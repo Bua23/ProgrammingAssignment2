@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T11:54:33.942411+00:00",
+  "generated_at": "2026-07-17T14:52:37.659547+00:00",
   "window_hours": 24,
   "companies_checked": 29,
   "companies_with_matches": [
@@ -43,6 +43,6 @@
     "Zopa"
   ],
   "companies_failed": [],
-  "total_jobs_found": 3,
+  "total_jobs_found": 4,
   "total_unconfirmed_found": 64
 }
