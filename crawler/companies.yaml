@@ -1,0 +1,90 @@
+# Curated list of software product companies with a real London, UK presence.
+#
+# Each entry points at the company's own applicant-tracking-system (ATS) feed —
+# the same public JSON feed that powers the "Careers" page on the company's own
+# website. This is not third-party scraping of an aggregator; it's reading each
+# company's own published job data.
+#
+# Tokens were identified via web search on 2026-07-17 by matching each
+# company's public job-board URL, e.g. https://boards.greenhouse.io/<token>,
+# https://jobs.lever.co/<token>, https://jobs.ashbyhq.com/<token>.
+# ATS providers and tokens can change over time — re-verify periodically.
+#
+# ats: one of "greenhouse" | "lever" | "ashby"
+# token: the slug in the company's job-board URL
+
+companies:
+  - name: DeepMind
+    website: https://deepmind.google
+    ats: greenhouse
+    token: deepmind
+
+  - name: Wayve
+    website: https://wayve.ai
+    ats: greenhouse
+    token: wayve
+
+  - name: GoodNotes
+    website: https://www.goodnotes.com
+    ats: greenhouse
+    token: goodnotes
+
+  - name: CreativeX
+    website: https://www.creativex.com
+    ats: greenhouse
+    token: creativex
+
+  - name: Stacklok
+    website: https://stacklok.com
+    ats: greenhouse
+    token: stacklok
+
+  - name: Figma
+    website: https://www.figma.com
+    ats: greenhouse
+    token: figma
+
+  - name: Zopa
+    website: https://www.zopa.com
+    ats: lever
+    token: zopa
+
+  - name: Teleport
+    website: https://goteleport.com
+    ats: lever
+    token: teleport
+
+  - name: Palantir Technologies
+    website: https://www.palantir.com
+    ats: lever
+    token: palantir
+
+  - name: Multiverse
+    website: https://www.multiverse.io
+    ats: ashby
+    token: multiverse
+
+  - name: hyperexponential
+    website: https://www.hyperexponential.com
+    ats: ashby
+    token: hyperexponential
+
+  - name: Talos
+    website: https://www.talos.com
+    ats: ashby
+    token: talos-trading
+
+  - name: Docker
+    website: https://www.docker.com
+    ats: ashby
+    token: docker
+
+  - name: Flow Engineering
+    website: https://www.flow.engineering
+    ats: ashby
+    token: flowengineering
+
+  - name: Deductive AI
+    website: https://www.deductive.ai
+    ats: ashby
+    token: deductive

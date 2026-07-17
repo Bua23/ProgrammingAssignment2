@@ -1,105 +1,126 @@
-### Introduction
+# London Software Jobs Dashboard
 
-This second programming assignment will require you to write an R
-function that is able to cache potentially time-consuming computations.
-For example, taking the mean of a numeric vector is typically a fast
-operation. However, for a very long vector, it may take too long to
-compute the mean, especially if it has to be computed repeatedly (e.g.
-in a loop). If the contents of a vector are not changing, it may make
-sense to cache the value of the mean so that when we need it again, it
-can be looked up in the cache rather than recomputed. In this
-Programming Assignment you will take advantage of the scoping rules of
-the R language and how they can be manipulated to preserve state inside
-of an R object.
+A dashboard that surfaces software-engineering roles based in **London, UK**
+that were posted in the **last 24 hours**, at a curated set of UK software
+product companies. Crawls run automatically **twice on every weekday**.
 
-### Example: Caching the Mean of a Vector
+> This repository started life as a Coursera R programming assignment. That
+> original content is preserved at
+> [`docs/original-coursera-assignment.md`](docs/original-coursera-assignment.md)
+> and [`cachematrix.R`](cachematrix.R); everything below is a separate project
+> built on top of it.
 
-In this example we introduce the `<<-` operator which can be used to
-assign a value to an object in an environment that is different from the
-current environment. Below are two functions that are used to create a
-special object that stores a numeric vector and caches its mean.
+## How it works
 
-The first function, `makeVector` creates a special "vector", which is
-really a list containing a function to
+```
+crawler/companies.yaml   curated list of UK software product companies
+        │                 (name, website, ATS provider + board token)
+        ▼
+crawler/crawl.py          for each company, calls that company's own public
+        │                 job-board API (Greenhouse / Lever / Ashby) — the
+        │                 same feed that powers their own "Careers" page —
+        │                 keeps roles located in London, UK and posted
+        │                 within the last 24 hours
+        ▼
+frontend/public/data/     jobs.json + meta.json (committed to the repo)
+        │
+        ▼
+frontend/ (React + Vite)  reads that JSON and renders the dashboard:
+                           stat tiles, a jobs-by-company chart, filters,
+                           and a card per role linking to the original
+                           posting on the company's own site
+```
 
-1.  set the value of the vector
-2.  get the value of the vector
-3.  set the value of the mean
-4.  get the value of the mean
+`.github/workflows/crawl.yml` runs the crawler on a schedule
+(`0 7,13 * * 1-5` UTC — twice every weekday) and commits the refreshed
+`jobs.json`/`meta.json`. `.github/workflows/deploy.yml` then rebuilds and
+publishes the frontend to GitHub Pages. You can also trigger either workflow
+manually from the Actions tab (`workflow_dispatch`).
 
-<!-- -->
+### Why company ATS feeds instead of LinkedIn / a scraper aggregator
 
-    makeVector <- function(x = numeric()) {
-            m <- NULL
-            set <- function(y) {
-                    x <<- y
-                    m <<- NULL
-            }
-            get <- function() x
-            setmean <- function(mean) m <<- mean
-            getmean <- function() m
-            list(set = set, get = get,
-                 setmean = setmean,
-                 getmean = getmean)
-    }
+Each of Greenhouse, Lever, and Ashby exposes a public, unauthenticated JSON
+API that is the actual data source for the "Careers" page embedded on the
+company's own website — no login, no credential automation, no bypassing of
+access controls, and no violation of LinkedIn's anti-scraping terms. It's
+also far more reliable than HTML scraping: structured fields for title,
+location, posted date, full description, and a canonical application URL.
 
-The following function calculates the mean of the special "vector"
-created with the above function. However, it first checks to see if the
-mean has already been calculated. If so, it `get`s the mean from the
-cache and skips the computation. Otherwise, it calculates the mean of
-the data and sets the value of the mean in the cache via the `setmean`
-function.
+The tradeoff: coverage is limited to the companies listed in
+[`crawler/companies.yaml`](crawler/companies.yaml), and only to companies
+using one of the supported ATS providers (Greenhouse, Lever, Ashby, plus a
+Workable client that's implemented but unused by default). Add a company by
+finding its board token (the slug in `boards.greenhouse.io/<token>`,
+`jobs.lever.co/<token>`, or `jobs.ashbyhq.com/<token>`) and adding an entry to
+`companies.yaml`.
 
-    cachemean <- function(x, ...) {
-            m <- x$getmean()
-            if(!is.null(m)) {
-                    message("getting cached data")
-                    return(m)
-            }
-            data <- x$get()
-            m <- mean(data, ...)
-            x$setmean(m)
-            m
-    }
+### A known limitation, by design
 
-### Assignment: Caching the Inverse of a Matrix
+Greenhouse's public feed only exposes `updated_at`, not a true "posted"
+timestamp — a role that was edited stays looking "fresh" even if it was
+originally posted earlier. Lever and Ashby both expose true creation/publish
+timestamps, so this only affects Greenhouse-listed companies. This is a
+limitation of the public (unauthenticated) feed, not of the crawler.
 
-Matrix inversion is usually a costly computation and there may be some
-benefit to caching the inverse of a matrix rather than computing it
-repeatedly (there are also alternatives to matrix inversion that we will
-not discuss here). Your assignment is to write a pair of functions that
-cache the inverse of a matrix.
+## Repository layout
 
-Write the following functions:
+```
+crawler/
+  companies.yaml       curated company list (edit this to add/remove companies)
+  ats_clients.py        Greenhouse / Lever / Ashby / Workable API clients
+  crawl.py               orchestrates fetch → filter → write JSON
+  requirements.txt
+frontend/
+  src/                   React + TypeScript dashboard
+  public/data/           jobs.json / meta.json (crawler output, committed)
+.github/workflows/
+  crawl.yml              scheduled crawl (twice/weekday) + manual trigger
+  deploy.yml              build + publish frontend to GitHub Pages
+```
 
-1.  `makeCacheMatrix`: This function creates a special "matrix" object
-    that can cache its inverse.
-2.  `cacheSolve`: This function computes the inverse of the special
-    "matrix" returned by `makeCacheMatrix` above. If the inverse has
-    already been calculated (and the matrix has not changed), then
-    `cacheSolve` should retrieve the inverse from the cache.
+## Running the crawler locally
 
-Computing the inverse of a square matrix can be done with the `solve`
-function in R. For example, if `X` is a square invertible matrix, then
-`solve(X)` returns its inverse.
+```bash
+cd crawler
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python crawl.py --hours 24
+# writes frontend/public/data/jobs.json and meta.json
+```
 
-For this assignment, assume that the matrix supplied is always
-invertible.
+## Running the dashboard locally
 
-In order to complete this assignment, you must do the following:
+```bash
+cd frontend
+npm install
+npm run dev       # http://localhost:5173, reads public/data/*.json
+```
 
-1.  Fork the GitHub repository containing the stub R files at
-    [https://github.com/rdpeng/ProgrammingAssignment2](https://github.com/rdpeng/ProgrammingAssignment2)
-    to create a copy under your own account.
-2.  Clone your forked GitHub repository to your computer so that you can
-    edit the files locally on your own machine.
-3.  Edit the R file contained in the git repository and place your
-    solution in that file (please do not rename the file).
-4.  Commit your completed R file into YOUR git repository and push your
-    git branch to the GitHub repository under your account.
-5.  Submit to Coursera the URL to your GitHub repository that contains
-    the completed R code for the assignment.
+`npm run build` produces a static `frontend/dist/` that can be hosted
+anywhere (GitHub Pages, Netlify, S3, etc.) — the app is pure static
+files plus two JSON fetches, no backend server required.
 
-### Grading
+## Enabling GitHub Pages (one-time)
 
-This assignment will be graded via peer assessment.
+In the repo's **Settings → Pages**, set **Source** to **GitHub Actions**.
+The `deploy.yml` workflow will then publish the site on every push to
+`main`/`master` that touches `frontend/`, and after every scheduled crawl
+(since the crawl commits into `frontend/public/data/`, which triggers the
+path filter).
+
+## Important notes
+
+- **First run**: I could not reach the internet from the sandboxed session
+  that built this (its outbound network is restricted to a small allowlist —
+  package registries, not job-board APIs), so `frontend/public/data/jobs.json`
+  starts out empty. Trigger `crawl.yml` manually from the Actions tab (or wait
+  for the next scheduled run) once this is pushed to populate real data —
+  GitHub's own runners have normal internet access.
+- **Company list is a curated seed**, verified via web search on 2026-07-17
+  against each company's real public job-board URL. ATS providers and board
+  tokens can change; re-verify periodically and prune/extend
+  `companies.yaml` as needed.
+- **Attribution**: the dashboard only stores title/location/description/link
+  for roles found via each company's own public feed, and links back to the
+  original posting for the actual application. It does not scrape or mirror
+  LinkedIn.
