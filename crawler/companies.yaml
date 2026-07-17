@@ -5,86 +5,192 @@
 # website. This is not third-party scraping of an aggregator; it's reading each
 # company's own published job data.
 #
-# Tokens were identified via web search on 2026-07-17 by matching each
-# company's public job-board URL, e.g. https://boards.greenhouse.io/<token>,
-# https://jobs.lever.co/<token>, https://jobs.ashbyhq.com/<token>.
-# ATS providers and tokens can change over time — re-verify periodically.
+# Tokens were identified via web search by matching each company's public
+# job-board URL, e.g. https://boards.greenhouse.io/<token>,
+# https://jobs.lever.co/<token>, https://jobs.ashbyhq.com/<token>,
+# https://apply.workable.com/<token>. Last verified 2026-07-17. ATS providers
+# and tokens can change over time — re-verify periodically.
 #
-# ats: one of "greenhouse" | "lever" | "ashby"
+# ats: one of "greenhouse" | "lever" | "ashby" | "workable"
 # token: the slug in the company's job-board URL
+# origin: "UK" (founded/HQ'd in the UK) or "US" (US company with a real
+#         London office/expansion) — informational only, not used by the crawler.
 
 companies:
+  # --- UK-native software product companies ---
+
   - name: DeepMind
     website: https://deepmind.google
     ats: greenhouse
     token: deepmind
+    origin: UK
 
   - name: Wayve
     website: https://wayve.ai
     ats: greenhouse
     token: wayve
+    origin: UK
 
   - name: GoodNotes
     website: https://www.goodnotes.com
     ats: greenhouse
     token: goodnotes
+    origin: UK
 
   - name: CreativeX
     website: https://www.creativex.com
     ats: greenhouse
     token: creativex
+    origin: UK
 
   - name: Stacklok
     website: https://stacklok.com
     ats: greenhouse
     token: stacklok
-
-  - name: Figma
-    website: https://www.figma.com
-    ats: greenhouse
-    token: figma
+    origin: UK
 
   - name: Zopa
     website: https://www.zopa.com
     ats: lever
     token: zopa
+    origin: UK
 
   - name: Teleport
     website: https://goteleport.com
     ats: lever
     token: teleport
-
-  - name: Palantir Technologies
-    website: https://www.palantir.com
-    ats: lever
-    token: palantir
+    origin: UK
 
   - name: Multiverse
     website: https://www.multiverse.io
     ats: ashby
     token: multiverse
+    origin: UK
 
   - name: hyperexponential
     website: https://www.hyperexponential.com
     ats: ashby
     token: hyperexponential
+    origin: UK
 
   - name: Talos
     website: https://www.talos.com
     ats: ashby
     token: talos-trading
-
-  - name: Docker
-    website: https://www.docker.com
-    ats: ashby
-    token: docker
+    origin: UK
 
   - name: Flow Engineering
     website: https://www.flow.engineering
     ats: ashby
     token: flowengineering
+    origin: UK
 
   - name: Deductive AI
     website: https://www.deductive.ai
     ats: ashby
     token: deductive
+    origin: UK
+
+  - name: Trainline
+    website: https://www.thetrainline.com
+    ats: ashby
+    token: trainline
+    origin: UK
+
+  - name: Starling Bank
+    website: https://www.starlingbank.com
+    ats: workable
+    token: starling-bank
+    origin: UK
+
+  - name: Heron Data
+    website: https://www.herondata.io
+    ats: ashby
+    token: herondata
+    origin: UK
+
+  - name: Validus Risk Management
+    website: https://www.validusrm.com
+    ats: workable
+    token: validus-risk-management
+    origin: UK
+
+  - name: FIXR
+    website: https://www.fixr.co
+    ats: workable
+    token: fixr
+    origin: UK
+
+  # --- US companies with a real London office / active UK expansion ---
+
+  - name: Figma
+    website: https://www.figma.com
+    ats: greenhouse
+    token: figma
+    origin: US
+
+  - name: Palantir Technologies
+    website: https://www.palantir.com
+    ats: lever
+    token: palantir
+    origin: US
+
+  - name: Docker
+    website: https://www.docker.com
+    ats: ashby
+    token: docker
+    origin: US
+
+  - name: Cresta
+    website: https://cresta.com
+    ats: greenhouse
+    token: cresta
+    origin: US
+
+  - name: OpenAI
+    website: https://openai.com
+    ats: ashby
+    token: openai
+    origin: US
+
+  - name: Mercor
+    website: https://mercor.com
+    ats: ashby
+    token: mercor
+    origin: US
+
+  - name: Meticulous
+    website: https://meticulous.ai
+    ats: ashby
+    token: meticulous
+    origin: US
+
+  - name: Sim
+    website: https://sim.ai
+    ats: ashby
+    token: sim
+    origin: US
+
+  - name: Junior AI
+    website: https://junior.ai
+    ats: ashby
+    token: junior
+    origin: US
+
+  - name: Profound
+    website: https://tryprofound.com
+    ats: ashby
+    token: Profound
+    origin: US
+
+  - name: H Company
+    website: https://www.hcompany.ai
+    ats: ashby
+    token: hcompany
+    origin: US
+
+  - name: Edra
+    website: https://www.edra.com
+    ats: ashby
+    token: edra
+    origin: US
