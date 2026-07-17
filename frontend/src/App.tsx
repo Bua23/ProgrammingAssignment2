@@ -11,6 +11,7 @@ const DATA_BASE = `${import.meta.env.BASE_URL}data/`;
 
 export default function App() {
   const [jobs, setJobs] = useState<Job[] | null>(null);
+  const [unconfirmedJobs, setUnconfirmedJobs] = useState<Job[]>([]);
   const [meta, setMeta] = useState<Meta | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [search, setSearch] = useState("");
@@ -29,7 +30,17 @@ export default function App() {
     ])
       .then(([jobsData, metaData]) => {
         setJobs(jobsData.jobs ?? []);
-        setMeta(metaData);
+        setUnconfirmedJobs(jobsData.unconfirmed_jobs ?? []);
+        // Defensive: tolerate data.json files written by an older crawler
+        // version that predates these fields (e.g. mid-deploy).
+        setMeta({
+          companies_with_matches: [],
+          companies_with_unconfirmed: [],
+          companies_dom_fallback: [],
+          companies_failed: [],
+          total_unconfirmed_found: 0,
+          ...metaData,
+        });
       })
       .catch((err) => setLoadError(String(err)));
   }, []);
@@ -48,6 +59,15 @@ export default function App() {
     });
   }, [jobs, search, company]);
 
+  const filteredUnconfirmed = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    return unconfirmedJobs.filter((job) => {
+      if (company && job.company !== company) return false;
+      if (!q) return true;
+      return job.title.toLowerCase().includes(q) || job.company.toLowerCase().includes(q);
+    });
+  }, [unconfirmedJobs, search, company]);
+
   const companyCounts = useMemo(() => {
     if (!jobs) return [] as [string, number][];
     const map = new Map<string, number>();
@@ -56,8 +76,9 @@ export default function App() {
   }, [jobs]);
 
   const allCompanies = useMemo(
-    () => [...new Set((jobs ?? []).map((j) => j.company))].sort(),
-    [jobs]
+    () =>
+      [...new Set([...(jobs ?? []), ...unconfirmedJobs].map((j) => j.company))].sort(),
+    [jobs, unconfirmedJobs]
   );
 
   return (
@@ -65,10 +86,11 @@ export default function App() {
       <header className="hero">
         <h1>London software jobs — last 24 hours</h1>
         <p>
-          A curated set of UK software product companies, crawled directly from
-          each company's own job board (Greenhouse / Lever / Ashby), filtered
-          to roles based in London, UK and posted within the last 24 hours.
-          Runs automatically twice each weekday.
+          A curated set of UK software product companies, crawled by rendering
+          each company's own public careers page in a headless browser and
+          reading the job data as their own site loads it — filtered to roles
+          based in London, UK and posted within the last 24 hours. Runs
+          automatically twice each weekday.
         </p>
       </header>
 
@@ -114,6 +136,24 @@ export default function App() {
             </div>
           )}
 
+          {filteredUnconfirmed.length > 0 && (
+            <>
+              <div className="section-heading">
+                <h2>Also spotted on company career pages</h2>
+                <p>
+                  These London-mentioning roles were found on a company's own
+                  page, but that page didn't expose a machine-readable posted
+                  date, so we can't confirm they're within the last 24 hours.
+                </p>
+              </div>
+              <div className="job-grid">
+                {filteredUnconfirmed.map((job) => (
+                  <JobCard job={job} key={job.id} />
+                ))}
+              </div>
+            </>
+          )}
+
           <footer className="meta-footer">
             <div>
               <span className="status-dot" />
@@ -122,12 +162,15 @@ export default function App() {
               {meta.companies_failed.length > 0 && (
                 <> · {meta.companies_failed.length} unreachable this run</>
               )}
+              {meta.companies_dom_fallback.length > 0 && (
+                <> · {meta.companies_dom_fallback.length} used DOM fallback (no ATS call observed)</>
+              )}
             </div>
             <div>
-              Sources are each company's own public job-board feed — no login,
-              no LinkedIn scraping. Job data belongs to the respective
-              employers; this dashboard only links out to their original
-              posting.
+              Sources are each company's own public careers page — no login,
+              no LinkedIn scraping, no calls to the ATS made by us directly.
+              Job data belongs to the respective employers; this dashboard
+              only links out to their original posting.
             </div>
           </footer>
         </>

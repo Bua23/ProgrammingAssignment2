@@ -1,196 +1,242 @@
 # Curated list of software product companies with a real London, UK presence.
 #
-# Each entry points at the company's own applicant-tracking-system (ATS) feed —
-# the same public JSON feed that powers the "Careers" page on the company's own
-# website. This is not third-party scraping of an aggregator; it's reading each
-# company's own published job data.
+# The crawler renders `careers_url` — each company's OWN public careers page
+# — in a headless browser (see browser_crawl.py). If that page's own
+# JavaScript calls a known ATS API (Greenhouse/Lever/Ashby/Workable) to
+# populate the listing, exactly as it would for a real visitor, we capture
+# that response and parse it. We never call the ATS ourselves. If no such
+# call is observed, we fall back to best-effort scraping of the rendered
+# page (no reliable posted-date in that case — see README).
 #
-# Tokens were identified via web search by matching each company's public
-# job-board URL, e.g. https://boards.greenhouse.io/<token>,
-# https://jobs.lever.co/<token>, https://jobs.ashbyhq.com/<token>,
-# https://apply.workable.com/<token>. Last verified 2026-07-17. ATS providers
-# and tokens can change over time — re-verify periodically.
+# `ats`/`token` describe what the page is *expected* to be backed by; they're
+# used to recognize the right captured network response and (cosmetically)
+# to build job IDs. Getting one wrong just means that company always falls
+# back to DOM scraping — it doesn't break anything.
 #
-# ats: one of "greenhouse" | "lever" | "ashby" | "workable"
-# token: the slug in the company's job-board URL
+# Two companies (Stacklok, Deductive AI) have no separate branded careers
+# page at all — their own site routes straight to the ATS-hosted board, so
+# careers_url points directly at that board page (still rendered in the
+# browser, still captured the same way).
+#
+# Researched + verified 2026-07-17. Company sites redesign / migrate ATS
+# providers over time — re-verify periodically.
+#
+# ats: one of "greenhouse" | "lever" | "ashby" | "workable" | "other"
 # origin: "UK" (founded/HQ'd in the UK) or "US" (US company with a real
-#         London office/expansion) — informational only, not used by the crawler.
+#         London office/expansion) — informational only.
 
 companies:
   # --- UK-native software product companies ---
 
   - name: DeepMind
     website: https://deepmind.google
+    careers_url: https://deepmind.google/careers/
     ats: greenhouse
     token: deepmind
     origin: UK
 
   - name: Wayve
     website: https://wayve.ai
+    careers_url: https://wayve.ai/careers/
     ats: greenhouse
     token: wayve
     origin: UK
 
   - name: GoodNotes
     website: https://www.goodnotes.com
+    careers_url: https://www.goodnotes.com/careers
     ats: greenhouse
     token: goodnotes
     origin: UK
 
   - name: CreativeX
     website: https://www.creativex.com
+    careers_url: https://www.creativex.com/careers
     ats: greenhouse
     token: creativex
     origin: UK
 
   - name: Stacklok
     website: https://stacklok.com
+    careers_url: https://job-boards.greenhouse.io/stacklok
     ats: greenhouse
     token: stacklok
     origin: UK
+    note: No separate branded careers page found; their own site routes straight to this ATS board.
 
   - name: Zopa
     website: https://www.zopa.com
+    careers_url: https://careers.zopa.com/
     ats: lever
     token: zopa
     origin: UK
 
   - name: Teleport
     website: https://goteleport.com
+    careers_url: https://goteleport.com/careers/
     ats: lever
     token: teleport
     origin: UK
 
   - name: Multiverse
     website: https://www.multiverse.io
+    careers_url: https://www.multiverse.io/en-GB/careers
     ats: ashby
     token: multiverse
     origin: UK
 
   - name: hyperexponential
     website: https://www.hyperexponential.com
+    careers_url: https://www.hyperexponential.com/careers
     ats: ashby
     token: hyperexponential
     origin: UK
 
   - name: Talos
     website: https://www.talos.com
+    careers_url: https://www.talos.com/working/open-roles
     ats: ashby
     token: talos-trading
     origin: UK
 
   - name: Flow Engineering
-    website: https://www.flow.engineering
+    website: https://www.flowengineering.com
+    careers_url: https://www.flowengineering.com/careers
     ats: ashby
     token: flowengineering
     origin: UK
+    note: Real domain is flowengineering.com, not flow.engineering.
 
   - name: Deductive AI
     website: https://www.deductive.ai
+    careers_url: https://jobs.ashbyhq.com/deductive
     ats: ashby
     token: deductive
     origin: UK
+    note: No separate branded careers page found; jobs live entirely on this ATS board.
 
   - name: Trainline
-    website: https://www.thetrainline.com
+    website: https://www.trainlinegroup.com
+    careers_url: https://www.trainlinegroup.com/careers/
     ats: ashby
     token: trainline
     origin: UK
+    note: Careers live on the corporate site (trainlinegroup.com), not the consumer booking site (thetrainline.com).
 
   - name: Starling Bank
     website: https://www.starlingbank.com
+    careers_url: https://www.starlingbank.com/careers/
     ats: workable
     token: starling-bank
     origin: UK
 
   - name: Heron Data
     website: https://www.herondata.io
+    careers_url: https://www.herondata.io/careers
     ats: ashby
     token: herondata
     origin: UK
 
   - name: Validus Risk Management
     website: https://www.validusrm.com
+    careers_url: https://www.validusrm.com/validus-careers/
     ats: workable
     token: validus-risk-management
     origin: UK
 
   - name: FIXR
     website: https://www.fixr.co
-    ats: workable
+    careers_url: https://careers.fixr.co/
+    ats: other
     token: fixr
     origin: UK
+    note: Backed by SmartRecruiters, not Workable — falls back to DOM scraping (no ATS parser for SmartRecruiters yet).
 
   # --- US companies with a real London office / active UK expansion ---
 
   - name: Figma
     website: https://www.figma.com
+    careers_url: https://www.figma.com/careers/
     ats: greenhouse
     token: figma
     origin: US
 
   - name: Palantir Technologies
     website: https://www.palantir.com
+    careers_url: https://www.palantir.com/careers/
     ats: lever
     token: palantir
     origin: US
 
   - name: Docker
     website: https://www.docker.com
+    careers_url: https://www.docker.com/careers/
     ats: ashby
     token: docker
     origin: US
 
   - name: Cresta
     website: https://cresta.com
+    careers_url: https://www.cresta.com/careers
     ats: greenhouse
     token: cresta
     origin: US
 
   - name: OpenAI
     website: https://openai.com
+    careers_url: https://openai.com/careers/
     ats: ashby
     token: openai
     origin: US
 
   - name: Mercor
     website: https://mercor.com
-    ats: ashby
+    careers_url: https://www.mercor.com/careers/
+    ats: other
     token: mercor
     origin: US
+    note: Careers page appears custom-built with job postings hosted directly on mercor.com — likely DOM fallback only.
 
   - name: Meticulous
     website: https://meticulous.ai
+    careers_url: https://www.meticulous.ai/careers
     ats: ashby
     token: meticulous
     origin: US
 
   - name: Sim
     website: https://sim.ai
+    careers_url: https://www.sim.ai/careers
     ats: ashby
     token: sim
     origin: US
 
   - name: Junior AI
     website: https://junior.ai
+    careers_url: https://junior.ai/careers
     ats: ashby
     token: junior
     origin: US
 
   - name: Profound
     website: https://tryprofound.com
-    ats: ashby
+    careers_url: https://www.tryprofound.com/careers
+    ats: other
     token: Profound
     origin: US
+    note: Careers page appears custom-built with job postings hosted directly on tryprofound.com — likely DOM fallback only.
 
   - name: H Company
     website: https://www.hcompany.ai
+    careers_url: https://hcompany.ai/careers
     ats: ashby
     token: hcompany
     origin: US
 
   - name: Edra
-    website: https://www.edra.com
+    website: https://edra.ai
+    careers_url: https://edra.ai/careers
     ats: ashby
     token: edra
     origin: US
+    note: "IMPORTANT: edra.com is an unrelated Italian furniture company — the AI startup (ex-Palantir engineers) is at edra.ai."
