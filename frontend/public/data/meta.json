@@ -1,24 +1,12 @@
 {
-  "generated_at": "2026-07-17T10:09:06.360594+00:00",
+  "generated_at": "2026-07-17T11:17:48.968458+00:00",
   "window_hours": 24,
   "companies_checked": 15,
-  "companies_with_matches": [],
-  "companies_failed": [
-    "DeepMind",
-    "Wayve",
-    "GoodNotes",
-    "CreativeX",
-    "Stacklok",
+  "companies_with_matches": [
     "Figma",
-    "Zopa",
-    "Teleport",
-    "Palantir Technologies",
     "Multiverse",
-    "hyperexponential",
-    "Talos",
-    "Docker",
-    "Flow Engineering",
-    "Deductive AI"
+    "Wayve"
   ],
-  "total_jobs_found": 0
+  "companies_failed": [],
+  "total_jobs_found": 4
 }
