@@ -1,12 +1,48 @@
 {
-  "generated_at": "2026-07-17T11:17:48.968458+00:00",
+  "generated_at": "2026-07-17T11:54:33.942411+00:00",
   "window_hours": 24,
-  "companies_checked": 15,
+  "companies_checked": 29,
   "companies_with_matches": [
     "Figma",
-    "Multiverse",
+    "Multiverse"
+  ],
+  "companies_with_unconfirmed": [
+    "Deductive AI",
+    "Edra",
+    "FIXR",
+    "Flow Engineering",
+    "Junior AI",
+    "Profound",
+    "Starling Bank",
     "Wayve"
   ],
+  "companies_dom_fallback": [
+    "CreativeX",
+    "Deductive AI",
+    "DeepMind",
+    "Docker",
+    "Edra",
+    "FIXR",
+    "Flow Engineering",
+    "GoodNotes",
+    "H Company",
+    "Heron Data",
+    "Junior AI",
+    "Mercor",
+    "Meticulous",
+    "OpenAI",
+    "Palantir Technologies",
+    "Profound",
+    "Sim",
+    "Stacklok",
+    "Starling Bank",
+    "Teleport",
+    "Trainline",
+    "Validus Risk Management",
+    "Wayve",
+    "Zopa"
+  ],
   "companies_failed": [],
-  "total_jobs_found": 4
+  "total_jobs_found": 3,
+  "total_unconfirmed_found": 64
 }
