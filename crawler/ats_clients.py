@@ -1,6 +1,8 @@
-"""Thin clients for the public job-board JSON feeds published by each ATS.
+"""Parsers + thin clients for the public job-board JSON feeds published by
+Greenhouse, Lever, Ashby, and Workable.
 
-Every function returns a list of NormalizedJob dicts:
+Every `parse_*` function is a pure function: JSON body in, list of
+NormalizedJob dicts out:
     {
         "external_id": str,
         "title": str,
@@ -8,16 +10,20 @@ Every function returns a list of NormalizedJob dicts:
         "url": str,
         "description_html": str,
         "posted_at": datetime | None,   # tz-aware UTC
-        "source": "greenhouse" | "lever" | "ashby",
+        "source": "greenhouse" | "lever" | "ashby" | "workable",
     }
 
-These are all public, unauthenticated endpoints that back the company's own
-"Careers" page widget on their own website — no login, no credential
-automation, no bypassing of access controls.
+`browser_crawl.py` calls these on JSON bodies captured from network responses
+while rendering each company's own careers page (i.e. the ATS call is made
+by the company's own page, exactly as it would be for a human visitor — we
+just read the response). The `fetch_*`/`fetch_company_jobs` functions below
+call the same ATS endpoints directly and are kept only for local testing/
+debugging the parsers in isolation; the scheduled crawl does not use them.
 """
 from __future__ import annotations
 
 import logging
+import re
 from datetime import datetime, timezone
 from typing import Any
 
@@ -31,6 +37,15 @@ USER_AGENT = (
 )
 
 REQUEST_TIMEOUT = 20
+
+# URL patterns used by browser_crawl.py to recognize a captured network
+# response as belonging to a given ATS.
+API_URL_PATTERNS: dict[str, re.Pattern] = {
+    "greenhouse": re.compile(r"boards-api\.greenhouse\.io/v1/boards/[^/]+/jobs"),
+    "lever": re.compile(r"api\.lever\.co/v0/postings/"),
+    "ashby": re.compile(r"api\.ashbyhq\.com/posting-api/job-board/"),
+    "workable": re.compile(r"apply\.workable\.com/api/v1/widget/accounts/"),
+}
 
 
 def _get(url: str, params: dict | None = None) -> Any:
@@ -58,21 +73,15 @@ def _parse_iso(value: str | None) -> datetime | None:
         return None
 
 
-def fetch_greenhouse(token: str, **_ignored) -> list[dict]:
-    """Greenhouse job-board API.
+def parse_greenhouse(data: dict) -> list[dict]:
+    """Parse a Greenhouse `/v1/boards/<token>/jobs?content=true` response body.
 
-    The public API host (boards-api.greenhouse.io) is the same regardless of
-    whether the company's front-end careers page is served from the legacy
-    boards.greenhouse.io UI or the newer job-boards.greenhouse.io UI.
-
-    NOTE: Greenhouse's public list endpoint does not expose a true "created"
-    timestamp, only `updated_at`. For newly posted roles this is normally the
-    same moment, but a role that was edited later will look "recently
-    updated" even if it was posted long ago. This is a known limitation of
-    the public feed (no auth = no access to the richer recruiting API).
+    NOTE: Greenhouse's public feed does not expose a true "created"
+    timestamp, only `updated_at`. For newly posted roles this is normally
+    the same moment, but a role that was edited later will look "recently
+    updated" even if it was posted long ago — a known limitation of the
+    public (unauthenticated) feed.
     """
-    url = f"https://boards-api.greenhouse.io/v1/boards/{token}/jobs"
-    data = _get(url, params={"content": "true"})
     jobs = []
     for job in data.get("jobs", []):
         location = (job.get("location") or {}).get("name", "")
@@ -90,9 +99,8 @@ def fetch_greenhouse(token: str, **_ignored) -> list[dict]:
     return jobs
 
 
-def fetch_lever(token: str) -> list[dict]:
-    url = f"https://api.lever.co/v0/postings/{token}"
-    data = _get(url, params={"mode": "json"})
+def parse_lever(data: list) -> list[dict]:
+    """Parse a Lever `/v0/postings/<token>?mode=json` response body."""
     jobs = []
     for job in data:
         categories = job.get("categories", {}) or {}
@@ -117,9 +125,8 @@ def fetch_lever(token: str) -> list[dict]:
     return jobs
 
 
-def fetch_ashby(token: str) -> list[dict]:
-    url = f"https://api.ashbyhq.com/posting-api/job-board/{token}"
-    data = _get(url, params={"includeCompensation": "false"})
+def parse_ashby(data: dict) -> list[dict]:
+    """Parse an Ashby `/posting-api/job-board/<token>` response body."""
     jobs = []
     for job in data.get("jobs", []):
         location = job.get("location", "") or job.get("address", {}).get("postalAddress", {}).get("addressLocality", "")
@@ -137,9 +144,8 @@ def fetch_ashby(token: str) -> list[dict]:
     return jobs
 
 
-def fetch_workable(token: str) -> list[dict]:
-    url = f"https://apply.workable.com/api/v1/widget/accounts/{token}"
-    data = _get(url, params={"details": "true"})
+def parse_workable(data: dict) -> list[dict]:
+    """Parse a Workable `/api/v1/widget/accounts/<token>` response body."""
     jobs = []
     for job in data.get("jobs", []):
         loc = job.get("location", {}) or {}
@@ -158,6 +164,44 @@ def fetch_workable(token: str) -> list[dict]:
     return jobs
 
 
+PARSERS = {
+    "greenhouse": parse_greenhouse,
+    "lever": parse_lever,
+    "ashby": parse_ashby,
+    "workable": parse_workable,
+}
+
+
+def parse_captured_response(ats: str, data: Any) -> list[dict]:
+    parser = PARSERS.get(ats)
+    if parser is None:
+        raise ValueError(f"Unsupported ATS type: {ats}")
+    return parser(data)
+
+
+# --- Direct-fetch helpers: local testing / debugging only. The scheduled
+#     crawl goes through browser_crawl.py + parse_captured_response above. ---
+
+def fetch_greenhouse(token: str, **_ignored) -> list[dict]:
+    url = f"https://boards-api.greenhouse.io/v1/boards/{token}/jobs"
+    return parse_greenhouse(_get(url, params={"content": "true"}))
+
+
+def fetch_lever(token: str) -> list[dict]:
+    url = f"https://api.lever.co/v0/postings/{token}"
+    return parse_lever(_get(url, params={"mode": "json"}))
+
+
+def fetch_ashby(token: str) -> list[dict]:
+    url = f"https://api.ashbyhq.com/posting-api/job-board/{token}"
+    return parse_ashby(_get(url, params={"includeCompensation": "false"}))
+
+
+def fetch_workable(token: str) -> list[dict]:
+    url = f"https://apply.workable.com/api/v1/widget/accounts/{token}"
+    return parse_workable(_get(url, params={"details": "true"}))
+
+
 FETCHERS = {
     "greenhouse": fetch_greenhouse,
     "lever": fetch_lever,
@@ -167,8 +211,7 @@ FETCHERS = {
 
 
 def fetch_company_jobs(company: dict) -> list[dict]:
-    ats = company["ats"]
-    fetcher = FETCHERS.get(ats)
+    fetcher = FETCHERS.get(company["ats"])
     if fetcher is None:
-        raise ValueError(f"Unsupported ATS type: {ats}")
+        raise ValueError(f"Unsupported ATS type: {company['ats']}")
     return fetcher(company["token"])
