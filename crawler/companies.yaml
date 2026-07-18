@@ -18,12 +18,23 @@
 # careers_url points directly at that board page (still rendered in the
 # browser, still captured the same way).
 #
-# Researched + verified 2026-07-17. Company sites redesign / migrate ATS
-# providers over time — re-verify periodically.
+# When no network call is captured on the initial page, the crawler also
+# looks for an on-page link to the company's configured ATS board (a "View
+# open roles" button, say) and follows it once before falling back to DOM
+# scraping — see browser_crawl.py.
+#
+# Researched + verified 2026-07-17 (initial 29) and 2026-07-17 (expansion to
+# ~144, covering large/established employers, more UK-native scaleups, and
+# smaller US/international companies expanding into London). Company sites
+# redesign / migrate ATS providers over time — re-verify periodically.
 #
 # ats: one of "greenhouse" | "lever" | "ashby" | "workable" | "other"
-# origin: "UK" (founded/HQ'd in the UK) or "US" (US company with a real
-#         London office/expansion) — informational only.
+#      ("other" covers Workday, SmartRecruiters, Avature, Eightfold, and
+#      fully custom in-house systems — none of these have a parser, so
+#      those companies always land in the DOM-fallback/unconfirmed bucket;
+#      see the `note` field for what the real backend actually is)
+# origin: "UK" (founded/HQ'd in the UK), "US", or "Intl" (neither UK nor US)
+#         — informational only, not used by the crawler.
 
 companies:
   # --- UK-native software product companies ---
@@ -240,3 +251,852 @@ companies:
     token: edra
     origin: US
     note: "IMPORTANT: edra.com is an unrelated Italian furniture company — the AI startup (ex-Palantir engineers) is at edra.ai."
+
+  # --- More UK-native software product companies (added 2026-07-17) ---
+
+  - name: Monzo
+    website: https://monzo.com
+    careers_url: https://monzo.com/careers
+    ats: greenhouse
+    token: monzo
+    origin: UK
+
+  - name: Revolut
+    website: https://www.revolut.com
+    careers_url: https://www.revolut.com/careers/
+    ats: other
+    token: revolut
+    origin: UK
+    note: Fully self-built careers site, no known third-party ATS — DOM fallback expected.
+
+  - name: Wise
+    website: https://wise.com
+    careers_url: https://wise.jobs/
+    ats: other
+    token: wise
+    origin: UK
+    note: Self-built careers site on its own domain (wise.jobs) — DOM fallback expected.
+
+  - name: GoCardless
+    website: https://gocardless.com
+    careers_url: https://gocardless.com/about/careers
+    ats: greenhouse
+    token: gocardless
+    origin: UK
+
+  - name: Cleo AI
+    website: https://www.meetcleo.com
+    careers_url: https://web.meetcleo.com/careers
+    ats: greenhouse
+    token: cleo
+    origin: UK
+
+  - name: Curve
+    website: https://www.curve.com
+    careers_url: https://www.curve.com/careers/
+    ats: other
+    token: curve
+    origin: UK
+
+  - name: Tide
+    website: https://www.tide.co
+    careers_url: https://www.tide.co/careers/
+    ats: greenhouse
+    token: tide
+    origin: UK
+
+  - name: ClearScore
+    website: https://www.clearscore.com
+    careers_url: https://www.clearscore.com/careers
+    ats: workable
+    token: clear-score
+    origin: UK
+
+  - name: Marshmallow
+    website: https://www.marshmallow.com
+    careers_url: https://www.marshmallow.com/jobs
+    ats: ashby
+    token: marshmallow
+    origin: UK
+    note: Also has an older/parallel Workable board — Ashby looked more current at research time.
+
+  - name: Griffin
+    website: https://griffin.com
+    careers_url: https://griffin.com/careers
+    ats: ashby
+    token: griffin
+    origin: UK
+    note: Also has an older/parallel Workable board — Ashby looked more current at research time.
+
+  - name: Thought Machine
+    website: https://www.thoughtmachine.net
+    careers_url: https://www.thoughtmachine.net/life-at-thought-machine
+    ats: other
+    token: thought-machine
+    origin: UK
+    note: Backed by Avature (white-labeled at thoughtmachine.avature.net) — DOM fallback expected.
+
+  - name: Onfido
+    website: https://onfido.com
+    careers_url: https://apply.workable.com/onfido/
+    ats: workable
+    token: onfido
+    origin: UK
+    note: No distinct on-domain careers page found — routes straight to this Workable board. Acquired by Entrust (2024); may migrate.
+
+  - name: TrueLayer
+    website: https://truelayer.com
+    careers_url: https://truelayer.com/careers/
+    ats: workable
+    token: truelayer
+    origin: UK
+
+  - name: Checkout.com
+    website: https://www.checkout.com
+    careers_url: https://www.checkout.com/careers
+    ats: other
+    token: checkoutcom1
+    origin: UK
+    note: Backed by SmartRecruiters — DOM fallback expected (no parser yet).
+
+  - name: Paddle
+    website: https://www.paddle.com
+    careers_url: https://www.paddle.com/careers
+    ats: ashby
+    token: paddle
+    origin: UK
+
+  - name: Yapily
+    website: https://www.yapily.com
+    careers_url: https://www.yapily.com/company/careers
+    ats: workable
+    token: yapily
+    origin: UK
+
+  - name: Zilch
+    website: https://www.zilch.com
+    careers_url: https://www.zilch.com/uk/careers/
+    ats: ashby
+    token: zilch
+    origin: UK
+
+  - name: Darktrace
+    website: https://www.darktrace.com
+    careers_url: https://www.darktrace.com/careers
+    ats: other
+    token: darktrace
+    origin: UK
+    note: ATS not confidently identified — DOM fallback expected.
+
+  - name: Synthesia
+    website: https://www.synthesia.io
+    careers_url: https://www.synthesia.io/careers
+    ats: other
+    token: synthesia
+    origin: UK
+    note: ATS not confidently identified — DOM fallback expected.
+
+  - name: Speechmatics
+    website: https://www.speechmatics.com
+    careers_url: https://www.speechmatics.com/company/careers
+    ats: other
+    token: speechmatics
+    origin: UK
+    note: ATS not confidently identified — DOM fallback expected.
+
+  - name: Graphcore
+    website: https://www.graphcore.ai
+    careers_url: https://www.graphcore.ai/careers
+    ats: other
+    token: graphcore
+    origin: UK
+    note: ATS not confidently identified — DOM fallback expected.
+
+  - name: Signal AI
+    website: https://signal-ai.com
+    careers_url: https://signal-ai.com/careers/
+    ats: workable
+    token: signal
+    origin: UK
+
+  - name: Ravelin
+    website: https://www.ravelin.com
+    careers_url: https://www.ravelin.com/careers
+    ats: workable
+    token: ravelin
+    origin: UK
+    note: Acquired by Worldpay (Feb 2025) — page may not be actively maintained.
+
+  - name: Zego
+    website: https://www.zego.com
+    careers_url: https://www.zego.com/careers/
+    ats: workable
+    token: zego
+    origin: UK
+
+  - name: Sage
+    website: https://www.sage.com
+    careers_url: https://www.sage.com/en-gb/company/careers/
+    ats: other
+    token: sage
+    origin: UK
+    note: ATS not confidently identified — DOM fallback expected.
+
+  - name: Depop
+    website: https://www.depop.com
+    careers_url: https://depopcareers.com/
+    ats: other
+    token: depop
+    origin: UK
+    note: Backed by Workday (Etsy-owned since 2021) — DOM fallback expected.
+
+  - name: Skyscanner
+    website: https://www.skyscanner.net
+    careers_url: https://www.skyscanner.net/jobs
+    ats: other
+    token: skyscanner
+    origin: UK
+    note: ATS not confidently identified — DOM fallback expected.
+
+  - name: Octopus Energy / Kraken Tech
+    website: https://octopus.energy
+    careers_url: https://octopus.energy/careers/
+    ats: lever
+    token: octoenergy
+    origin: UK
+    note: Kraken Technologies (the licensed SaaS platform arm) is filterable as a department on the same Lever board.
+
+  - name: Quantexa
+    website: https://www.quantexa.com
+    careers_url: https://www.quantexa.com/careers/
+    ats: workable
+    token: quantexa
+    origin: UK
+
+  - name: Featurespace
+    website: https://www.featurespace.com
+    careers_url: https://www.featurespace.com/careers/about-featurespace
+    ats: other
+    token: featurespace
+    origin: UK
+    note: Acquired by Visa (Dec 2024) — page may fold into Visa's careers site over time.
+
+  - name: Freetrade
+    website: https://freetrade.io
+    careers_url: https://freetrade.io/careers
+    ats: ashby
+    token: freetrade
+    origin: UK
+
+  - name: Moneybox
+    website: https://www.moneyboxapp.com
+    careers_url: https://www.moneyboxapp.com/careers
+    ats: other
+    token: moneybox
+    origin: UK
+    note: ATS not confidently identified — DOM fallback expected.
+
+  - name: Lendable
+    website: https://www.lendable.co.uk
+    careers_url: https://careers.lendable.com/
+    ats: other
+    token: lendable
+    origin: UK
+    note: ATS not confidently identified — DOM fallback expected.
+
+  - name: PhysicsX
+    website: https://www.physicsx.ai
+    careers_url: https://www.physicsx.ai/careers
+    ats: greenhouse
+    token: physicsx
+    origin: UK
+    note: Backed by Greenhouse's EU instance (boards-api.eu.greenhouse.io) — supported.
+
+  # --- Smaller US/international companies expanding into London (added 2026-07-17) ---
+
+  - name: Ramp
+    website: https://ramp.com
+    careers_url: https://ramp.com/careers
+    ats: ashby
+    token: ramp
+    origin: US
+
+  - name: Deel
+    website: https://www.deel.com
+    careers_url: https://www.deel.com/careers/
+    ats: other
+    token: deel
+    origin: Intl
+    note: Deel runs its own native ATS product (jobs.deel.com) — DOM fallback expected.
+
+  - name: Vanta
+    website: https://www.vanta.com
+    careers_url: https://www.vanta.com/company/careers
+    ats: ashby
+    token: vanta
+    origin: US
+
+  - name: Rippling
+    website: https://www.rippling.com
+    careers_url: https://www.rippling.com/careers/open-roles
+    ats: other
+    token: rippling
+    origin: US
+    note: Rippling sells its own ATS product but hires through its own domain directly — DOM fallback expected.
+
+  - name: Retool
+    website: https://retool.com
+    careers_url: https://retool.com/careers
+    ats: lever
+    token: retool
+    origin: US
+
+  - name: Notion
+    website: https://www.notion.com
+    careers_url: https://www.notion.com/careers
+    ats: ashby
+    token: notion
+    origin: US
+
+  - name: Airtable
+    website: https://airtable.com
+    careers_url: https://airtable.com/careers
+    ats: greenhouse
+    token: airtable
+    origin: US
+
+  - name: Scale AI
+    website: https://scale.com
+    careers_url: https://scale.com/careers
+    ats: greenhouse
+    token: scaleai
+    origin: US
+
+  - name: Anduril
+    website: https://www.anduril.com
+    careers_url: https://www.anduril.com/careers
+    ats: greenhouse
+    token: andurilindustries
+    origin: US
+
+  - name: Miro
+    website: https://miro.com
+    careers_url: https://miro.com/careers/open-positions/
+    ats: other
+    token: miro
+    origin: Intl
+    note: No external ATS board found — listings appear to render natively on-domain; DOM fallback expected.
+
+  - name: Canva
+    website: https://www.canva.com
+    careers_url: https://www.lifeatcanva.com/en/jobs/
+    ats: other
+    token: canva
+    origin: Intl
+    note: Backed by SmartRecruiters, on Canva's own branded careers domain — DOM fallback expected.
+
+  - name: monday.com
+    website: https://monday.com
+    careers_url: https://monday.com/careers
+    ats: other
+    token: monday
+    origin: Intl
+    note: Appears to use a custom in-house system — DOM fallback expected.
+
+  - name: Intercom
+    website: https://www.intercom.com
+    careers_url: https://www.intercom.com/careers
+    ats: greenhouse
+    token: intercom
+    origin: Intl
+
+  - name: Gong
+    website: https://www.gong.io
+    careers_url: https://www.gong.io/careers
+    ats: greenhouse
+    token: gongio
+    origin: Intl
+
+  - name: Contentful
+    website: https://www.contentful.com
+    careers_url: https://www.contentful.com/careers/
+    ats: greenhouse
+    token: contentful
+    origin: Intl
+
+  - name: Algolia
+    website: https://www.algolia.com
+    careers_url: https://www.algolia.com/careers
+    ats: greenhouse
+    token: algolia
+    origin: Intl
+
+  - name: Vercel
+    website: https://vercel.com
+    careers_url: https://vercel.com/careers
+    ats: ashby
+    token: vercel
+    origin: US
+    note: Possibly migrated from Greenhouse to Ashby recently — worth reconfirming if this stops matching.
+
+  - name: Netlify
+    website: https://www.netlify.com
+    careers_url: https://www.netlify.com/careers/
+    ats: greenhouse
+    token: netlify
+    origin: US
+
+  - name: Supabase
+    website: https://supabase.com
+    careers_url: https://supabase.com/careers
+    ats: ashby
+    token: supabase
+    origin: Intl
+
+  - name: Temporal Technologies
+    website: https://temporal.io
+    careers_url: https://temporal.io/careers
+    ats: greenhouse
+    token: temporaltechnologies
+    origin: US
+
+  - name: LaunchDarkly
+    website: https://launchdarkly.com
+    careers_url: https://launchdarkly.com/careers/
+    ats: greenhouse
+    token: launchdarkly
+    origin: US
+
+  - name: PagerDuty
+    website: https://www.pagerduty.com
+    careers_url: https://careers.pagerduty.com/
+    ats: greenhouse
+    token: pagerduty
+    origin: US
+
+  - name: Sentry
+    website: https://sentry.io
+    careers_url: https://sentry.io/careers/
+    ats: ashby
+    token: sentry
+    origin: US
+
+  - name: Grafana Labs
+    website: https://grafana.com
+    careers_url: https://grafana.com/careers/
+    ats: greenhouse
+    token: grafanalabs
+    origin: Intl
+
+  - name: JFrog
+    website: https://jfrog.com
+    careers_url: https://join.jfrog.com/positions/
+    ats: greenhouse
+    token: jfrog
+    origin: Intl
+
+  - name: CircleCI
+    website: https://circleci.com
+    careers_url: https://circleci.com/careers/
+    ats: greenhouse
+    token: circleci
+    origin: US
+
+  - name: Harness
+    website: https://www.harness.io
+    careers_url: https://www.harness.io/company/careers
+    ats: greenhouse
+    token: harnessinc
+    origin: US
+
+  - name: Wiz
+    website: https://www.wiz.io
+    careers_url: https://www.wiz.io/careers
+    ats: greenhouse
+    token: wizprivate
+    origin: Intl
+
+  - name: SentinelOne
+    website: https://www.sentinelone.com
+    careers_url: https://www.sentinelone.com/careers/
+    ats: greenhouse
+    token: sentinellabs
+    origin: Intl
+
+  - name: 1Password
+    website: https://1password.com
+    careers_url: https://1password.com/careers
+    ats: ashby
+    token: 1password
+    origin: Intl
+
+  - name: Klaviyo
+    website: https://www.klaviyo.com
+    careers_url: https://www.klaviyo.com/careers
+    ats: greenhouse
+    token: klaviyo
+    origin: US
+
+  - name: Amplitude
+    website: https://amplitude.com
+    careers_url: https://amplitude.com/careers
+    ats: greenhouse
+    token: amplitude
+    origin: US
+
+  - name: Braze
+    website: https://www.braze.com
+    careers_url: https://www.braze.com/company/careers
+    ats: greenhouse
+    token: braze
+    origin: US
+
+  - name: Zapier
+    website: https://zapier.com
+    careers_url: https://zapier.com/jobs
+    ats: ashby
+    token: zapier
+    origin: US
+
+  - name: Pendo
+    website: https://www.pendo.io
+    careers_url: https://www.pendo.io/careers/
+    ats: greenhouse
+    token: pendo
+    origin: US
+
+  - name: Assembled
+    website: https://www.assembled.com
+    careers_url: https://www.assembled.com/careers-at-assembled
+    ats: ashby
+    token: assembledhq
+    origin: US
+
+  - name: Legora
+    website: https://legora.com
+    careers_url: https://legora.com/careers
+    ats: ashby
+    token: legora
+    origin: Intl
+
+  - name: Lovable
+    website: https://lovable.dev
+    careers_url: https://lovable.dev/careers
+    ats: ashby
+    token: lovable
+    origin: Intl
+
+  - name: Perplexity AI
+    website: https://www.perplexity.ai
+    careers_url: https://www.perplexity.ai/hub/careers
+    ats: ashby
+    token: perplexity
+    origin: US
+
+  - name: ElevenLabs
+    website: https://elevenlabs.io
+    careers_url: https://elevenlabs.io/careers
+    ats: ashby
+    token: elevenlabs
+    origin: Intl
+
+  - name: Harvey AI
+    website: https://www.harvey.ai
+    careers_url: https://www.harvey.ai/careers
+    ats: ashby
+    token: harvey
+    origin: US
+
+  - name: Sierra AI
+    website: https://sierra.ai
+    careers_url: https://sierra.ai/careers
+    ats: ashby
+    token: sierra
+    origin: US
+
+  - name: Writer (AI)
+    website: https://writer.com
+    careers_url: https://writer.com/company/careers/
+    ats: ashby
+    token: writer
+    origin: US
+
+  - name: Cohere
+    website: https://cohere.com
+    careers_url: https://cohere.com/careers
+    ats: ashby
+    token: cohere
+    origin: Intl
+
+  - name: Runway ML
+    website: https://runwayml.com
+    careers_url: https://runwayml.com/careers
+    ats: ashby
+    token: runway-ml
+    origin: US
+    note: Domain may have moved to runway.com (rebrand) — reconfirm if careers_url starts failing.
+
+  # --- Large, already-established organizations with a real London tech
+  #     presence (added 2026-07-17). Most of these run Workday, SmartRecruiters,
+  #     Avature, Eightfold, or a fully custom in-house ATS — none of which have
+  #     a parser here, so most of this section relies on DOM fallback
+  #     (unconfirmed jobs) rather than a confirmed posted-date. ---
+
+  - name: Google
+    website: https://www.google.com
+    careers_url: https://careers.google.com/locations/london/
+    ats: other
+    token: google
+    origin: US
+
+  - name: Meta
+    website: https://about.meta.com
+    careers_url: https://www.metacareers.com/locations/london
+    ats: other
+    token: meta
+    origin: US
+
+  - name: Amazon
+    website: https://www.amazon.com
+    careers_url: https://www.amazon.jobs/en/location/london
+    ats: other
+    token: amazon
+    origin: US
+
+  - name: Microsoft
+    website: https://www.microsoft.com
+    careers_url: https://jobs.careers.microsoft.com/global/en/search?lc=United+Kingdom
+    ats: other
+    token: microsoft
+    origin: US
+
+  - name: Apple
+    website: https://www.apple.com
+    careers_url: https://jobs.apple.com/en-gb/search?location=london-LND
+    ats: other
+    token: apple
+    origin: US
+
+  - name: Netflix
+    website: https://www.netflix.com
+    careers_url: https://explore.jobs.netflix.net/careers?location=London%2C+England%2C+United+Kingdom
+    ats: other
+    token: netflix
+    origin: US
+    note: Backend is Eightfold AI — DOM fallback expected.
+
+  - name: Salesforce
+    website: https://www.salesforce.com
+    careers_url: https://careers.salesforce.com/en/jobs/
+    ats: other
+    token: salesforce
+    origin: US
+
+  - name: Uber
+    website: https://www.uber.com
+    careers_url: https://jobs.uber.com/en/locations/london/
+    ats: greenhouse
+    token: uber
+    origin: US
+
+  - name: Spotify
+    website: https://www.spotify.com
+    careers_url: https://www.lifeatspotify.com/jobs?l=london
+    ats: lever
+    token: spotify
+    origin: Intl
+
+  - name: Bloomberg
+    website: https://www.bloomberg.com
+    careers_url: https://www.bloomberg.com/company/careers/global-roles/working-at-bloomberg-in-london/
+    ats: other
+    token: bloomberg
+    origin: US
+    note: Backend is Avature — DOM fallback expected.
+
+  - name: IBM
+    website: https://www.ibm.com
+    careers_url: https://www.ibm.com/uk-en/careers/search
+    ats: other
+    token: ibm
+    origin: US
+
+  - name: Oracle
+    website: https://www.oracle.com
+    careers_url: https://careers.oracle.com/en/sites/jobsearch/jobs
+    ats: other
+    token: oracle
+    origin: US
+
+  - name: SAP
+    website: https://www.sap.com
+    careers_url: https://jobs.sap.com/go/SAP-Jobs-in-London/913501/
+    ats: other
+    token: sap
+    origin: Intl
+    note: Backend is likely SAP SuccessFactors — DOM fallback expected.
+
+  - name: TikTok / ByteDance
+    website: https://www.tiktok.com
+    careers_url: https://lifeattiktok.com/search
+    ats: other
+    token: tiktok
+    origin: Intl
+
+  - name: Snap Inc.
+    website: https://www.snap.com
+    careers_url: https://careers.snap.com/jobs
+    ats: greenhouse
+    token: snap
+    origin: US
+
+  - name: Atlassian
+    website: https://www.atlassian.com
+    careers_url: https://www.atlassian.com/company/careers/all-jobs
+    ats: other
+    token: atlassian
+    origin: Intl
+
+  - name: Twilio
+    website: https://www.twilio.com
+    careers_url: https://www.twilio.com/en-us/company/jobs
+    ats: other
+    token: twilio
+    origin: US
+
+  - name: Datadog
+    website: https://www.datadoghq.com
+    careers_url: https://careers.datadoghq.com/emea/
+    ats: greenhouse
+    token: datadog
+    origin: US
+
+  - name: MongoDB
+    website: https://www.mongodb.com
+    careers_url: https://www.mongodb.com/company/careers/locations/london
+    ats: greenhouse
+    token: mongodb
+    origin: US
+
+  - name: Cloudflare
+    website: https://www.cloudflare.com
+    careers_url: https://www.cloudflare.com/careers/locations/london/
+    ats: greenhouse
+    token: cloudflare
+    origin: US
+
+  - name: GitHub
+    website: https://github.com
+    careers_url: https://www.github.careers/careers-home/jobs
+    ats: other
+    token: github
+    origin: US
+
+  - name: Snowflake
+    website: https://www.snowflake.com
+    careers_url: https://careers.snowflake.com/us/en/search-results
+    ats: other
+    token: snowflake
+    origin: US
+
+  - name: Databricks
+    website: https://www.databricks.com
+    careers_url: https://www.databricks.com/company/careers/open-positions
+    ats: greenhouse
+    token: databricks
+    origin: US
+
+  - name: ServiceNow
+    website: https://www.servicenow.com
+    careers_url: https://careers.servicenow.com/locations/emea/united-kingdom/
+    ats: other
+    token: servicenow
+    origin: US
+
+  - name: Workday
+    website: https://www.workday.com
+    careers_url: https://workday.wd5.myworkdayjobs.com/Workday
+    ats: other
+    token: workday
+    origin: US
+    note: Workday runs its own hiring on its own product (Workday) — DOM fallback expected.
+
+  - name: Palo Alto Networks
+    website: https://www.paloaltonetworks.com
+    careers_url: https://jobs.paloaltonetworks.com/en/location/london-jobs/47263/2635167-6269131-2643743/4
+    ats: other
+    token: paloaltonetworks
+    origin: US
+    note: Backend is SmartRecruiters — DOM fallback expected.
+
+  - name: CrowdStrike
+    website: https://www.crowdstrike.com
+    careers_url: https://crowdstrike.wd5.myworkdayjobs.com/crowdstrikecareers
+    ats: other
+    token: crowdstrike
+    origin: US
+
+  - name: Autodesk
+    website: https://www.autodesk.com
+    careers_url: https://autodesk.wd1.myworkdayjobs.com/Ext
+    ats: other
+    token: autodesk
+    origin: US
+
+  - name: Dropbox
+    website: https://www.dropbox.com
+    careers_url: https://www.dropbox.jobs/en/jobs/
+    ats: greenhouse
+    token: dropbox
+    origin: US
+
+  - name: Pinterest
+    website: https://www.pinterest.com
+    careers_url: https://www.pinterestcareers.com/jobs/
+    ats: greenhouse
+    token: pinterestjobadvertisements
+    origin: US
+
+  - name: eBay
+    website: https://www.ebay.com
+    careers_url: https://jobs.ebayinc.com/us/en/jobs-in-united-kingdom
+    ats: other
+    token: ebay
+    origin: US
+    note: Backend is SmartRecruiters — DOM fallback expected.
+
+  - name: PayPal
+    website: https://www.paypal.com
+    careers_url: https://careers.pypl.com/search-results/
+    ats: other
+    token: paypal
+    origin: US
+
+  - name: Booking.com
+    website: https://www.booking.com
+    careers_url: https://careers.booking.com/
+    ats: other
+    token: booking
+    origin: Intl
+
+  - name: Expedia Group
+    website: https://www.expediagroup.com
+    careers_url: https://careers.expediagroup.com/locations/london-england/
+    ats: other
+    token: expedia
+    origin: US
+
+  - name: Adobe
+    website: https://www.adobe.com
+    careers_url: https://careers.adobe.com/us/en
+    ats: other
+    token: adobe
+    origin: US
+
+  - name: LinkedIn
+    website: https://www.linkedin.com
+    careers_url: https://careers.linkedin.com/Locations/London
+    ats: other
+    token: linkedin
+    origin: US
+    note: Owned by Microsoft; runs its own careers.linkedin.com platform.

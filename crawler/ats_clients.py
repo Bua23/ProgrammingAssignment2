@@ -41,10 +41,24 @@ REQUEST_TIMEOUT = 20
 # URL patterns used by browser_crawl.py to recognize a captured network
 # response as belonging to a given ATS.
 API_URL_PATTERNS: dict[str, re.Pattern] = {
-    "greenhouse": re.compile(r"boards-api\.greenhouse\.io/v1/boards/[^/]+/jobs"),
+    "greenhouse": re.compile(r"boards-api(\.eu)?\.greenhouse\.io/v1/boards/[^/]+/jobs"),
     "lever": re.compile(r"api\.lever\.co/v0/postings/"),
     "ashby": re.compile(r"api\.ashbyhq\.com/posting-api/job-board/"),
     "workable": re.compile(r"apply\.workable\.com/api/v1/widget/accounts/"),
+}
+
+# Human-facing ATS board URL patterns. Many companies' own careers page is a
+# marketing page with a "View open roles" button that links out to one of
+# these rather than embedding the listing directly. When no API call is
+# captured on the initial page, browser_crawl.py looks for a link matching
+# the company's configured ATS here and follows it — one click-through, same
+# as a real visitor clicking "View open roles" — before falling back to DOM
+# scraping.
+BOARD_URL_PATTERNS: dict[str, re.Pattern] = {
+    "greenhouse": re.compile(r"(boards|job-boards)(\.eu)?\.greenhouse\.io/[^/\s\"']+", re.IGNORECASE),
+    "lever": re.compile(r"jobs\.lever\.co/[^/\s\"']+", re.IGNORECASE),
+    "ashby": re.compile(r"jobs\.ashbyhq\.com/[^/\s\"']+", re.IGNORECASE),
+    "workable": re.compile(r"apply\.workable\.com/[^/\s\"']+", re.IGNORECASE),
 }
 
 

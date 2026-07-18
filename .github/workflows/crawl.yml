@@ -18,6 +18,10 @@ concurrency:
 jobs:
   crawl:
     runs-on: ubuntu-latest
+    # ~144 companies crawled sequentially in a headless browser; generous
+    # but bounded so a systemic failure (e.g. every page timing out) doesn't
+    # silently burn hours of Actions minutes.
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
