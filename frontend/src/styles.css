@@ -171,6 +171,12 @@ header.hero p {
   font-variant-numeric: tabular-nums;
 }
 
+.bar-more-note {
+  margin: 10px 0 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
 .filters {
   display: flex;
   gap: 10px;

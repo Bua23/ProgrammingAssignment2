@@ -1,8 +1,11 @@
 # London Software Jobs Dashboard
 
 A dashboard that surfaces software-engineering roles based in **London, UK**
-that were posted in the **last 24 hours**, at a curated set of UK software
-product companies (plus smaller US companies with a real London presence).
+that were posted in the **last 24 hours**, at a curated list of ~144
+companies: large employers already established in the UK (Google, Meta,
+Amazon, ...), UK-native scaleups and unicorns (Monzo, Revolut, Darktrace,
+...), and smaller US/international companies actively expanding into
+London (Cresta, Ramp, Harvey AI, ...) — consultancies excluded throughout.
 Crawls run automatically **twice on every weekday**.
 
 > This repository started life as a Coursera R programming assignment. That
@@ -25,6 +28,10 @@ crawler/browser_crawl.py  renders careers_url in a headless browser (Playwright)
         │                     listing — exactly as it would for a human visitor —
         │                     we capture that response. We never call the ATS
         │                     ourselves.
+        │                   • if not, but the page links out to an ATS-hosted
+        │                     board (a "View open roles" button), we follow
+        │                     that one link — same as a real visitor clicking
+        │                     it — and check again.
         │                   • otherwise, best-effort DOM scraping of the
         │                     rendered page (no reliable posted-date this way)
         ▼
@@ -96,7 +103,8 @@ crawler/
                            responses, plus direct-fetch helpers used only for
                            local testing (the scheduled crawl never calls these)
   browser_crawl.py        renders each company's careers_url, captures the ATS
-                           response if the page makes one, else DOM fallback
+                           response if the page makes one (or one click-through
+                           away), else DOM fallback
   crawl.py                 orchestrates crawl → filter → write JSON
   requirements.txt
 frontend/
@@ -149,12 +157,30 @@ path filter).
   access, so the scheduled/manual crawl is where this actually runs for
   real — check `meta.json` after a run for `companies_failed` and
   `companies_dom_fallback` to see how each company actually behaved.
-- **Company list is a curated seed**, verified via web search on 2026-07-17
-  against each company's real public careers-page URL — including catching
-  a couple of wrong assumptions (e.g. `edra.com` is an unrelated furniture
-  company; the real one is `edra.ai`). Sites redesign and migrate ATS
-  providers over time; re-verify periodically and prune/extend
+- **Company list is a curated, researched snapshot (~144 companies)**, not a
+  live search — verified via web research on 2026-07-17 across three
+  categories: large employers already established in the UK, UK-native
+  scaleups/unicorns, and smaller US/international companies expanding into
+  London, with consultancies explicitly excluded throughout. This caught a
+  couple of wrong assumptions along the way (e.g. `edra.com` is an unrelated
+  furniture company; the real one is `edra.ai`). Sites redesign and migrate
+  ATS providers over time; re-verify periodically and prune/extend
   `companies.yaml` as needed.
+- **`ats: other` means no confirmed-timestamp parser exists yet** for that
+  company's real backend (Workday, SmartRecruiters, Avature, Eightfold, or a
+  fully custom system are all common among the larger companies) — those
+  always land in the unconfirmed bucket rather than the confirmed last-24h
+  list. The `note` field on each entry says what the real backend actually
+  is, for whoever adds a parser for it later.
+- **Making company discovery itself run automatically before every crawl is
+  not yet implemented.** This list was researched manually (via web search)
+  rather than by a script the scheduled workflow can invoke — GitHub Actions
+  has no built-in web-search capability. Doing that for real needs either a
+  jobs-aggregator API (e.g. Adzuna/Reed, free tier, used only to discover
+  *which companies* are currently hiring, never as the job-data source
+  itself) or an LLM API call with web search (recurring cost). Neither is
+  wired up yet; this file is a snapshot to be refreshed periodically until
+  that's built.
 - **Attribution**: the dashboard only stores title/location/description/link
   for roles found via each company's own public page, and links back to the
   original posting for the actual application. It does not scrape or mirror

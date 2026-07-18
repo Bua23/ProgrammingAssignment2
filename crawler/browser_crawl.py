@@ -9,11 +9,14 @@ own domain and watch what the page itself does while it loads.
   embedded "careers" widgets normally do — we capture that response (the
   same request a human visitor's browser would make) and parse it with the
   shared normalizers in ats_clients.py. We never call the ATS ourselves.
-- If no such call is observed (fully custom page, or one that renders
-  everything server-side with no client-side API call to intercept), we
-  fall back to best-effort scraping of the rendered DOM. That fallback has
-  no reliable "posted date" field, so callers should treat those results as
-  unconfirmed / lower-confidence.
+- If no such call is observed on the initial page — common for companies
+  whose own careers page is a marketing page with a "View open roles"
+  button that links out to the ATS-hosted board rather than embedding it —
+  we look for a link matching the company's configured ATS and follow it
+  once (the same click a real visitor would make), then check again.
+- If still nothing, we fall back to best-effort scraping of the rendered
+  DOM. That fallback has no reliable "posted date" field, so callers should
+  treat those results as unconfirmed / lower-confidence.
 """
 from __future__ import annotations
 
@@ -22,7 +25,7 @@ import logging
 from playwright.sync_api import Browser, Response
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 
-from ats_clients import API_URL_PATTERNS, parse_captured_response
+from ats_clients import API_URL_PATTERNS, BOARD_URL_PATTERNS, parse_captured_response
 
 logger = logging.getLogger(__name__)
 
@@ -79,6 +82,18 @@ def crawl_company(browser: Browser, company: dict) -> tuple[list[dict], str]:
         page.close()
         return [], "failed"
 
+    if "body" not in captured:
+        board_url = _find_board_link(page, ats)
+        if board_url:
+            try:
+                page.goto(board_url, timeout=PAGE_TIMEOUT_MS, wait_until="load")
+                page.wait_for_timeout(POST_LOAD_WAIT_MS)
+            except Exception as exc:  # noqa: BLE001
+                logger.info(
+                    "Click-through to %s ATS board failed for %s (%s): %s",
+                    ats, company["name"], board_url, exc,
+                )
+
     if "body" in captured:
         try:
             jobs = parse_captured_response(ats, captured["body"])
@@ -93,6 +108,22 @@ def crawl_company(browser: Browser, company: dict) -> tuple[list[dict], str]:
     jobs = _dom_fallback(page, company)
     page.close()
     return jobs, "dom_fallback"
+
+
+def _find_board_link(page, ats: str) -> str | None:
+    """Look for an on-page link pointing at the company's configured ATS
+    board (e.g. a "View open roles" button) and return its href, if any."""
+    pattern = BOARD_URL_PATTERNS.get(ats)
+    if not pattern:
+        return None
+    try:
+        hrefs = page.eval_on_selector_all("a", "els => els.map(e => e.href)")
+    except Exception:  # noqa: BLE001
+        return None
+    for href in hrefs:
+        if pattern.search(href):
+            return href
+    return None
 
 
 def _dom_fallback(page, company: dict, max_results: int = 20) -> list[dict]:
