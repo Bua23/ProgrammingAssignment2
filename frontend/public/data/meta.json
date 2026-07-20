@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-18T11:54:34.914032+00:00",
+  "generated_at": "2026-07-20T10:30:36.727347+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Figma",
-    "Multiverse"
+    "Legora"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
     "Apple",
+    "Atlassian",
     "Cohere",
     "CreativeX",
     "Databricks",
@@ -30,6 +30,7 @@
     "Lendable",
     "Lovable",
     "Marshmallow",
+    "Meta",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -74,7 +75,6 @@
     "CircleCI",
     "ClearScore",
     "Cleo AI",
-    "Cloudflare",
     "Cohere",
     "Contentful",
     "CreativeX",
@@ -188,6 +188,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 16,
-  "total_unconfirmed_found": 345
+  "total_jobs_found": 2,
+  "total_unconfirmed_found": 359
 }
