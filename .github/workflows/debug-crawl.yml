@@ -1,0 +1,40 @@
+name: Debug crawl (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      companies:
+        description: Comma-separated company names to probe (must match companies.yaml exactly)
+        required: false
+        default: "DeepMind,GoodNotes,Palantir Technologies,Zopa,Docker,Starling Bank,Multiverse"
+
+permissions:
+  contents: read
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install crawler dependencies
+        run: pip install -r crawler/requirements.txt
+
+      - name: Install Playwright browser
+        run: playwright install --with-deps chromium
+
+      - name: Run diagnostic probe
+        run: python crawler/debug_probe.py --companies "${{ github.event.inputs.companies }}"
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-screenshots
+          path: debug-screenshots/
+          retention-days: 7
