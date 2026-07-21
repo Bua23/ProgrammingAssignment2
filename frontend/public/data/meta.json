@@ -1,18 +1,19 @@
 {
-  "generated_at": "2026-07-21T09:45:25.982469+00:00",
+  "generated_at": "2026-07-21T15:26:55.589778+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Legora",
     "Multiverse"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
     "Apple",
+    "Atlassian",
     "Canva",
     "Cohere",
     "CreativeX",
+    "CrowdStrike",
     "Databricks",
     "Edra",
     "ElevenLabs",
@@ -23,9 +24,11 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
+    "Harvey AI",
     "Heron Data",
     "IBM",
     "Intercom",
+    "Junior AI",
     "Klaviyo",
     "Lendable",
     "Lovable",
@@ -189,5 +192,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 2,
-  "total_unconfirmed_found": 340
+  "total_unconfirmed_found": 378
 }
