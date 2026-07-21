@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-07-20T15:35:27.481823+00:00",
+  "generated_at": "2026-07-21T09:45:25.982469+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Legora"
+    "Legora",
+    "Multiverse"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
     "Apple",
-    "Atlassian",
+    "Canva",
     "Cohere",
     "CreativeX",
     "Databricks",
-    "Datadog",
     "Edra",
     "ElevenLabs",
     "Expedia Group",
@@ -188,6 +188,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 1,
-  "total_unconfirmed_found": 356
+  "total_jobs_found": 2,
+  "total_unconfirmed_found": 340
 }
