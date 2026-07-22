@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-21T15:26:55.589778+00:00",
+  "generated_at": "2026-07-22T09:44:37.070988+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -13,7 +13,6 @@
     "Canva",
     "Cohere",
     "CreativeX",
-    "CrowdStrike",
     "Databricks",
     "Edra",
     "ElevenLabs",
@@ -39,11 +38,11 @@
     "Palo Alto Networks",
     "Pendo",
     "PhysicsX",
-    "Pinterest",
     "Profound",
     "Quantexa",
     "Ravelin",
     "Retool",
+    "SAP",
     "Scale AI",
     "ServiceNow",
     "Sierra AI",
@@ -191,6 +190,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 2,
-  "total_unconfirmed_found": 378
+  "total_jobs_found": 3,
+  "total_unconfirmed_found": 375
 }
