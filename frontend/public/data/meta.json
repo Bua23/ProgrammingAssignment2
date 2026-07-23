@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-23T09:42:16.638424+00:00",
+  "generated_at": "2026-07-23T15:37:14.723898+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Figma",
-    "Legora"
+    "Figma"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
     "Apple",
+    "Atlassian",
     "Canva",
     "Cohere",
     "CreativeX",
@@ -33,7 +33,6 @@
     "Lovable",
     "Marshmallow",
     "Meta",
-    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -53,6 +52,7 @@
     "Synthesia",
     "Uber",
     "Vercel",
+    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -190,6 +190,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 15,
-  "total_unconfirmed_found": 343
+  "total_jobs_found": 2,
+  "total_unconfirmed_found": 372
 }
