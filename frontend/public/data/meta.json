@@ -1,16 +1,20 @@
 {
-  "generated_at": "2026-07-24T09:39:37.097747+00:00",
+  "generated_at": "2026-07-24T15:18:16.327554+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Figma"
+    "Figma",
+    "Legora",
+    "Multiverse"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
     "Apple",
+    "Atlassian",
     "Cohere",
     "CreativeX",
+    "CrowdStrike",
     "Databricks",
     "Edra",
     "ElevenLabs",
@@ -49,7 +53,6 @@
     "Synthesia",
     "Uber",
     "Vercel",
-    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -187,6 +190,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 1,
-  "total_unconfirmed_found": 338
+  "total_jobs_found": 4,
+  "total_unconfirmed_found": 350
 }
