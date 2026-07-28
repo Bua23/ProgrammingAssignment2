@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T16:06:05.232302+00:00",
+  "generated_at": "2026-07-28T09:54:24.370560+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -24,7 +24,6 @@
     "Graphcore",
     "H Company",
     "Heron Data",
-    "IBM",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -37,13 +36,13 @@
     "Monzo",
     "Palo Alto Networks",
     "Pendo",
-    "Perplexity AI",
     "PhysicsX",
     "Profound",
     "Quantexa",
     "Ravelin",
     "Retool",
     "SAP",
+    "Scale AI",
     "ServiceNow",
     "Sierra AI",
     "Snap Inc.",
@@ -191,5 +190,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 3,
-  "total_unconfirmed_found": 350
+  "total_unconfirmed_found": 357
 }
