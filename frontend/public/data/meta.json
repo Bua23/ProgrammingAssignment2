@@ -1,18 +1,19 @@
 {
-  "generated_at": "2026-07-28T15:45:55.911745+00:00",
+  "generated_at": "2026-07-29T09:55:53.707591+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Figma"
+    "Figma",
+    "Griffin"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
-    "Atlassian",
+    "Apple",
     "Cohere",
     "CreativeX",
-    "CrowdStrike",
     "Databricks",
+    "Datadog",
     "Edra",
     "ElevenLabs",
     "Expedia Group",
@@ -31,7 +32,6 @@
     "Marshmallow",
     "Meta",
     "Meticulous",
-    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -190,5 +190,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 2,
-  "total_unconfirmed_found": 356
+  "total_unconfirmed_found": 333
 }
