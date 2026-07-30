@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-07-29T15:30:45.645484+00:00",
+  "generated_at": "2026-07-30T09:48:24.113987+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Figma",
-    "Griffin",
     "Multiverse"
   ],
   "companies_with_unconfirmed": [
@@ -25,7 +24,9 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
+    "Harvey AI",
     "Heron Data",
+    "IBM",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -34,7 +35,6 @@
     "Marshmallow",
     "Meta",
     "Meticulous",
-    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -193,5 +193,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 3,
-  "total_unconfirmed_found": 357
+  "total_unconfirmed_found": 373
 }
