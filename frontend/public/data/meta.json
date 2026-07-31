@@ -1,11 +1,10 @@
 {
-  "generated_at": "2026-07-30T15:34:46.944120+00:00",
+  "generated_at": "2026-07-31T10:02:41.842482+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Figma",
     "Legora",
-    "Multiverse",
     "hyperexponential"
   ],
   "companies_with_unconfirmed": [
@@ -58,7 +57,8 @@
     "Wise",
     "Wiz",
     "Writer (AI)",
-    "eBay"
+    "eBay",
+    "monday.com"
   ],
   "companies_dom_fallback": [
     "1Password",
@@ -193,5 +193,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 8,
-  "total_unconfirmed_found": 373
+  "total_unconfirmed_found": 372
 }
