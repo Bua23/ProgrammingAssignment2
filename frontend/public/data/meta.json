@@ -1,11 +1,9 @@
 {
-  "generated_at": "2026-07-31T10:02:41.842482+00:00",
+  "generated_at": "2026-07-31T15:42:10.695824+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Figma",
-    "Legora",
-    "hyperexponential"
+    "Figma"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
@@ -192,6 +190,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 8,
-  "total_unconfirmed_found": 372
+  "total_jobs_found": 2,
+  "total_unconfirmed_found": 370
 }
