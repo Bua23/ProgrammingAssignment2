@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-08-04T09:55:55.616078+00:00",
+  "generated_at": "2026-08-04T15:47:11.103005+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Legora",
-    "Talos"
+    "Talos",
+    "Vanta"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
@@ -34,7 +35,6 @@
     "Marshmallow",
     "Meta",
     "Meticulous",
-    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -45,7 +45,6 @@
     "Quantexa",
     "Ravelin",
     "Retool",
-    "Revolut",
     "Scale AI",
     "ServiceNow",
     "Sierra AI",
@@ -55,7 +54,6 @@
     "Synthesia",
     "Uber",
     "Vercel",
-    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -193,6 +191,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 5,
-  "total_unconfirmed_found": 386
+  "total_jobs_found": 6,
+  "total_unconfirmed_found": 377
 }
