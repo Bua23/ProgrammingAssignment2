@@ -1,12 +1,16 @@
 {
-  "generated_at": "2026-08-03T16:06:47.060180+00:00",
+  "generated_at": "2026-08-04T09:55:55.616078+00:00",
   "window_hours": 24,
   "companies_checked": 144,
-  "companies_with_matches": [],
+  "companies_with_matches": [
+    "Legora",
+    "Talos"
+  ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
     "Apple",
+    "Atlassian",
     "Cohere",
     "CreativeX",
     "Databricks",
@@ -22,7 +26,6 @@
     "H Company",
     "Harvey AI",
     "Heron Data",
-    "IBM",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -31,6 +34,7 @@
     "Marshmallow",
     "Meta",
     "Meticulous",
+    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -41,6 +45,7 @@
     "Quantexa",
     "Ravelin",
     "Retool",
+    "Revolut",
     "Scale AI",
     "ServiceNow",
     "Sierra AI",
@@ -188,6 +193,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 0,
-  "total_unconfirmed_found": 364
+  "total_jobs_found": 5,
+  "total_unconfirmed_found": 386
 }
