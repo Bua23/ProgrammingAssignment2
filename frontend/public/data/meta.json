@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-08-05T09:55:48.340238+00:00",
+  "generated_at": "2026-08-05T15:39:10.770677+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Figma",
-    "Legora",
-    "Vanta"
+    "Legora"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
     "Apple",
+    "Atlassian",
     "Cohere",
     "CreativeX",
     "Databricks",
@@ -33,7 +33,6 @@
     "Marshmallow",
     "Meta",
     "Meticulous",
-    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -44,6 +43,7 @@
     "Quantexa",
     "Ravelin",
     "Retool",
+    "Revolut",
     "Scale AI",
     "ServiceNow",
     "Sierra AI",
@@ -193,6 +193,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 3,
-  "total_unconfirmed_found": 374
+  "total_jobs_found": 2,
+  "total_unconfirmed_found": 390
 }
