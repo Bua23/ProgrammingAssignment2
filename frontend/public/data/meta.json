@@ -1,16 +1,15 @@
 {
-  "generated_at": "2026-08-05T15:39:10.770677+00:00",
+  "generated_at": "2026-08-06T09:58:59.630911+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Figma",
-    "Legora"
+    "Legora",
+    "Multiverse"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
     "Apple",
-    "Atlassian",
     "Cohere",
     "CreativeX",
     "Databricks",
@@ -33,17 +32,18 @@
     "Marshmallow",
     "Meta",
     "Meticulous",
+    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
     "Pendo",
     "Perplexity AI",
     "PhysicsX",
+    "Pinterest",
     "Profound",
     "Quantexa",
     "Ravelin",
     "Retool",
-    "Revolut",
     "Scale AI",
     "ServiceNow",
     "Sierra AI",
@@ -51,15 +51,13 @@
     "Snowflake",
     "Speechmatics",
     "Synthesia",
-    "TikTok / ByteDance",
     "Uber",
     "Vercel",
     "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
-    "eBay",
-    "monday.com"
+    "eBay"
   ],
   "companies_dom_fallback": [
     "1Password",
@@ -193,6 +191,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 2,
-  "total_unconfirmed_found": 390
+  "total_jobs_found": 3,
+  "total_unconfirmed_found": 371
 }
