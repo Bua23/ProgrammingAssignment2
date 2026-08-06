@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T09:58:59.630911+00:00",
+  "generated_at": "2026-08-06T15:39:56.681894+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -12,8 +12,8 @@
     "Apple",
     "Cohere",
     "CreativeX",
+    "CrowdStrike",
     "Databricks",
-    "Datadog",
     "Edra",
     "ElevenLabs",
     "Expedia Group",
@@ -32,7 +32,6 @@
     "Marshmallow",
     "Meta",
     "Meticulous",
-    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -191,6 +190,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 3,
-  "total_unconfirmed_found": 371
+  "total_jobs_found": 4,
+  "total_unconfirmed_found": 375
 }
