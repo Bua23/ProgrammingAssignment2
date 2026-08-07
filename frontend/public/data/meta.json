@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-08-07T08:32:11.313071+00:00",
+  "generated_at": "2026-08-07T14:33:51.537735+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Figma",
-    "Multiverse"
+    "Figma"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
@@ -34,6 +33,7 @@
     "Marshmallow",
     "Meta",
     "Meticulous",
+    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -45,7 +45,7 @@
     "Quantexa",
     "Ravelin",
     "Retool",
-    "Scale AI",
+    "Revolut",
     "ServiceNow",
     "Sierra AI",
     "Snap Inc.",
@@ -192,6 +192,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 2,
-  "total_unconfirmed_found": 412
+  "total_jobs_found": 1,
+  "total_unconfirmed_found": 395
 }
