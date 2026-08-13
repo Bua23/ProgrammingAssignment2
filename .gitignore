@@ -11,3 +11,7 @@ venv/
 
 # Editors / OS
 .DS_Store
+
+# Energy tracker: secrets and personal consumption data
+energy-tracker/.env
+energy-tracker/data/*.json

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Home Energy Tracker</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="page">
+  <header class="page-header">
+    <div>
+      <h1>Home energy tracker</h1>
+      <p class="subtitle" id="data-range-note">Loading data…</p>
+    </div>
+    <div class="header-actions">
+      <button id="theme-toggle" class="ghost-btn" type="button" aria-label="Toggle dark mode">🌓</button>
+      <button id="table-toggle" class="ghost-btn" type="button" aria-pressed="false">Table view</button>
+    </div>
+  </header>
+
+  <div class="filter-row" role="group" aria-label="Date range">
+    <button class="filter-btn" data-days="7">Last 7 days</button>
+    <button class="filter-btn" data-days="30">Last 30 days</button>
+    <button class="filter-btn" data-days="90">Last 90 days</button>
+    <button class="filter-btn" data-days="all">All time</button>
+  </div>
+
+  <section class="stat-row" id="stat-row" aria-label="Summary"></section>
+
+  <section class="chart-card">
+    <div class="chart-card-header">
+      <h2>Electricity <span class="unit-badge series-1">kWh / day</span></h2>
+    </div>
+    <div class="chart-wrap" id="electricity-chart"></div>
+    <div class="chart-table" id="electricity-table" hidden></div>
+  </section>
+
+  <section class="chart-card">
+    <div class="chart-card-header">
+      <h2>Gas <span class="unit-badge series-2">kWh / day</span></h2>
+    </div>
+    <p class="note">Converted from m³ using the standard SMETS2 formula (volume correction × calorific value ÷ 3.6). Set <code>GAS_UNITS=kwh</code> in <code>.env</code> if your meter already reports kWh.</p>
+    <div class="chart-wrap" id="gas-chart"></div>
+    <div class="chart-table" id="gas-table" hidden></div>
+  </section>
+
+  <footer class="page-footer">
+    <p>Data fetched from the Octopus Energy API via <code>fetch_consumption.py</code>. Run it again to refresh, then reload this page.</p>
+  </footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
