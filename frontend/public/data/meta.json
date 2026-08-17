@@ -1,15 +1,13 @@
 {
-  "generated_at": "2026-08-14T14:36:08.391118+00:00",
+  "generated_at": "2026-08-17T08:10:36.985262+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Legora",
-    "Vanta"
+    "Griffin"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
-    "Atlassian",
     "Cohere",
     "CreativeX",
     "Databricks",
@@ -42,16 +40,15 @@
     "Quantexa",
     "Ravelin",
     "Retool",
-    "SAP",
     "Scale AI",
     "ServiceNow",
     "Sierra AI",
     "Snap Inc.",
+    "Snowflake",
     "Speechmatics",
     "Synthesia",
     "Uber",
     "Vercel",
-    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -189,6 +186,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 2,
-  "total_unconfirmed_found": 360
+  "total_jobs_found": 1,
+  "total_unconfirmed_found": 332
 }
