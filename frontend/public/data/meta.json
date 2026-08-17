@@ -1,13 +1,15 @@
 {
-  "generated_at": "2026-08-17T08:10:36.985262+00:00",
+  "generated_at": "2026-08-17T14:04:07.112438+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Griffin"
+    "Griffin",
+    "Legora"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
+    "Canva",
     "Cohere",
     "CreativeX",
     "Databricks",
@@ -20,7 +22,9 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
+    "Harvey AI",
     "Heron Data",
+    "IBM",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -33,7 +37,6 @@
     "Monzo",
     "Palo Alto Networks",
     "Pendo",
-    "Perplexity AI",
     "PhysicsX",
     "Pinterest",
     "Profound",
@@ -49,6 +52,7 @@
     "Synthesia",
     "Uber",
     "Vercel",
+    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -73,6 +77,7 @@
     "CircleCI",
     "ClearScore",
     "Cleo AI",
+    "Cloudflare",
     "Cohere",
     "Contentful",
     "CreativeX",
@@ -186,6 +191,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 1,
-  "total_unconfirmed_found": 332
+  "total_jobs_found": 2,
+  "total_unconfirmed_found": 340
 }
