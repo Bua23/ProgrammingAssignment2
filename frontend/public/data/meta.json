@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-08-20T07:58:03.571952+00:00",
+  "generated_at": "2026-08-20T14:09:45.872704+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
+    "Figma",
     "LaunchDarkly",
     "Legora",
     "hyperexponential"
@@ -31,17 +32,18 @@
     "Marshmallow",
     "Meta",
     "Meticulous",
-    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
     "Pendo",
     "Perplexity AI",
     "PhysicsX",
+    "Pinterest",
     "Profound",
     "Quantexa",
     "Ravelin",
     "Retool",
+    "SAP",
     "Scale AI",
     "ServiceNow",
     "Snap Inc.",
@@ -54,7 +56,8 @@
     "Wise",
     "Wiz",
     "Writer (AI)",
-    "eBay"
+    "eBay",
+    "monday.com"
   ],
   "companies_dom_fallback": [
     "1Password",
@@ -188,6 +191,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 5,
-  "total_unconfirmed_found": 344
+  "total_jobs_found": 7,
+  "total_unconfirmed_found": 339
 }
