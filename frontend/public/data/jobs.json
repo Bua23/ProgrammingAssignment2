@@ -1,6 +1,19 @@
 {
   "jobs": [
     {
+      "id": "ashby-hyperexponential-decb04ff-754c-40b3-ab8c-d5dfbf605b2d",
+      "company": "hyperexponential",
+      "company_website": "https://www.hyperexponential.com",
+      "origin": "UK",
+      "title": "People & Talent Product Engineer",
+      "location": "London (hybrid)",
+      "description_text": "People & Talent Product Engineer\nHi \ud83d\udc4b I'm Ash Rama, VP People at hyperexponential.\nI lead the team responsible for how hx makes decisions about its people: comp, performance, org design, and increasingly, the systems and tools that power all of it. We don't buy software off the shelf when it doesn't fit how we actually want to work, we want to build it ourselves, bespoke to hx. This means shipping everything from simple internal letter-writing tools to a full multi-level compensation platform used by every employee and manager here.\nI'm hiring a product engineer to join the People & Talent team, within Central Functions and become the builder behind these tools: someone who can take a prototype, decide how it should actually work and feel for the person using it, then build it out to the highest of hx standards, end to end, back end, data, infrastructure, and ship something that holds up under real use.\nThis isn't a typical engineering role. You'll sit close to People & Talent day to day, but work alongside our IT and Security teams to make sure everything we build is secure and compliant by design, not bolted on after the fact. I think this is the future of how People functions will operate in the AI era: technical, product-minded, building rather than configuring. If that excites you more than a conventional engineering role would, I'd love to hear from you.\nAbout Central Functions\nCentral Functions is the core of hx, laying the road for the business to execute on. We bring together Finance, Legal, People, Talent, and Business Operations, the connective tissue that lets every other part of hx move fast with confidence. You'll sit inside this function, working closely with People & Talent day to day, and partnering with IT and Security to make sure everything you build is secure and compliant from the ground up.\nReporting line and engineering partnership\nThis role reports into our VP People. You'll also work in close partnership with a senior or staff-level engineer from our core Engineering team, who'll sense-check technical decisions and review your work. This isn't day-to-day pairing or management; you'll operate with real autonomy, with that partnership acting as a technical backstop rather than a supervisor. We're looking for someone with 2-4 years' experience who can own a build with real autonomy.\nWhat you'll be doing\nAct as product engineer for People & Talent, owning the full arc from problem framing and experience design through to technical build and delivery, for tools spanning simple internal utilities to our multi-level compensation platform.\nMake the UI and design calls that matter for how people across hx actually experience these tools, whether that's an employee submitting a request or a manager running calibration, turning \"we need this to work\" into something genuinely well-designed and intuitive.\nTake front-end prototypes built across People & Talent and turn them into production-ready products, full stack: building out the back end, data model, and infrastructure to make them reliable and scalable.\nSpec new builds properly before writing code, mapping the experience and delivery plan (who uses it, how, what \"done\" looks like) alongside the technical architecture, so nothing gets built twice or built wrong.\nIterate on live tools based on real user feedback, treating internal People & Talent products with the same product rigour as anything we'd ship externally.\nWork with highly sensitive employee and compensation data, following hx's data protection and security policies closely, and help shape them as our tools evolve.\nGrow into a genuinely unusual specialism: product engineering for People & Talent, sitting at the intersection of software engineering, UX, security, and people operations.\nWhat good looks like\nWithin 3 months:\n existing tools that have already been prototyped and tested, ones already proven to be incrementally helpful, are live in production and released to the business.\nWithin 6 months:\n",
+      "description_snippet": "People & Talent Product Engineer\nHi \ud83d\udc4b I'm Ash Rama, VP People at hyperexponential.\nI lead the team responsible for how hx makes decisions about its people: comp, performance, org design, and increasingly, the systems and tools that power all of it. We don't buy software off the\u2026",
+      "url": "https://jobs.ashbyhq.com/hyperexponential/decb04ff-754c-40b3-ab8c-d5dfbf605b2d",
+      "source": "ashby",
+      "posted_at": "2026-08-21T13:29:03.636000+00:00"
+    },
+    {
       "id": "ashby-vanta-d38e7474-2b44-415c-824a-3debb757c9af",
       "company": "Vanta",
       "company_website": "https://www.vanta.com",
@@ -25,136 +38,97 @@
       "url": "https://jobs.ashbyhq.com/vanta/a2371f65-5777-47b7-9f4e-bcb260ce70a4",
       "source": "ashby",
       "posted_at": "2026-08-20T14:34:25.074000+00:00"
-    },
-    {
-      "id": "greenhouse-figma-6122269004",
-      "company": "Figma",
-      "company_website": "https://www.figma.com",
-      "origin": "US",
-      "title": "Inside Sales Representative, French or German Speaker (London, United Kingdom)",
-      "location": "London, England",
-      "description_text": "<div class=\"content-intro\"><p>Figma is growing our team of passionate creatives and builders on a mission to make design accessible to all. Figma\u2019s platform helps teams bring ideas to life\u2014whether you're brainstorming, creating a prototype, translating designs into code, or iterating with AI. From idea to product, Figma empowers teams to streamline workflows, move faster, and work together in real time from anywhere in the world. If you're excited to shape the future of design and collaboration, join us!</p></div><div class=\"section page-centered\">\n<div class=\"section page-centered\">\n<div class=\"section page-centered\">\n<div class=\"section page-centered\">\n<p>As an Inside Sales Representative, you\u2019ll play an important role in helping our existing customers scale while managing requests and closing deals from a large book of accounts. You\u2019ll build a strong foundation of knowledge across our product platform and internal sales processes while partnering with Support, Order Management, and Marketing. You\u2019ll also gain experience qualifying and routing inbound prospects to an aligned Account Executive. Ultimately, this experience will help you serve customers efficiently and support your own career development in Sales. As a founding member of this new team, you're adaptable and eager to contribute to how the strategy of this function evolves over time.</p>\n<p>This is a full time role that can be held from our London hub.</p>\n<h4><strong>What you'll do at Figma:</strong></h4>\n<ul>\n<li>Communicate with existing customer accounts through email, Zoom, and Ironclad about Figma\u2019s platform and pricing&nbsp;</li>\n<li>Close inbound sales requests for subscription expansions, including adding products or licenses, creating new instances, and upgrading to the Enterprise Plan</li>\n<li>Manage inbound billing requests (such as processing renewals and changing payment term/method)&nbsp;</li>\n<li>Close targeted outbound account renewals&nbsp;</li>\n<li>Qualify and handle inbound sales requests&nbsp;</li>\n<li>Partner with Marketing to run proactive campaigns that maximize expansion/retention across all products&nbsp;</li>\n</ul>\n<h4><strong>We\u2019d love to hear from you if you have:</strong></h4>\n<ul>\n<li>Desire to build career in Sales - ultimately working towards Senior Inside Sales Representative and Account Executive roles at Figma&nbsp;</li>\n<li>Strong technical aptitude with ability to learn new products, processes, and policies as we go&nbsp;</li>\n<li>Collaboration across multiple teams (such as Sales, Support, Billing, and Marketing)</li>\n<li>Inherent curiosity and commitment to ongoing learning, adaptable and comfortable navigating frequent change, and high achiever with a strong inner motivation to over-achieve</li>\n<li>Fluent in French or German language</li>\n</ul>\n<h4><strong>While it\u2019s not required, it\u2019s an added plus if you also have:</strong></h4>\n<ul>\n<li>B2B SaaS experience&nbsp;</li>\n<li>Customer-facing Sales/Support experience&nbsp;</li>\n</ul>\n<p>At Figma, one of our values is Grow as you go. We believe in hiring smart, curious people who are excited to learn and develop their skills. If you\u2019re excited about this role but your past experience doesn\u2019t align perfectly with the points outlined in the job description, we encourage you to apply anyways. You may be just the right candidate for this or other roles.</p>\n</div>\n</div>\n</div>\n</div><div class=\"content-conclusion\"><p>At Figma we celebrate and support our differences. We know employing a team rich in diverse thoughts, experiences, and opinions allows our employees, our product and our community to flourish. Figma is an <a href=\"https://www.eeoc.gov/sites/default/files/2022-10/EEOC_KnowYourRights_screen_reader_10_20.pdf\">equal opportunity workplace</a> - we are dedicated to equal employment opportunities regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity/expression, veteran status<st",
-      "description_snippet": "<div class=\"content-intro\"><p>Figma is growing our team of passionate creatives and builders on a mission to make design accessible to all. Figma\u2019s platform helps teams bring ideas to life\u2014whether you're brainstorming, creating a prototype, translating designs into code, or\u2026",
-      "url": "https://boards.greenhouse.io/figma/jobs/6122269004?gh_jid=6122269004",
-      "source": "greenhouse",
-      "posted_at": "2026-08-20T10:03:31+00:00"
-    },
-    {
-      "id": "greenhouse-figma-6102903004",
-      "company": "Figma",
-      "company_website": "https://www.figma.com",
-      "origin": "US",
-      "title": "Customer Enablement Manager, French Speaking (London, United Kingdom)",
-      "location": "London, England",
-      "description_text": "<div class=\"content-intro\"><p>Figma is growing our team of passionate creatives and builders on a mission to make design accessible to all. Figma\u2019s platform helps teams bring ideas to life\u2014whether you're brainstorming, creating a prototype, translating designs into code, or iterating with AI. From idea to product, Figma empowers teams to streamline workflows, move faster, and work together in real time from anywhere in the world. If you're excited to shape the future of design and collaboration, join us!</p></div><p>As a Customer Enablement Manager, you\u2019ll work directly with some of our largest customers to help them get the most value from the Figma platform. You'll design and deliver tailored enablement strategies that drive product adoption, help uncover new use cases, and support long-term success.</p>\n<p>In this highly collaborative role, you\u2019ll partner with various internal teams such as Account Executives, Onboarding Managers, Technical Account Managers, and Industry Advocates to deliver a seamless and impactful customer experience.to deliver thoughtful, engaging experiences for our customers. Your ability to build strong relationships, connect the dots between product features and customer goals, and communicate with clarity will make you a trusted advisor and strategic partner.</p>\n<p>If you\u2019re passionate about helping customers thrive, enjoy solving complex problems, and love working at the intersection of product and customer success, we\u2019d love to meet you.</p>\n<h4>What you\u2019ll do at Figma:</h4>\n<ul>\n<li data-section-id=\"qzdhx8\" data-start=\"0\" data-end=\"137\">Manage the adoption journey for a portfolio of large, strategic customers, aligning engagement with customer goals and success metrics</li>\n<li data-section-id=\"ro16sm\" data-start=\"138\" data-end=\"250\">Use product data and customer insights to develop proactive engagement strategies that drive measurable value</li>\n<li data-section-id=\"4fdrne\" data-start=\"251\" data-end=\"357\">Document engagement strategies through high-quality, bespoke enablement plans tailored to each customer</li>\n<li data-section-id=\"1k84owe\" data-start=\"358\" data-end=\"460\">Share best practices, use cases, and product expertise to help teams unlock the full value of Figma</li>\n<li data-section-id=\"b7icm3\" data-start=\"461\" data-end=\"586\">Build trusted relationships with stakeholders across roles and departments, from individual contributors to senior leaders</li>\n<li data-section-id=\"9wkubb\" data-start=\"587\" data-end=\"702\">Identify and empower internal champions who can advocate for Figma and drive adoption within their organizations</li>\n<li data-section-id=\"1hvfo3z\" data-start=\"703\" data-end=\"840\">Collaborate with Account Executives on account reviews, expansion opportunities, renewal risk mitigation, and overall account strategy</li>\n<li data-section-id=\"62dxii\" data-start=\"841\" data-end=\"1076\" data-is-last-node=\"\">Deliver live and scalable training tailored to customer maturity and needs, partnering cross-functionally with Onboarding Managers, Technical Account Managers, Solutions Consultants, and Industry Advocates to ensure customer success</li>\n</ul>\n<h4>We\u2019d love to hear from you if you have:</h4>\n<ul>\n<li>4+ years of experience in Technical Account Management, Technical Customer Success, Customer Success, Customer Enablement, Account Management or a relevant customer-facing role in SaaS</li>\n<li>Excellent communication skills, with the ability to connect with a wide range of customer personas</li>\n<li>Strong product knowledge and a customer-first, consultative approach to solving challenges and driving adoption</li>\n<li>A track record of driving impactful outcomes, adapting to evolving customer needs, and collaborating effectively with cross-functional teams</li>\n<li>Fluency in French, additional European languages a plus</li>\n</ul>\n<h4>While it\u2019s not required, it\u2019s an added plus if you also have:</h4>\n<ul>\n<li>Experience using Figma or working with design and collaboration tools</li>\n<l",
-      "description_snippet": "<div class=\"content-intro\"><p>Figma is growing our team of passionate creatives and builders on a mission to make design accessible to all. Figma\u2019s platform helps teams bring ideas to life\u2014whether you're brainstorming, creating a prototype, translating designs into code, or\u2026",
-      "url": "https://boards.greenhouse.io/figma/jobs/6102903004?gh_jid=6102903004",
-      "source": "greenhouse",
-      "posted_at": "2026-08-20T10:01:52+00:00"
-    },
-    {
-      "id": "ashby-legora-92db5fb3-581b-4dcd-b6c1-84c8ba39bb9e",
-      "company": "Legora",
-      "company_website": "https://legora.com",
-      "origin": "Intl",
-      "title": "Staff Product Designer",
-      "location": "London",
-      "description_text": "About Us\nLegora is redefining how legal work gets done. Not built for lawyers, built with them. We work alongside the world\u2019s best legal teams, who expect excellence, precision, and speed, and we hold ourselves to the same bar.\nOur AI-native workspace lets legal professionals move faster, think more clearly, and operate with sharper precision. By analysing thousands of documents in minutes and powering end-to-end workflows, we cut through complexity, teams can focus on what matters: judgment, strategy, and outcomes.\n1,000+ customers across 50+ countries trust us, including Cleary Gottlieb, Goodwin, Linklaters, White & Case, Dentons, and Barclays. We\u2019ve scaled to\n $100M+ in ARR\n, with teams across Europe, North America and APAC, and continue to expand through acquisitions including Qura, Walter AI and Graceview.\nWe partner with world-class performers: including Aaron Judge and the New York Yankees, Ludvig \u00c5berg (and his caddie), and campaigns featuring Jude Law.\nJoining Legora means three things.\nWe \nlean in: \nownership over titles, outcomes over intentions.\nWe \nfight for excellence:\n high standards, direct, ego-free feedback.\nWe\n grow together:\n as a team and with our customers.\nMission before ego. Everyone contributes. No one coasts.\nIf you\u2019re driven by impact, pace, and raising the bar. This is the place.\nAs a Staff Product Designer, you\u2019ll be the first designer in our London office, taking on some of our most complex product challenges and setting a high bar for design quality across products and teams.\nYou\u2019ll partner closely with product and engineering to shape direction, bring clarity to ambiguous problems, and deliver best-in-class interaction and visual design. This is a highly hands-on role for a designer who can move between product strategy and craft, and whose work raises the quality of the team around them.\nWhat you\u2019ll do\nLead design across multiple product areas, creating coherence across complex workflows and experiences.\nShape product strategy: frame the hardest problems, influence roadmaps, and turn ambiguity into bold, practical solutions.\nSet and raise the bar for design craft, accessibility, and usability across Legora\u2019s product.\nPartner with product and engineering to make smart tradeoffs that protect the experience while shipping quickly.\nExplore new product directions, from zero-to-one concepts to scaled launches.\nExplore and implement new ways of working with AI to produce better design outcomes, faster.\nHelp make Legora a destination for exceptional design talent in London.\nAbout you\nExtensive product design experience with a track record of shipping complex, high-impact products.\nExceptional craft in interaction and visual design, with the ability to connect the details to the bigger picture.\nComfortable owning complex, ambiguous problems and creating clarity across teams and product areas.\nSkilled at moving seamlessly between hands-on design and product strategy.\nStrong product judgment and communication skills; you influence direction and inspire confidence across product, engineering, and leadership.\nWhat\u2019s in it for you\nCareer development opportunities in a rapidly evolving entrepreneurial environment.\nDirect collaboration with senior leadership and the opportunity to impact company growth and strategy.\nA collaborative, high-energy team where your ideas and contributions are valued and implemented.\nCompetitive salary complemented by a transparent and highly competitive options program.\nLegora is an Equal Opportunity Employer\nAt Legora, we believe great teams are built on diversity of thought and experience. We\u2019re proud to be an equal opportunity employer and committed to creating an inclusive, high-performance culture where everyone can do their best work. We welcome people of all backgrounds and don\u2019t discriminate based on race, color, religion, national origin, gender, gender identity or expression, sexual orientation, age, disability, veteran status, or any other characteristic protected by law",
-      "description_snippet": "About Us\nLegora is redefining how legal work gets done. Not built for lawyers, built with them. We work alongside the world\u2019s best legal teams, who expect excellence, precision, and speed, and we hold ourselves to the same bar.\nOur AI-native workspace lets legal professionals\u2026",
-      "url": "https://jobs.ashbyhq.com/legora/92db5fb3-581b-4dcd-b6c1-84c8ba39bb9e",
-      "source": "ashby",
-      "posted_at": "2026-08-20T08:51:21.572000+00:00"
     }
   ],
   "unconfirmed_jobs": [
     {
-      "id": "dom-fallback-other-amazon-109a2bc801270521",
+      "id": "dom-fallback-other-amazon-06f93f08a9905d62",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Associate Director, Production Non-Fiction",
+      "title": "AWS Transport Business Development Manager, Central Government, Transport",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10499687/associate-director-production-non-fiction",
+      "url": "https://www.amazon.jobs/en/jobs/10509953/aws-transport-business-development-manager-central-government-transport",
       "source": "dom-fallback-other",
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-a8a498f7fdfb6c7a",
+      "id": "dom-fallback-other-amazon-beecb3dcd8cbe46f",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Brand Manager Global Originals, Prime Video International, 12 month Fixed Term Contract, Marketing",
+      "title": "Applied Scientist, Prime Video Commerce Insights",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10509493/brand-manager-global-originals-prime-video-international-12-month-fixed-term-contract-marketing",
+      "url": "https://www.amazon.jobs/en/jobs/10442664/applied-scientist-prime-video-commerce-insights",
       "source": "dom-fallback-other",
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-3bcb2fce03812240",
+      "id": "dom-fallback-other-amazon-0727ff4426c93bd2",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Food Service Design Manager, Design, Sustainability & Engineering",
+      "title": "Creative Producer - 18 month contract",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10509731/food-service-design-manager-design-sustainability-engineering",
+      "url": "https://www.amazon.jobs/en/jobs/10510005/creative-producer-18-month-contract",
       "source": "dom-fallback-other",
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-8d0d840b4fc64548",
+      "id": "dom-fallback-other-amazon-1e62be38845ffe0a",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Principal Worldwide Specialist Solutions Architect, Amazon Bedrock, AgentCore, Data & AI GTM",
+      "title": "Customer Engagement Manager, UK, Germany and International Organisations Public Sector",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10509106/principal-worldwide-specialist-solutions-architect-amazon-bedrock-agentcore-data-ai-gtm",
+      "url": "https://www.amazon.jobs/en/jobs/10509888/customer-engagement-manager-uk-germany-and-international-organisations-public-sector",
       "source": "dom-fallback-other",
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-2222b8f990188ccc",
+      "id": "dom-fallback-other-amazon-0ff841d0e9756d5e",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Sales Development Representative (SDR), Amazon Shipping (SWA)",
+      "title": "Military Data Centre Engineering Operations (DCEO), Amazon Web Services (AWS)",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10509768/sales-development-representative-sdr-amazon-shipping-swa",
+      "url": "https://www.amazon.jobs/en/jobs/10509900/military-data-centre-engineering-operations-dceo-amazon-web-services-aws",
       "source": "dom-fallback-other",
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-b8d890006a7a0e57",
+      "id": "dom-fallback-other-amazon-d167400492b6f2c4",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Senior Assurance Consultant, AWS Security Assurance Services",
+      "title": "Regional Commercial Manager, Data Center Delivery, EMEA Construction Cost Control",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10393772/senior-assurance-consultant-aws-security-assurance-services",
+      "url": "https://www.amazon.jobs/en/jobs/10498334/regional-commercial-manager-data-center-delivery-emea-construction-cost-control",
       "source": "dom-fallback-other",
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-f0da529d4b5f25df",
+      "id": "dom-fallback-other-amazon-2fd1ba8cf2706adc",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Senior Delivery Consultant AI - Enterprises, AWS Professional Services",
+      "title": "Senior Pricing Manager, International DSP (Delivery Service Partners)",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10508036/senior-delivery-consultant-ai-enterprises-aws-professional-services",
+      "url": "https://www.amazon.jobs/en/jobs/10463321/senior-pricing-manager-international-dsp-delivery-service-partners",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -172,15 +146,41 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-e7fb87560292c068",
+      "id": "dom-fallback-other-amazon-3b5da3365e2c673d",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Strategy Consultant (Marketplace), Global Selling",
+      "title": "Social Media Manager, UK, Amazon Music",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10457471/strategy-consultant-marketplace-global-selling",
+      "url": "https://www.amazon.jobs/en/jobs/10457666/social-media-manager-uk-amazon-music",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-amazon-c0693c35d3fad29d",
+      "company": "Amazon",
+      "company_website": "https://www.amazon.com",
+      "origin": "US",
+      "title": "Sr. Customer Solutions Manager, UKI Customer Solutions Management, Field-AGS-UKI-ENT-CS",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.amazon.jobs/en/jobs/10503840/sr-customer-solutions-manager-uki-customer-solutions-management-field-ags-uki-ent-cs",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-amazon-bc6dee8d2dcf3563",
+      "company": "Amazon",
+      "company_website": "https://www.amazon.com",
+      "origin": "US",
+      "title": "Technical Program Manager - Infrastructure Remediation, DC Delivery",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.amazon.jobs/en/jobs/10462274/technical-program-manager-infrastructure-remediation-dc-delivery",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -233,19 +233,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://jobs.apple.com/en-gb/details/200678658-2114/engineering-manager-ml-infrastructure-london?team=SFTWR",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-canva-1d6d367e2662f238",
-      "company": "Canva",
-      "company_website": "https://www.canva.com",
-      "origin": "Intl",
-      "title": "Executive Assistant to Founder (relocate to Australia)",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.lifeatcanva.com/en/jobs/6000000001321109/executive-assistant-to-founder-relocate-to-australia/",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -559,6 +546,19 @@
       "description_snippet": "",
       "url": "https://job-boards.greenhouse.io/creativex/jobs/6101175004",
       "source": "dom-fallback-greenhouse",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-crowdstrike-ebde7f5917b136bd",
+      "company": "CrowdStrike",
+      "company_website": "https://www.crowdstrike.com",
+      "origin": "US",
+      "title": "Senior Software Engineer - UI Platform (Hybrid, London)",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://crowdstrike.wd5.myworkdayjobs.com/en-US/crowdstrikecareers/job/United-Kingdom---London/Sr-UI-Platform-Engineer_R29584-1",
+      "source": "dom-fallback-other",
       "posted_at": null
     },
     {
@@ -1446,6 +1446,19 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-ashby-hcompany-91a62ae53f85a24d",
+      "company": "H Company",
+      "company_website": "https://www.hcompany.ai",
+      "origin": "US",
+      "title": "VP Engineering - Paris\n\nENGINEERING \u2022 Hybrid Paris; Hybrid London \u2022 Full time \u2022 Hybrid",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.ashbyhq.com/hcompany/e969946a-5636-4a44-a046-92277169135d",
+      "source": "dom-fallback-ashby",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-ashby-hcompany-https://www.ashbyhq.com/disclosure",
       "company": "H Company",
       "company_website": "https://www.hcompany.ai",
@@ -2278,19 +2291,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-greenhouse-pendo-https://job-boards.greenhouse.io/pendo/jobs/8613608002",
-      "company": "Pendo",
-      "company_website": "https://www.pendo.io",
-      "origin": "US",
-      "title": "Director, Field Marketing EMEA\n\nLondon, UK",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://job-boards.greenhouse.io/pendo/jobs/8613608002",
-      "source": "dom-fallback-greenhouse",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-greenhouse-pendo-https://job-boards.greenhouse.io/pendo/jobs/8621059002",
       "company": "Pendo",
       "company_website": "https://www.pendo.io",
@@ -2720,6 +2720,19 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-greenhouse-pinterestjobadvertisements-34a9024ed1510446",
+      "company": "Pinterest",
+      "company_website": "https://www.pinterest.com",
+      "origin": "US",
+      "title": "Client Account Manager II, UK/I, Fintech, Insurance and Government Business",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.pinterestcareers.com/jobs/8129644/client-account-manager-ii-uki-fintech-insurance-and-government-business/?gh_jid=8129644",
+      "source": "dom-fallback-greenhouse",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-greenhouse-pinterestjobadvertisements-8bf09a3041a03e75",
       "company": "Pinterest",
       "company_website": "https://www.pinterest.com",
@@ -2976,6 +2989,19 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://ravelin.pinpointhq.com/en/postings/ac9a6c75-c74b-4699-9cca-dce4cc5bde06",
+      "source": "dom-fallback-workable",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-workable-ravelin-a70edaa0a0f5cfec",
+      "company": "Ravelin",
+      "company_website": "https://www.ravelin.com",
+      "origin": "UK",
+      "title": "IT Support Manager",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://ravelin.pinpointhq.com/en/postings/3d106503-712e-43da-9434-3c37160ea9ea",
       "source": "dom-fallback-workable",
       "posted_at": null
     },
@@ -3357,6 +3383,19 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-other-servicenow-9a3830726b0d3452",
+      "company": "ServiceNow",
+      "company_website": "https://www.servicenow.com",
+      "origin": "US",
+      "title": "Implementation Manager - Moveworks",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://careers.servicenow.com/jobs/744000144741139/implementation-manager-moveworks/",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-other-servicenow-a241f4a3c6b25e04",
       "company": "ServiceNow",
       "company_website": "https://www.servicenow.com",
@@ -3405,6 +3444,19 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://careers.snap.com/job?id=R0045380",
+      "source": "dom-fallback-greenhouse",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-greenhouse-snap-https://careers.snap.com/job?id=R0046529",
+      "company": "Snap Inc.",
+      "company_website": "https://www.snap.com",
+      "origin": "US",
+      "title": "HR Manager",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://careers.snap.com/job?id=R0046529",
       "source": "dom-fallback-greenhouse",
       "posted_at": null
     },
@@ -4059,19 +4111,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-wise-77551797d648f2ce",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Principal AI Content Designer, FinCrime",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/principal-ai-content-designer-fincrime-in-london-jid-3203",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-other-wise-2953a713d08c1ae7",
       "company": "Wise",
       "company_website": "https://wise.com",
@@ -4081,6 +4120,32 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://wise.jobs/job/product-lead-business-payments-in-london-jid-4045",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-wise-737bdbfce7cecdfe",
+      "company": "Wise",
+      "company_website": "https://wise.com",
+      "origin": "UK",
+      "title": "SEO Content Specialist",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://wise.jobs/job/seo-content-specialist-in-london-jid-3578",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-wise-4075825d4f4bc9d2",
+      "company": "Wise",
+      "company_website": "https://wise.com",
+      "origin": "UK",
+      "title": "Senior CRM Manager - Global",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://wise.jobs/job/senior-crm-manager-global-in-london-jid-4046",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -4107,19 +4172,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://wise.jobs/job/senior-engineering-manager-ii-risk-api-servicing-platform-in-london-jid-4039",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-wise-a44b1801a869ec3d",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Senior Marketing Data Analyst - Paid Social",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/senior-marketing-data-analyst-paid-social-in-london-jid-4035",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -4211,6 +4263,19 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://www.wiz.io/careers/job/4705349006/regional-partner-manager-uk?gh_jid=4705349006",
+      "source": "dom-fallback-greenhouse",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-greenhouse-wizprivate-c69d02bb5bfff685",
+      "company": "Wiz",
+      "company_website": "https://www.wiz.io",
+      "origin": "Intl",
+      "title": "Security Engineer - ProductSecurity/Product SecurityLondon, UK; Remote - United Kingdom",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.wiz.io/careers/job/4704730006/security-engineer-product?gh_jid=4704730006",
       "source": "dom-fallback-greenhouse",
       "posted_at": null
     },
@@ -4397,6 +4462,19 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-other-ebay-df6023f5000f4743",
+      "company": "eBay",
+      "company_website": "https://www.ebay.com",
+      "origin": "US",
+      "title": "Security Compliance Engineer",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.ebayinc.com/us/en/job/R0074466/Security-Compliance-Engineer",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-other-ebay-e503f8b8abdb2fa7",
       "company": "eBay",
       "company_website": "https://www.ebay.com",
@@ -4445,19 +4523,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://jobs.ebayinc.com/us/en/job/R0076099/Strategic-Execution-Manager",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-ebay-e03c4a55a4cface7",
-      "company": "eBay",
-      "company_website": "https://www.ebay.com",
-      "origin": "US",
-      "title": "Strategic Ops & Communications Lead",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://jobs.ebayinc.com/us/en/job/R0075585/Strategic-Ops-Communications-Lead",
       "source": "dom-fallback-other",
       "posted_at": null
     },
