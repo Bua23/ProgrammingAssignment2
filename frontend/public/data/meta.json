@@ -1,12 +1,11 @@
 {
-  "generated_at": "2026-08-20T14:09:45.872704+00:00",
+  "generated_at": "2026-08-21T08:01:21.878133+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Figma",
-    "LaunchDarkly",
     "Legora",
-    "hyperexponential"
+    "Vanta"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
@@ -24,6 +23,7 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
+    "IBM",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -191,6 +191,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 7,
-  "total_unconfirmed_found": 339
+  "total_jobs_found": 5,
+  "total_unconfirmed_found": 340
 }
