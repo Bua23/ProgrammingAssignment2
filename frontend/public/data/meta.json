@@ -1,19 +1,15 @@
 {
-  "generated_at": "2026-08-21T14:08:29.945272+00:00",
+  "generated_at": "2026-08-24T08:15:19.189084+00:00",
   "window_hours": 24,
   "companies_checked": 144,
-  "companies_with_matches": [
-    "Vanta",
-    "hyperexponential"
-  ],
+  "companies_with_matches": [],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
     "Apple",
-    "Canva",
+    "Atlassian",
     "Cohere",
     "CreativeX",
-    "CrowdStrike",
     "Databricks",
     "Edra",
     "Expedia Group",
@@ -23,7 +19,6 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
-    "IBM",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -44,7 +39,6 @@
     "Ravelin",
     "Retool",
     "SAP",
-    "Scale AI",
     "ServiceNow",
     "Snap Inc.",
     "Snowflake",
@@ -191,6 +185,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 3,
-  "total_unconfirmed_found": 347
+  "total_jobs_found": 0,
+  "total_unconfirmed_found": 341
 }
