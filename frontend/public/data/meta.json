@@ -1,8 +1,11 @@
 {
-  "generated_at": "2026-08-24T08:15:19.189084+00:00",
+  "generated_at": "2026-08-24T14:12:47.091274+00:00",
   "window_hours": 24,
   "companies_checked": 144,
-  "companies_with_matches": [],
+  "companies_with_matches": [
+    "LaunchDarkly",
+    "Legora"
+  ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
@@ -10,7 +13,9 @@
     "Atlassian",
     "Cohere",
     "CreativeX",
+    "CrowdStrike",
     "Databricks",
+    "Datadog",
     "Edra",
     "Expedia Group",
     "FIXR",
@@ -39,6 +44,7 @@
     "Ravelin",
     "Retool",
     "SAP",
+    "Scale AI",
     "ServiceNow",
     "Snap Inc.",
     "Snowflake",
@@ -185,6 +191,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 0,
-  "total_unconfirmed_found": 341
+  "total_jobs_found": 2,
+  "total_unconfirmed_found": 356
 }
