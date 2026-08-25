@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T14:12:47.091274+00:00",
+  "generated_at": "2026-08-25T08:01:35.242295+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -10,7 +10,6 @@
     "Amazon",
     "Amplitude",
     "Apple",
-    "Atlassian",
     "Cohere",
     "CreativeX",
     "CrowdStrike",
@@ -38,7 +37,6 @@
     "Pendo",
     "Perplexity AI",
     "PhysicsX",
-    "Pinterest",
     "Profound",
     "Quantexa",
     "Ravelin",
@@ -192,5 +190,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 2,
-  "total_unconfirmed_found": 356
+  "total_unconfirmed_found": 334
 }
