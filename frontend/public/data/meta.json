@@ -1,15 +1,16 @@
 {
-  "generated_at": "2026-08-25T14:13:07.386822+00:00",
+  "generated_at": "2026-08-26T08:05:24.768911+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Figma"
+    "Figma",
+    "Gong",
+    "Multiverse"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
     "Apple",
-    "Atlassian",
     "Canva",
     "Cohere",
     "CreativeX",
@@ -23,6 +24,7 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
+    "IBM",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -35,12 +37,14 @@
     "Monzo",
     "Palo Alto Networks",
     "Pendo",
+    "Perplexity AI",
     "PhysicsX",
     "Profound",
     "Quantexa",
     "Ravelin",
     "Retool",
     "SAP",
+    "Scale AI",
     "ServiceNow",
     "Snap Inc.",
     "Snowflake",
@@ -49,7 +53,9 @@
     "Thought Machine",
     "Uber",
     "Vercel",
+    "Wayve",
     "Wise",
+    "Wiz",
     "Writer (AI)",
     "eBay",
     "monday.com"
@@ -186,6 +192,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 1,
-  "total_unconfirmed_found": 316
+  "total_jobs_found": 4,
+  "total_unconfirmed_found": 341
 }
