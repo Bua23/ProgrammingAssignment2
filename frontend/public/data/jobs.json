@@ -2122,6 +2122,19 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-other-mercor-47d1703d1298fedd",
+      "company": "Mercor",
+      "company_website": "https://mercor.com",
+      "origin": "US",
+      "title": "Research Scientist, APEX Benchmarks\n\nResearch\n\u00b7\nSan Francisco\n\u00b7\nFull time\n\u00b7\nOnsite\n\u00b7\n$200K - $400K",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.mercor.com/careers/bebd78ce-5f12-46e9-a285-674e33838211/",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-other-meta-cc2e05215ec947ec",
       "company": "Meta",
       "company_website": "https://about.meta.com",
@@ -2993,19 +3006,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-Profound-a13be6e1041fec65",
-      "company": "Profound",
-      "company_website": "https://tryprofound.com",
-      "origin": "US",
-      "title": "Engagement Manager, Agency\n\nNew York, New York \u00b7 London, England \u00b7 San Francisco, California \u00b7 Boston, MA",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.tryprofound.com/careers/c7e12d10-a7ff-47ea-a62f-f7560541dea3",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-other-Profound-2a3c74be124a8dcb",
       "company": "Profound",
       "company_website": "https://tryprofound.com",
@@ -3305,15 +3305,41 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-sap-d428b8b3d568d793",
-      "company": "SAP",
-      "company_website": "https://www.sap.com",
-      "origin": "Intl",
-      "title": "Assessment Lead",
+      "id": "dom-fallback-other-revolut-ef041ca7a9eba705",
+      "company": "Revolut",
+      "company_website": "https://www.revolut.com",
+      "origin": "UK",
+      "title": "Graphic Designer (Employer Branding)\nOffice: Barcelona \u00b7 Lisbon \u00b7 Madrid\nRemote: Porto \u00b7 Portugal \u00b7 Spain",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://jobs.sap.com/job/London-Assessment-Lead-EC3M-7AF/1428234333/",
+      "url": "https://www.revolut.com/careers/position/graphic-designer-employer-branding-d47d1c9b-3e07-4878-84d7-5841dd3930d8/",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-revolut-3adaf1e4cc50ea35",
+      "company": "Revolut",
+      "company_website": "https://www.revolut.com",
+      "origin": "UK",
+      "title": "Graphic Designer (Growth)\nOffice: Tokyo\nRemote: Japan",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.revolut.com/careers/position/graphic-designer-growth-ba99036f-306a-4d82-98bc-8ff73853d41c/",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-revolut-970227cba72ddc29",
+      "company": "Revolut",
+      "company_website": "https://www.revolut.com",
+      "origin": "UK",
+      "title": "Motion Designer\nOffice: Dubai \u00b7 Krakow \u00b7 Lisbon \u00b7 Madrid\nRemote: Poland \u00b7 Porto \u00b7 Portugal \u00b7 Spain \u00b7 UAE",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.revolut.com/careers/position/motion-designer-5f707767-cb4d-484f-82ee-fff6afbfbfd6/",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -3569,7 +3595,7 @@
       "company": "Scale AI",
       "company_website": "https://scale.com",
       "origin": "US",
-      "title": "Senior Product Design Manager\nSAN FRANCISCO, CA\nAPPLY \u2192",
+      "title": "Senior Product Design Manager\nNEW YORK, NY\nAPPLY \u2192",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
@@ -4306,71 +4332,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-wise-dbdee0d6dda6dc99",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Analytics Manager - Internal Audit",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/analytics-manager-internal-audit-in-london-jid-3799",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-wise-3eb3d14058fdcc1b",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Backend Engineer - Contacts Team",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/backend-engineer-contacts-team-in-london-jid-4073",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-wise-34e3ceeb631966a2",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Engineering Lead - Account Management",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/engineering-lead-account-management-in-london-jid-1930",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-wise-0c86ad9931e37601",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Engineering Lead - Embedded Solutions",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/engineering-lead-embedded-solutions-in-london-jid-3755",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-wise-5d50b0be6857dd2c",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Lead Creative Strategist (12 month Mat Cover)",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/lead-creative-strategist-12-month-mat-cover-in-london-jid-4031",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-other-wise-72d7ee58d4c2124d",
       "company": "Wise",
       "company_website": "https://wise.com",
@@ -4410,19 +4371,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-wise-7a2e7050f1275a5c",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Salesforce & GTM Systems Specialist",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/salesforce-and-gtm-systems-specialist-in-london-jid-4071",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-other-wise-687821d13caead62",
       "company": "Wise",
       "company_website": "https://wise.com",
@@ -4432,19 +4380,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://wise.jobs/job/senior-engineering-lead-ii-send-experience-in-london-jid-2748",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-wise-00f6f35367646b77",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Senior Software Developer - Contacts Team",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/senior-software-developer-contacts-team-in-london-jid-4074",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -4462,15 +4397,15 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-wise-20878ac024fb5b8d",
+      "id": "dom-fallback-other-wise-96f01d0a8057a97d",
       "company": "Wise",
       "company_website": "https://wise.com",
       "origin": "UK",
-      "title": "Staff User Researcher - Mitigation Platform",
+      "title": "Software Engineer - Recurring Payin",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://wise.jobs/job/staff-user-researcher-mitigation-platform-in-london-jid-3774",
+      "url": "https://wise.jobs/job/software-engineer-recurring-payin-in-london-jid-3490",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -4683,19 +4618,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-ebay-89b4fd113c1cf6eb",
-      "company": "eBay",
-      "company_website": "https://www.ebay.com",
-      "origin": "US",
-      "title": "Commercial Dir, UK Parts & Accessories",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://jobs.ebayinc.com/us/en/job/R0073088/Commercial-Dir-UK-Parts-Accessories",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-other-ebay-4ce4eb58cb372f3d",
       "company": "eBay",
       "company_website": "https://www.ebay.com",
@@ -4705,6 +4627,19 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://jobs.ebayinc.com/us/en/job/R0075864/Global-Markets-Lead-Global-Buyer-CRM",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-ebay-dac34f7b4c742744",
+      "company": "eBay",
+      "company_website": "https://www.ebay.com",
+      "origin": "US",
+      "title": "Insurance Business Sr. Manager",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.ebayinc.com/us/en/job/R0075321/Insurance-Business-Sr-Manager",
       "source": "dom-fallback-other",
       "posted_at": null
     },

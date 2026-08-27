@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-27T18:24:52.609296+00:00",
+  "generated_at": "2026-08-27T23:12:28.363786+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -31,6 +31,7 @@
     "Lendable",
     "Lovable",
     "Marshmallow",
+    "Mercor",
     "Meta",
     "Meticulous",
     "MongoDB",
@@ -44,7 +45,7 @@
     "Quantexa",
     "Ravelin",
     "Retool",
-    "SAP",
+    "Revolut",
     "Scale AI",
     "ServiceNow",
     "Snap Inc.",
@@ -194,5 +195,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 3,
-  "total_unconfirmed_found": 367
+  "total_unconfirmed_found": 362
 }
