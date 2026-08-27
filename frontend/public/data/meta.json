@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-26T14:15:00.933179+00:00",
+  "generated_at": "2026-08-27T18:24:52.609296+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Figma",
-    "Gong",
-    "Multiverse"
+    "LaunchDarkly",
+    "hyperexponential"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
@@ -25,7 +25,6 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
-    "IBM",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -40,11 +39,13 @@
     "Pendo",
     "Perplexity AI",
     "PhysicsX",
+    "Pinterest",
     "Profound",
     "Quantexa",
     "Ravelin",
     "Retool",
     "SAP",
+    "Scale AI",
     "ServiceNow",
     "Snap Inc.",
     "Snowflake",
@@ -192,6 +193,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 4,
-  "total_unconfirmed_found": 339
+  "total_jobs_found": 3,
+  "total_unconfirmed_found": 367
 }
