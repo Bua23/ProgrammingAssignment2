@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T19:35:46.752141+00:00",
+  "generated_at": "2026-08-28T23:16:06.015288+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -25,7 +25,6 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
-    "Harvey AI",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -46,8 +45,8 @@
     "Quantexa",
     "Ravelin",
     "Retool",
-    "Revolut",
     "SAP",
+    "Scale AI",
     "ServiceNow",
     "Snap Inc.",
     "Speechmatics",
@@ -55,7 +54,6 @@
     "Thought Machine",
     "Uber",
     "Vercel",
-    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -195,5 +193,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 7,
-  "total_unconfirmed_found": 351
+  "total_unconfirmed_found": 352
 }
