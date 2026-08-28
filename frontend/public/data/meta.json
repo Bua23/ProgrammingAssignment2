@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-08-27T23:12:28.363786+00:00",
+  "generated_at": "2026-08-28T19:35:46.752141+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Figma",
-    "LaunchDarkly",
-    "hyperexponential"
+    "Griffin",
+    "Legora",
+    "Vanta"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
-    "Apple",
     "Atlassian",
     "Canva",
     "Cohere",
@@ -25,6 +25,7 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
+    "Harvey AI",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -46,10 +47,9 @@
     "Ravelin",
     "Retool",
     "Revolut",
-    "Scale AI",
+    "SAP",
     "ServiceNow",
     "Snap Inc.",
-    "Snowflake",
     "Speechmatics",
     "Synthesia",
     "Thought Machine",
@@ -194,6 +194,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 3,
-  "total_unconfirmed_found": 362
+  "total_jobs_found": 7,
+  "total_unconfirmed_found": 351
 }
