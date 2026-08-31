@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-08-31T15:11:12.620395+00:00",
+  "generated_at": "2026-08-31T19:49:32.933721+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "LaunchDarkly"
+    "LaunchDarkly",
+    "Legora"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
     "Atlassian",
-    "Canva",
     "Cohere",
     "CreativeX",
     "Databricks",
@@ -29,6 +29,7 @@
     "Lovable",
     "Marshmallow",
     "Mercor",
+    "Meta",
     "Meticulous",
     "MongoDB",
     "Monzo",
@@ -42,7 +43,6 @@
     "Ravelin",
     "Retool",
     "SAP",
-    "Scale AI",
     "ServiceNow",
     "Snap Inc.",
     "Speechmatics",
@@ -96,6 +96,7 @@
     "Expedia Group",
     "FIXR",
     "Featurespace",
+    "Figma",
     "Flow Engineering",
     "Freetrade",
     "GitHub",
@@ -191,6 +192,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 1,
-  "total_unconfirmed_found": 355
+  "total_jobs_found": 2,
+  "total_unconfirmed_found": 346
 }
