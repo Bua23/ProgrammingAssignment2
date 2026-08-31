@@ -1,12 +1,9 @@
 {
-  "generated_at": "2026-08-28T23:16:06.015288+00:00",
+  "generated_at": "2026-08-31T15:11:12.620395+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Figma",
-    "Griffin",
-    "Legora",
-    "Vanta"
+    "LaunchDarkly"
   ],
   "companies_with_unconfirmed": [
     "Amazon",
@@ -32,7 +29,6 @@
     "Lovable",
     "Marshmallow",
     "Mercor",
-    "Meta",
     "Meticulous",
     "MongoDB",
     "Monzo",
@@ -52,8 +48,10 @@
     "Speechmatics",
     "Synthesia",
     "Thought Machine",
+    "TikTok / ByteDance",
     "Uber",
     "Vercel",
+    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -107,6 +105,7 @@
     "Grafana Labs",
     "Graphcore",
     "H Company",
+    "Harness",
     "Harvey AI",
     "Heron Data",
     "IBM",
@@ -192,6 +191,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 7,
-  "total_unconfirmed_found": 352
+  "total_jobs_found": 1,
+  "total_unconfirmed_found": 355
 }
