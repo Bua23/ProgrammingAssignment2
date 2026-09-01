@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T19:49:32.933721+00:00",
+  "generated_at": "2026-09-01T12:41:25.906442+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -43,12 +43,12 @@
     "Ravelin",
     "Retool",
     "SAP",
+    "Scale AI",
     "ServiceNow",
     "Snap Inc.",
     "Speechmatics",
     "Synthesia",
     "Thought Machine",
-    "TikTok / ByteDance",
     "Uber",
     "Vercel",
     "Wayve",
@@ -96,7 +96,6 @@
     "Expedia Group",
     "FIXR",
     "Featurespace",
-    "Figma",
     "Flow Engineering",
     "Freetrade",
     "GitHub",
@@ -193,5 +192,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 2,
-  "total_unconfirmed_found": 346
+  "total_unconfirmed_found": 350
 }
