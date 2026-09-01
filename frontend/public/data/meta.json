@@ -1,11 +1,8 @@
 {
-  "generated_at": "2026-09-01T12:41:25.906442+00:00",
+  "generated_at": "2026-09-01T17:33:46.502368+00:00",
   "window_hours": 24,
   "companies_checked": 144,
-  "companies_with_matches": [
-    "LaunchDarkly",
-    "Legora"
-  ],
+  "companies_with_matches": [],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
@@ -51,7 +48,6 @@
     "Thought Machine",
     "Uber",
     "Vercel",
-    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -191,6 +187,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 2,
-  "total_unconfirmed_found": 350
+  "total_jobs_found": 0,
+  "total_unconfirmed_found": 342
 }
