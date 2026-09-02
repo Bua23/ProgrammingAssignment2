@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T12:21:09.179275+00:00",
+  "generated_at": "2026-09-02T17:23:43.664552+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -8,6 +8,7 @@
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
+    "Apple",
     "Canva",
     "Cohere",
     "CreativeX",
@@ -30,13 +31,13 @@
     "Mercor",
     "Meta",
     "Meticulous",
+    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
     "Pendo",
     "Perplexity AI",
     "PhysicsX",
-    "Pinterest",
     "Profound",
     "Quantexa",
     "Ravelin",
@@ -112,7 +113,6 @@
     "JFrog",
     "Junior AI",
     "Klaviyo",
-    "Legora",
     "Lendable",
     "LinkedIn",
     "Lovable",
@@ -192,5 +192,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 2,
-  "total_unconfirmed_found": 331
+  "total_unconfirmed_found": 334
 }
