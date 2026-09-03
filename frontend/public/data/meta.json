@@ -1,12 +1,16 @@
 {
-  "generated_at": "2026-09-03T12:16:46.683762+00:00",
+  "generated_at": "2026-09-03T17:18:06.208312+00:00",
   "window_hours": 24,
   "companies_checked": 144,
-  "companies_with_matches": [],
+  "companies_with_matches": [
+    "Multiverse"
+  ],
   "companies_with_unconfirmed": [
+    "1Password",
     "Amazon",
     "Amplitude",
     "Apple",
+    "Atlassian",
     "Canva",
     "Cohere",
     "CreativeX",
@@ -19,7 +23,6 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
-    "Harvey AI",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -43,6 +46,7 @@
     "Scale AI",
     "ServiceNow",
     "Snap Inc.",
+    "Snowflake",
     "Speechmatics",
     "Synthesia",
     "Temporal Technologies",
@@ -189,6 +193,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 0,
-  "total_unconfirmed_found": 373
+  "total_jobs_found": 1,
+  "total_unconfirmed_found": 400
 }
