@@ -1,10 +1,8 @@
 {
-  "generated_at": "2026-09-02T17:23:43.664552+00:00",
+  "generated_at": "2026-09-03T12:16:46.683762+00:00",
   "window_hours": 24,
   "companies_checked": 144,
-  "companies_with_matches": [
-    "Multiverse"
-  ],
+  "companies_with_matches": [],
   "companies_with_unconfirmed": [
     "Amazon",
     "Amplitude",
@@ -13,7 +11,6 @@
     "Cohere",
     "CreativeX",
     "Databricks",
-    "Datadog",
     "Edra",
     "Expedia Group",
     "FIXR",
@@ -22,6 +19,7 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
+    "Harvey AI",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -31,7 +29,6 @@
     "Mercor",
     "Meta",
     "Meticulous",
-    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -48,6 +45,7 @@
     "Snap Inc.",
     "Speechmatics",
     "Synthesia",
+    "Temporal Technologies",
     "Thought Machine",
     "Uber",
     "Vercel",
@@ -191,6 +189,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 2,
-  "total_unconfirmed_found": 334
+  "total_jobs_found": 0,
+  "total_unconfirmed_found": 373
 }
