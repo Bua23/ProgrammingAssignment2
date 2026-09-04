@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-09-03T17:18:06.208312+00:00",
+  "generated_at": "2026-09-04T12:17:20.845559+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
+    "Legora",
     "Multiverse"
   ],
   "companies_with_unconfirmed": [
@@ -27,7 +28,6 @@
     "Junior AI",
     "Klaviyo",
     "Lendable",
-    "Lovable",
     "Marshmallow",
     "Mercor",
     "Meta",
@@ -38,6 +38,7 @@
     "Pendo",
     "Perplexity AI",
     "PhysicsX",
+    "Pinterest",
     "Profound",
     "Quantexa",
     "Ravelin",
@@ -46,14 +47,12 @@
     "Scale AI",
     "ServiceNow",
     "Snap Inc.",
-    "Snowflake",
     "Speechmatics",
     "Synthesia",
     "Temporal Technologies",
     "Thought Machine",
     "Uber",
     "Vercel",
-    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -193,6 +192,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 1,
-  "total_unconfirmed_found": 400
+  "total_jobs_found": 2,
+  "total_unconfirmed_found": 374
 }
