@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T13:38:47.864086+00:00",
+  "generated_at": "2026-09-07T18:29:33.439516+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -41,6 +41,7 @@
     "Quantexa",
     "Ravelin",
     "Retool",
+    "SAP",
     "Scale AI",
     "ServiceNow",
     "Snap Inc.",
@@ -50,7 +51,6 @@
     "Thought Machine",
     "Uber",
     "Vercel",
-    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -191,5 +191,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 2,
-  "total_unconfirmed_found": 368
+  "total_unconfirmed_found": 378
 }
