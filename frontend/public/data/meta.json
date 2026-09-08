@@ -1,9 +1,8 @@
 {
-  "generated_at": "2026-09-07T18:29:33.439516+00:00",
+  "generated_at": "2026-09-08T12:18:37.948526+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Griffin",
     "Multiverse"
   ],
   "companies_with_unconfirmed": [
@@ -23,6 +22,7 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
+    "IBM",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -30,7 +30,7 @@
     "Marshmallow",
     "Mercor",
     "Meta",
-    "Meticulous",
+    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -42,13 +42,14 @@
     "Ravelin",
     "Retool",
     "SAP",
-    "Scale AI",
     "ServiceNow",
     "Snap Inc.",
+    "Snowflake",
     "Speechmatics",
     "Synthesia",
     "Temporal Technologies",
     "Thought Machine",
+    "TikTok / ByteDance",
     "Uber",
     "Vercel",
     "Wise",
@@ -191,5 +192,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 2,
-  "total_unconfirmed_found": 378
+  "total_unconfirmed_found": 360
 }
