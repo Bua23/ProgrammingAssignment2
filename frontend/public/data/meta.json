@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T12:28:25.665598+00:00",
+  "generated_at": "2026-09-09T17:24:36.259812+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -24,7 +24,6 @@
     "Graphcore",
     "H Company",
     "Harvey AI",
-    "IBM",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -33,7 +32,6 @@
     "Marshmallow",
     "Mercor",
     "Meta",
-    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -45,10 +43,8 @@
     "Ravelin",
     "Retool",
     "SAP",
-    "Scale AI",
     "ServiceNow",
     "Snap Inc.",
-    "Snowflake",
     "Speechmatics",
     "Synthesia",
     "Temporal Technologies",
@@ -56,6 +52,7 @@
     "TikTok / ByteDance",
     "Uber",
     "Vercel",
+    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -196,5 +193,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 1,
-  "total_unconfirmed_found": 416
+  "total_unconfirmed_found": 392
 }
