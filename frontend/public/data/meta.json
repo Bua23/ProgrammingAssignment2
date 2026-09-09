@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T17:29:30.605080+00:00",
+  "generated_at": "2026-09-09T12:28:25.665598+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -11,6 +11,7 @@
     "Amplitude",
     "Apple",
     "Atlassian",
+    "Canva",
     "Cohere",
     "CreativeX",
     "Databricks",
@@ -22,6 +23,7 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
+    "Harvey AI",
     "IBM",
     "Intercom",
     "Junior AI",
@@ -31,6 +33,7 @@
     "Marshmallow",
     "Mercor",
     "Meta",
+    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -53,7 +56,6 @@
     "TikTok / ByteDance",
     "Uber",
     "Vercel",
-    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -193,6 +195,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 2,
-  "total_unconfirmed_found": 394
+  "total_jobs_found": 1,
+  "total_unconfirmed_found": 416
 }
