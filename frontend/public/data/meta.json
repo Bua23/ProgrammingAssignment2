@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-09-10T12:27:55.322015+00:00",
+  "generated_at": "2026-09-10T17:14:45.624636+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Figma"
+    "Figma",
+    "Legora"
   ],
   "companies_with_unconfirmed": [
     "1Password",
@@ -23,7 +24,7 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
-    "Harvey AI",
+    "IBM",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -32,6 +33,7 @@
     "Marshmallow",
     "Mercor",
     "Meta",
+    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -43,7 +45,6 @@
     "Ravelin",
     "Retool",
     "SAP",
-    "Scale AI",
     "ServiceNow",
     "Snap Inc.",
     "Snowflake",
@@ -115,7 +116,6 @@
     "JFrog",
     "Junior AI",
     "Klaviyo",
-    "Legora",
     "Lendable",
     "LinkedIn",
     "Lovable",
@@ -194,6 +194,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 1,
-  "total_unconfirmed_found": 408
+  "total_jobs_found": 3,
+  "total_unconfirmed_found": 382
 }
