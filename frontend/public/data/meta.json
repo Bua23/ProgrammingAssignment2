@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-09T17:24:36.259812+00:00",
+  "generated_at": "2026-09-10T12:27:55.322015+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Multiverse"
+    "Figma"
   ],
   "companies_with_unconfirmed": [
     "1Password",
@@ -43,13 +43,14 @@
     "Ravelin",
     "Retool",
     "SAP",
+    "Scale AI",
     "ServiceNow",
     "Snap Inc.",
+    "Snowflake",
     "Speechmatics",
     "Synthesia",
     "Temporal Technologies",
     "Thought Machine",
-    "TikTok / ByteDance",
     "Uber",
     "Vercel",
     "Wayve",
@@ -114,6 +115,7 @@
     "JFrog",
     "Junior AI",
     "Klaviyo",
+    "Legora",
     "Lendable",
     "LinkedIn",
     "Lovable",
@@ -193,5 +195,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 1,
-  "total_unconfirmed_found": 392
+  "total_unconfirmed_found": 408
 }
