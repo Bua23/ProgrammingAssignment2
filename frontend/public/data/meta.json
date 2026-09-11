@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T12:21:29.611067+00:00",
+  "generated_at": "2026-09-11T17:16:59.900535+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -25,11 +25,11 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
+    "IBM",
     "Intercom",
     "Junior AI",
     "Klaviyo",
     "Lendable",
-    "Lovable",
     "Marshmallow",
     "Mercor",
     "Meta",
@@ -45,10 +45,8 @@
     "Ravelin",
     "Retool",
     "SAP",
-    "Scale AI",
     "ServiceNow",
     "Snap Inc.",
-    "Snowflake",
     "Speechmatics",
     "Synthesia",
     "Temporal Technologies",
@@ -81,6 +79,7 @@
     "CircleCI",
     "ClearScore",
     "Cleo AI",
+    "Cloudflare",
     "Cohere",
     "Contentful",
     "CreativeX",
@@ -196,5 +195,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 5,
-  "total_unconfirmed_found": 395
+  "total_unconfirmed_found": 369
 }
