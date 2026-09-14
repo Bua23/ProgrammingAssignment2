@@ -1,11 +1,10 @@
 {
-  "generated_at": "2026-09-11T17:16:59.900535+00:00",
+  "generated_at": "2026-09-14T14:01:11.253356+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Figma",
-    "Legora",
-    "hyperexponential"
+    "Multiverse"
   ],
   "companies_with_unconfirmed": [
     "1Password",
@@ -33,7 +32,6 @@
     "Marshmallow",
     "Mercor",
     "Meta",
-    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -45,8 +43,10 @@
     "Ravelin",
     "Retool",
     "SAP",
+    "Scale AI",
     "ServiceNow",
     "Snap Inc.",
+    "Snowflake",
     "Speechmatics",
     "Synthesia",
     "Temporal Technologies",
@@ -79,7 +79,6 @@
     "CircleCI",
     "ClearScore",
     "Cleo AI",
-    "Cloudflare",
     "Cohere",
     "Contentful",
     "CreativeX",
@@ -194,6 +193,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 5,
-  "total_unconfirmed_found": 369
+  "total_jobs_found": 2,
+  "total_unconfirmed_found": 385
 }
