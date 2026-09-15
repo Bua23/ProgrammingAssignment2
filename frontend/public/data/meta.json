@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-09-14T18:48:10.828522+00:00",
+  "generated_at": "2026-09-15T12:47:05.412694+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Figma",
+    "Griffin",
     "Legora",
     "Multiverse"
   ],
@@ -25,14 +26,15 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
-    "IBM",
     "Intercom",
     "Junior AI",
     "Klaviyo",
     "Lendable",
+    "Lovable",
     "Marshmallow",
     "Mercor",
     "Meta",
+    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -48,11 +50,11 @@
     "Scale AI",
     "ServiceNow",
     "Snap Inc.",
-    "Snowflake",
     "Speechmatics",
     "Synthesia",
     "Temporal Technologies",
     "Thought Machine",
+    "TikTok / ByteDance",
     "Uber",
     "Vercel",
     "Wayve",
@@ -195,6 +197,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 5,
-  "total_unconfirmed_found": 387
+  "total_jobs_found": 6,
+  "total_unconfirmed_found": 407
 }
