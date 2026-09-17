@@ -1,12 +1,10 @@
 {
-  "generated_at": "2026-09-17T12:44:46.739925+00:00",
+  "generated_at": "2026-09-17T17:51:49.841760+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Figma",
-    "Griffin",
-    "Legora",
-    "Multiverse"
+    "Legora"
   ],
   "companies_with_unconfirmed": [
     "1Password",
@@ -35,11 +33,10 @@
     "Marshmallow",
     "Mercor",
     "Meta",
-    "Microsoft",
-    "MongoDB",
     "Monzo",
     "Palo Alto Networks",
     "Pendo",
+    "Perplexity AI",
     "PhysicsX",
     "Pinterest",
     "Profound",
@@ -86,6 +83,7 @@
     "Cohere",
     "Contentful",
     "CreativeX",
+    "Cresta",
     "CrowdStrike",
     "Curve",
     "Darktrace",
@@ -197,6 +195,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 4,
+  "total_jobs_found": 3,
   "total_unconfirmed_found": 406
 }
