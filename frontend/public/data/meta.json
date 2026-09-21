@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-18T17:19:37.265505+00:00",
+  "generated_at": "2026-09-21T13:59:56.937382+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Vanta"
+    "Legora"
   ],
   "companies_with_unconfirmed": [
     "1Password",
@@ -15,6 +15,7 @@
     "Cohere",
     "CreativeX",
     "Databricks",
+    "Datadog",
     "Edra",
     "Expedia Group",
     "FIXR",
@@ -33,6 +34,7 @@
     "Mercor",
     "Meta",
     "MongoDB",
+    "Monzo",
     "Palo Alto Networks",
     "Pendo",
     "Perplexity AI",
@@ -194,6 +196,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 1,
-  "total_unconfirmed_found": 421
+  "total_jobs_found": 2,
+  "total_unconfirmed_found": 413
 }
