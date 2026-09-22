@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T18:52:16.945704+00:00",
+  "generated_at": "2026-09-22T12:43:01.344836+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -24,6 +24,7 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
+    "IBM",
     "Intercom",
     "Klaviyo",
     "Lendable",
@@ -35,9 +36,7 @@
     "Monzo",
     "Palo Alto Networks",
     "Pendo",
-    "Perplexity AI",
     "PhysicsX",
-    "Pinterest",
     "Profound",
     "Quantexa",
     "Ravelin",
@@ -53,7 +52,6 @@
     "Thought Machine",
     "Uber",
     "Vercel",
-    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -195,5 +193,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 2,
-  "total_unconfirmed_found": 402
+  "total_unconfirmed_found": 380
 }
