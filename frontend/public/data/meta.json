@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T17:52:59.187985+00:00",
+  "generated_at": "2026-09-23T12:53:23.967045+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -37,13 +37,13 @@
     "Monzo",
     "Palo Alto Networks",
     "Pendo",
+    "Perplexity AI",
     "PhysicsX",
-    "Pinterest",
     "Profound",
     "Quantexa",
     "Ravelin",
     "Retool",
-    "SAP",
+    "Scale AI",
     "ServiceNow",
     "Snap Inc.",
     "Snowflake",
@@ -58,8 +58,7 @@
     "Wiz",
     "Writer (AI)",
     "Zego",
-    "eBay",
-    "monday.com"
+    "eBay"
   ],
   "companies_dom_fallback": [
     "1Password",
@@ -195,5 +194,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 4,
-  "total_unconfirmed_found": 371
+  "total_unconfirmed_found": 394
 }
