@@ -1,9 +1,8 @@
 {
-  "generated_at": "2026-09-23T18:05:53.013168+00:00",
+  "generated_at": "2026-09-24T12:52:19.591063+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Figma",
     "Legora"
   ],
   "companies_with_unconfirmed": [
@@ -18,7 +17,6 @@
     "Databricks",
     "Datadog",
     "Edra",
-    "Expedia Group",
     "FIXR",
     "Freetrade",
     "GoCardless",
@@ -26,7 +24,6 @@
     "Graphcore",
     "H Company",
     "Harvey AI",
-    "IBM",
     "Intercom",
     "Klaviyo",
     "Lendable",
@@ -53,6 +50,7 @@
     "Thought Machine",
     "Uber",
     "Vercel",
+    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -193,5 +191,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 2,
-  "total_unconfirmed_found": 378
+  "total_unconfirmed_found": 396
 }
