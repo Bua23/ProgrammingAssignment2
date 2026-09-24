@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T12:52:19.591063+00:00",
+  "generated_at": "2026-09-24T18:06:42.407050+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -11,12 +11,12 @@
     "Amplitude",
     "Apple",
     "Atlassian",
-    "Canva",
     "Cohere",
     "CreativeX",
     "Databricks",
     "Datadog",
     "Edra",
+    "Expedia Group",
     "FIXR",
     "Freetrade",
     "GoCardless",
@@ -24,6 +24,7 @@
     "Graphcore",
     "H Company",
     "Harvey AI",
+    "IBM",
     "Intercom",
     "Klaviyo",
     "Lendable",
@@ -35,6 +36,7 @@
     "Monzo",
     "Palo Alto Networks",
     "Pendo",
+    "Perplexity AI",
     "PhysicsX",
     "Profound",
     "Quantexa",
@@ -190,6 +192,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 2,
-  "total_unconfirmed_found": 396
+  "total_jobs_found": 3,
+  "total_unconfirmed_found": 406
 }
