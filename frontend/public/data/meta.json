@@ -1,10 +1,8 @@
 {
-  "generated_at": "2026-09-25T12:53:05.276488+00:00",
+  "generated_at": "2026-09-25T18:10:05.496179+00:00",
   "window_hours": 24,
   "companies_checked": 144,
-  "companies_with_matches": [
-    "Legora"
-  ],
+  "companies_with_matches": [],
   "companies_with_unconfirmed": [
     "1Password",
     "Amazon",
@@ -190,6 +188,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 1,
-  "total_unconfirmed_found": 397
+  "total_jobs_found": 0,
+  "total_unconfirmed_found": 423
 }
