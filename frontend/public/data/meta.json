@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-28T15:20:42.630777+00:00",
+  "generated_at": "2026-09-28T20:21:53.536209+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Multiverse",
+    "Vanta",
     "hyperexponential"
   ],
   "companies_with_unconfirmed": [
     "1Password",
     "Amazon",
-    "Amplitude",
     "Apple",
     "Atlassian",
     "Canva",
@@ -32,11 +32,11 @@
     "Marshmallow",
     "Mercor",
     "Meta",
+    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
     "Pendo",
-    "Perplexity AI",
     "PhysicsX",
     "Profound",
     "Quantexa",
@@ -51,9 +51,9 @@
     "Temporal Technologies",
     "Uber",
     "Vercel",
-    "Wayve",
     "Wise",
     "Wiz",
+    "Workday",
     "Writer (AI)",
     "Zego",
     "eBay"
@@ -191,6 +191,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 2,
-  "total_unconfirmed_found": 391
+  "total_jobs_found": 3,
+  "total_unconfirmed_found": 386
 }
