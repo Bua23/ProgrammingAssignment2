@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-09-28T20:21:53.536209+00:00",
+  "generated_at": "2026-09-29T14:06:35.953789+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
+    "Griffin",
     "Multiverse",
     "Vanta",
     "hyperexponential"
@@ -10,7 +11,6 @@
   "companies_with_unconfirmed": [
     "1Password",
     "Amazon",
-    "Apple",
     "Atlassian",
     "Canva",
     "Cohere",
@@ -191,6 +191,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 3,
-  "total_unconfirmed_found": 386
+  "total_jobs_found": 5,
+  "total_unconfirmed_found": 378
 }
