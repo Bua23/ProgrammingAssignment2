@@ -1,6 +1,32 @@
 {
   "jobs": [
     {
+      "id": "greenhouse-figma-5458801004",
+      "company": "Figma",
+      "company_website": "https://www.figma.com",
+      "origin": "US",
+      "title": "Account Executive, Enterprise (London, United Kingdom)",
+      "location": "London, England",
+      "description_text": "<div class=\"content-intro\"><p>Figma is growing our team of passionate creatives and builders on a mission to make design accessible to all. Figma\u2019s platform helps teams bring ideas to life\u2014whether you're brainstorming, creating a prototype, translating designs into code, or iterating with AI. From idea to product, Figma empowers teams to streamline workflows, move faster, and work together in real time from anywhere in the world. If you're excited to shape the future of design and collaboration, join us!</p></div><div class=\"section page-centered\">\n<div>\n<div class=\"section page-centered\">\n<div>\n<div><br>We are looking for an Enterprise Account Executive who will play a critical role driving sales and maximizing revenue with our Enterprise customers. You will be responsible for targeting, building and nurturing positive relationships with key executive level decision-makers, understanding complex business needs, and delivering innovative solutions across our product suite. This is an opportunity to accelerate your career, learn from leading sellers in the industry and build an incredible network of cross functional partners at Figma.<br>\n<p>This is a full time hybrid role based in our London hub.&nbsp;</p>\n<h4><strong>What you'll do at Figma:</strong></h4>\n<ul>\n<li>Create and manage a pipeline of Enterprise accounts to consistently meet or exceed quarterly and annual sales targets</li>\n<li>Apply effective discovery and value-selling techniques to build and strengthen relationships with key decision-makers in both new and existing customers (5000+ FTEs)</li>\n<li>Align with executives on business challenges and gain sponsorship for enterprise wide deployments for a suite of products, identifying where Figma\u2019s roadmap and innovations fit in the long term</li>\n<li>Conduct thorough analysis to create strategic account plans that outline company priorities and initiatives, multi-threading at an executive level to build on expansion opportunities</li>\n<li>Manage a book of business by tiering accounts and initiating techniques to save contractions</li>\n<li>Co-create with cross-functional partners to expertly position Figma, drive deals forward and ensure customer success</li>\n<li>Leverage opportunities to advance executive level relationships through in-person meetings and networking opportunities</li>\n</ul>\n<h4><strong>We'd love to hear from you if you have:</strong></h4>\n<ul>\n<li>Experience closing sales, over multiple years, for a software or SaaS business with an Enterprise book of customers (5000+ FTEs), selling to executives</li>\n<li>Consistent performance meeting pipeline generation targets for net new business</li>\n<li>Demonstrated experience successfully managing complex sales cycles (6 months+)</li>\n<li>A sales methodology and process that creates value for customers</li>\n</ul>\n<h4><strong>While it\u2019s not required, it\u2019s an added plus if you also have:</strong></h4>\n<ul>\n<li>Experience selling solutions to technical audiences at a strategic level (i.e. Engineering, Product, Design teams)</li>\n<li>Demonstrated ability to succeed in a changing environment</li>\n<li>Certified in deal qualification and prospect discovery</li>\n</ul>\nAt Figma, one of our values is Grow as you go. We believe in hiring smart, curious people who are excited to learn and develop their skills. If you\u2019re excited about this role but your past experience doesn\u2019t align perfectly with the points outlined in the job description, we encourage you to apply anyways. You may be just the right candidate for this or other roles.</div>\n</div>\n</div>\n</div>\n</div><div class=\"content-conclusion\"><p>At Figma we celebrate and support our differences. We know employing a team rich in diverse thoughts, experiences, and opinions allows our employees, our product and our community to flourish. Figma is an <a href=\"https://www.eeoc.gov/sites/default/files/2022-10/EEOC_KnowYourRights_screen_reader_10_20.pdf\">equal opportunity workplace</a> - we are dedicated to equal employment",
+      "description_snippet": "<div class=\"content-intro\"><p>Figma is growing our team of passionate creatives and builders on a mission to make design accessible to all. Figma\u2019s platform helps teams bring ideas to life\u2014whether you're brainstorming, creating a prototype, translating designs into code, or\u2026",
+      "url": "https://boards.greenhouse.io/figma/jobs/5458801004?gh_jid=5458801004",
+      "source": "greenhouse",
+      "posted_at": "2026-09-29T14:52:19+00:00"
+    },
+    {
+      "id": "ashby-multiverse-58389a21-a599-43b6-9869-9885a16e2072",
+      "company": "Multiverse",
+      "company_website": "https://www.multiverse.io",
+      "origin": "UK",
+      "title": "Senior AI Engineer",
+      "location": "London",
+      "description_text": "Multiverse is the upskilling platform for AI and Tech adoption.\nWe have partnered with 1,500+ companies to deliver a new kind of learning that's transforming today\u2019s workforce.\nOur upskilling apprenticeships are designed for people of any age and career stage to build critical AI, data, and tech skills. Our learners have driven $2bn+ ROI for their employers, using the skills they\u2019ve learned to improve productivity and measurable performance.\nIn April 2026, we announced $70 million in strategic funding, led by Schroders Capital, with participation from StepStone Group, Lightspeed Venture Partners and General Catalyst. At an increased valuation of $2.1bn, the round makes us Europe\u2019s first EdTech double unicorn.\nBut we aren\u2019t stopping there. With a strong operational footprint and 800+ employees, we have ambitious plans to continue scaling. We\u2019re building a world where tech skills unlock people\u2019s potential and output.\nJoin Multiverse and power our mission to equip the workforce to win in the AI era.\nThe AI Transformation team\nAI Transformation is a small, focused squad that is driving Multiverse\u2019s next wave of growth. Our mandate is to rebuild how the company actually works, function by function, and to establish the practices that make Multiverse an AI-first company from the core out.\nBut our work doesn\u2019t stop there. We are building a product that we will take to market to truly be a transformation partner to our customers. Joining this team means shaping the future of Multiverse, of our customers, and of the wider workforce as we navigate the new world of work.\nThe team is high velocity, inherently cross-functional and broad in scope. We work alongside colleagues whose work we are reimagining, and closely with the wider engineering org building Multiverse's current customer-facing product. The structure is flat and fast, with egos left at the door, bias to action and fun at our core.\nWhat your day-to-day will look like\nEvery day will be different, but you can expect it to include:\nOwn and deliver end-to-end AI systems:\n agents and the platforms they depend on. You identify a user problem, break it down and build the AI system that solves it, in close partnership with the teams who will adopt it\nDesign context and retrieval strategies: \nthe retrieval pipelines, conversation memory, summarisation strategies, chunking logic and RBAC that make context useful and permission-aware\nBuild evaluation frameworks. \nYou build automated eval pipelines and human-in-the-loop review processes that tell the team whether its AI systems are doing what they should.\nDesign tool integrations. \nAgents are only as capable as the systems and context they can reach. You design and build the tool layer: MCPs, APIs, data contracts, and the error handling that makes tool use reliable.\nInfluence technical direction. \nYou have opinions about how things should be built, and you back them up with evidence. You contribute to architectural decisions, push back when the team is heading in the wrong direction, and propose better approaches.\nWhat We Are Looking For\nProduction AI Agent Engineering: \nYou have shipped AI systems that serve real users at scale. You understand the engineering challenges that make agent systems different from conventional software, including context management, model selection and routing, cost engineering, tool use and agent augmentation, and evaluation\nProduct mindset: \nYour natural instinct is to identify the real user pain, understand their requirements and build pragmatic, high-impact solutions. You test, learn and iterate fast, and are comfortable executing under high ambiguity\nFull-Stack Delivery: \nYou work across the stack: LLM integration, backend services, data pipelines, and enough frontend to ship end to end\nCommunication: \nYou can explain technical concepts clearly to both engineers and business colleagues. You proactively engage the people around your work, and bring them along with you on the journey\nFluent in AI-assisted ",
+      "description_snippet": "Multiverse is the upskilling platform for AI and Tech adoption.\nWe have partnered with 1,500+ companies to deliver a new kind of learning that's transforming today\u2019s workforce.\nOur upskilling apprenticeships are designed for people of any age and career stage to build critical\u2026",
+      "url": "https://jobs.ashbyhq.com/multiverse/58389a21-a599-43b6-9869-9885a16e2072",
+      "source": "ashby",
+      "posted_at": "2026-09-29T14:08:51.168000+00:00"
+    },
+    {
       "id": "ashby-multiverse-51424d0a-3d73-4d5c-91c1-a92cf5e42d51",
       "company": "Multiverse",
       "company_website": "https://www.multiverse.io",
@@ -51,19 +77,6 @@
       "url": "https://jobs.ashbyhq.com/vanta/99412127-8d8d-4d25-9393-73e4c17deef4",
       "source": "ashby",
       "posted_at": "2026-09-28T19:40:13.865000+00:00"
-    },
-    {
-      "id": "ashby-multiverse-a729fed8-5035-471d-bac4-b275ba05c170",
-      "company": "Multiverse",
-      "company_website": "https://www.multiverse.io",
-      "origin": "UK",
-      "title": "Senior Leader - Product Marketing",
-      "location": "London",
-      "description_text": "Multiverse is the upskilling platform for AI and Tech adoption.\nWe have partnered with 1,500+ companies to deliver a new kind of learning that's transforming today\u2019s workforce.\nOur upskilling apprenticeships are designed for people of any age and career stage to build critical AI, data, and tech skills. Our learners have driven $2bn+ ROI for their employers, using the skills they\u2019ve learned to improve productivity and measurable performance.\nIn April 2026, we announced $70 million in strategic funding, led by Schroders Capital, with participation from StepStone Group, Lightspeed Venture Partners and General Catalyst. At an increased valuation of $2.1bn, the round makes us Europe\u2019s first EdTech double unicorn.\nBut we aren\u2019t stopping there. With a strong operational footprint and 800+ employees, we have ambitious plans to continue scaling. We\u2019re building a world where tech skills unlock people\u2019s potential and output.\nJoin Multiverse and power our mission to equip the workforce to win in the AI era.\nAbout the role\nBillions have gone into enterprise AI. Most of it isn't working \u2014 organisations still can't turn model capability into measurable business impact. That's not a training problem or a slide-deck problem. It's a hard, unsolved technical challenge: building the systems that translate what AI can do into how work actually gets done inside real organisations, at scale, with proof it's working. That's the problem Multiverse exists to solve, and it's the one this role exists to sell.\nWe're hiring a Senior Leader of Product Marketing, reporting to the CPTO, to own the positioning, competitive intelligence, and go-to-market orchestration that makes that story credible to buyers who've heard \"AI transformation\" pitches before and have learned to discount them. This is a strategic leadership and launch-execution role: you're accountable for a narrative that has to survive a skeptical CTO's follow-up questions, not just land in a pitch deck.\nYou'll sit at the center of Product, Engineering, Sales, B2B Marketing, CS, and executive leadership \u2014 turning hard technical work into a case buyers trust, giving Sales what they need to win the deals that matter, and grounding pricing and roadmap decisions in real market evidence.\nGrowth today comes primarily through our sales motion \u2014 there isn't yet a significant inbound or demand-generation engine to lean on. This role needs to work effectively within that reality now, while helping shape what comes next, rather than assuming a demand-gen infrastructure that doesn't currently exist.\nWhat you'll own\nPositioning & narrative\nDefine and defend the category narrative and product positioning \u2014 including translating technical/AI capabilities into value claims that hold up under scrutiny from technical buyers, procurement, and security review, without overclaiming\nOwn messaging architecture across product lines and keep it consistent as the portfolio grows\nMarket & competitive intelligence\nRun competitive intelligence (win-loss analysis, competitor tracking, technical benchmarking) and be the most credible voice in the room on what the market actually believes \u2014 evidence, not anecdote\nFeed that signal directly into product roadmap and pricing decisions\nBuild lightweight, repeatable, automatable processes to get customer voice and insight directly into product development and launches \u2014 this currently happens ad hoc and needs an owner\nGTM orchestration\nOwn launch strategy and sequencing \u2014 what to launch, when, and how big a moment to make of it \u2014 partnering with Product on roadmap-to-revenue sequencing so GTM readiness isn't an afterthought\nDefine launch success metrics and report on them credibly to executive leadership\nChampion and put structure around the shift toward faster product launches \u2014 building quickly and iterating based on real performance\nSales & CS enablement\nEquip Sales to win deals with best-in-class sales collateral, tools, and enablement, and support strategic deals directly where",
-      "description_snippet": "Multiverse is the upskilling platform for AI and Tech adoption.\nWe have partnered with 1,500+ companies to deliver a new kind of learning that's transforming today\u2019s workforce.\nOur upskilling apprenticeships are designed for people of any age and career stage to build critical\u2026",
-      "url": "https://jobs.ashbyhq.com/multiverse/a729fed8-5035-471d-bac4-b275ba05c170",
-      "source": "ashby",
-      "posted_at": "2026-09-28T14:41:57.026000+00:00"
     }
   ],
   "unconfirmed_jobs": [
@@ -107,6 +120,32 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-other-amazon-06f93f08a9905d62",
+      "company": "Amazon",
+      "company_website": "https://www.amazon.com",
+      "origin": "US",
+      "title": "AWS Transport Business Development Manager, Central Government, Transport",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.amazon.jobs/en/jobs/10509953/aws-transport-business-development-manager-central-government-transport",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-amazon-eba1cb1ddfed5d81",
+      "company": "Amazon",
+      "company_website": "https://www.amazon.com",
+      "origin": "US",
+      "title": "Construction Manager Intern (12 months) - 2027",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.amazon.jobs/en/jobs/10563867/construction-manager-intern-12-months-2027",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-other-amazon-98fd3a9c90f698e9",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
@@ -146,15 +185,15 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-e46026c21e2277f9",
+      "id": "dom-fallback-other-amazon-a4c78c09fae94699",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Senior Program Manager, EU Shipper Support, Amazon Shipping",
+      "title": "Senior Financial Analyst",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10563570/senior-program-manager-eu-shipper-support-amazon-shipping",
+      "url": "https://www.amazon.jobs/en/jobs/10563821/senior-financial-analyst",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -172,28 +211,28 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-53373547c56f911f",
+      "id": "dom-fallback-other-amazon-4bc638ca44667d72",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Software Development Engineer II, Audio, Twitch & Games (ATG) Security",
+      "title": "Sr. Account Manager, WWPS ISV Sales, PARTNERS-PS",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10561676/software-development-engineer-ii-audio-twitch-games-atg-security",
+      "url": "https://www.amazon.jobs/en/jobs/10528652/sr-account-manager-wwps-isv-sales-partners-ps",
       "source": "dom-fallback-other",
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-baf502aefc51f00c",
+      "id": "dom-fallback-other-amazon-50ee842ca2b6b932",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Speed Programs Manager - FTC 18 months, Sr Same Day Programs",
+      "title": "Sr. Sustainability Strategy Manager, Studios Strategy and Operations",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10563563/speed-programs-manager-ftc-18-months-sr-same-day-programs",
+      "url": "https://www.amazon.jobs/en/jobs/10564136/sr-sustainability-strategy-manager-studios-strategy-and-operations",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -220,6 +259,19 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://www.amazon.jobs/en/jobs/10485153/wim-investigator-ii-amsec-workplace-incident-management",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-apple-35399d48d9744791",
+      "company": "Apple",
+      "company_website": "https://www.apple.com",
+      "origin": "US",
+      "title": "SRE, London",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.apple.com/en-gb/details/200669097-2114/sre-london?team=SFTWR",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -272,19 +324,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://www.atlassian.com/company/careers/details/27066",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-atlassian-https://www.atlassian.com/company/careers/details/25723",
-      "company": "Atlassian",
-      "company_website": "https://www.atlassian.com",
-      "origin": "Intl",
-      "title": "Account Executive, DX Strategic Benelux",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.atlassian.com/company/careers/details/25723",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -419,19 +458,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-atlassian-https://www.atlassian.com/company/careers/details/25686",
-      "company": "Atlassian",
-      "company_website": "https://www.atlassian.com",
-      "origin": "Intl",
-      "title": "Sales Development Representative, Enterprise, Southern Europe",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.atlassian.com/company/careers/details/25686",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-other-atlassian-https://www.atlassian.com/company/careers/details/27023",
       "company": "Atlassian",
       "company_website": "https://www.atlassian.com",
@@ -454,6 +480,32 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://www.atlassian.com/company/careers/details/27091",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-atlassian-https://www.atlassian.com/company/careers/details/26050",
+      "company": "Atlassian",
+      "company_website": "https://www.atlassian.com",
+      "origin": "Intl",
+      "title": "Senior Principal Customer Success Manager, Strategic - UKI",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.atlassian.com/company/careers/details/26050",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-atlassian-https://www.atlassian.com/company/careers/details/25772",
+      "company": "Atlassian",
+      "company_website": "https://www.atlassian.com",
+      "origin": "Intl",
+      "title": "Senior Solution Engineer, Strategic, UKI",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.atlassian.com/company/careers/details/25772",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -1745,32 +1797,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-ashby-lovable-03efef25fc171386",
-      "company": "Lovable",
-      "company_website": "https://lovable.dev",
-      "origin": "Intl",
-      "title": "AI Scaled Customer Success Programs\n\nRevenue\n\n\u2022\n\nMultiple locations\n\n\u2022\n\nFull-time",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://lovable.dev/careers/ai-scaled-customer-success-programs-3944f5",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-lovable-https://lovable.dev/careers/analytics-engineer-d92292",
-      "company": "Lovable",
-      "company_website": "https://lovable.dev",
-      "origin": "Intl",
-      "title": "Analytics Engineer\n\nRevenue\n\n\u2022\n\nMultiple locations\n\n\u2022\n\nFull-time",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://lovable.dev/careers/analytics-engineer-d92292",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-ashby-lovable-https://lovable.dev/careers/commercial-counsel-4e100b",
       "company": "Lovable",
       "company_website": "https://lovable.dev",
@@ -1823,71 +1849,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-ashby-lovable-1e7934c0493b3857",
-      "company": "Lovable",
-      "company_website": "https://lovable.dev",
-      "origin": "Intl",
-      "title": "Mid Market Account Executive\n\nRevenue\n\n\u2022\n\nMultiple locations\n\n\u2022\n\nFull-time",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://lovable.dev/careers/mid-market-account-executive-58a2e1",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-lovable-342d73d9f792fa4b",
-      "company": "Lovable",
-      "company_website": "https://lovable.dev",
-      "origin": "Intl",
-      "title": "Mid-Market Account Executive, London\n\nRevenue\n\n\u2022\n\nLondon\n\n\u2022\n\nFull-time",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://lovable.dev/careers/mid-market-account-executive-london-129316",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-lovable-65a7e2bcc259b16d",
-      "company": "Lovable",
-      "company_website": "https://lovable.dev",
-      "origin": "Intl",
-      "title": "Mid-Market Account Executive, Nordics\n\nRevenue\n\n\u2022\n\nStockholm\n\n\u2022\n\nFull-time",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://lovable.dev/careers/mid-market-account-executive-nordics-379953",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-lovable-bad0d70689a94a37",
-      "company": "Lovable",
-      "company_website": "https://lovable.dev",
-      "origin": "Intl",
-      "title": "Partner Development Manager, Hyperscalers & GSIs\n\nRevenue\n\n\u2022\n\nMultiple locations\n\n\u2022\n\nFull-time",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://lovable.dev/careers/partner-development-manager-hyperscalers-and-gsis-02602e",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-lovable-2c0c3cc98e0a906a",
-      "company": "Lovable",
-      "company_website": "https://lovable.dev",
-      "origin": "Intl",
-      "title": "Partner Development Manager, Regional SIs\n\nRevenue\n\n\u2022\n\nMultiple locations\n\n\u2022\n\nFull-time",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://lovable.dev/careers/partner-development-manager-regional-sis-4f26af",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-ashby-lovable-https://lovable.dev/careers/payroll-lead-8fa617",
       "company": "Lovable",
       "company_website": "https://lovable.dev",
@@ -1936,19 +1897,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://lovable.dev/careers/product-partnership-manager-e1da28",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-lovable-d179f7125315c390",
-      "company": "Lovable",
-      "company_website": "https://lovable.dev",
-      "origin": "Intl",
-      "title": "Sales Manager, Enterprise & Strategic\n\nRevenue\n\n\u2022\n\nMultiple locations\n\n\u2022\n\nFull-time",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://lovable.dev/careers/sales-manager-enterprise-and-strategic-bd7b3e",
       "source": "dom-fallback-ashby",
       "posted_at": null
     },
@@ -2161,120 +2109,16 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-microsoft-e05275ce093dd4be",
-      "company": "Microsoft",
-      "company_website": "https://www.microsoft.com",
+      "id": "dom-fallback-greenhouse-mongodb-https://www.mongodb.com/careers/job/?gh_jid=8153715",
+      "company": "MongoDB",
+      "company_website": "https://www.mongodb.com",
       "origin": "US",
-      "title": "Environmental Health & Safety Manager\nUnited Kingdom, London, London\nPosted 16 days ago",
+      "title": "Enterprise Account Executive\nLondon\nFull-time",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556945378",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-microsoft-9de6b7d1677cfa14",
-      "company": "Microsoft",
-      "company_website": "https://www.microsoft.com",
-      "origin": "US",
-      "title": "Land Acquisition Manager\nUnited Kingdom, London, London\nPosted 3 months ago",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556889818",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-microsoft-c219863c8b6ba4ed",
-      "company": "Microsoft",
-      "company_website": "https://www.microsoft.com",
-      "origin": "US",
-      "title": "Lease Construction Manager\nUnited Kingdom, London, London\nPosted 3 months ago",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556872414",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-microsoft-b6a5f598bbd595e8",
-      "company": "Microsoft",
-      "company_website": "https://www.microsoft.com",
-      "origin": "US",
-      "title": "Member of Technical Staff - Applied AI Lead, Health\nUnited Kingdom, London, London\nPosted 2 months ago",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556927554",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-microsoft-5185cd426f5294f7",
-      "company": "Microsoft",
-      "company_website": "https://www.microsoft.com",
-      "origin": "US",
-      "title": "Member of Technical Staff - Applied AI Software Engineer, Health\nUnited Kingdom, London, London\nPosted a month ago",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556971733",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-microsoft-3da7201575e59b8f",
-      "company": "Microsoft",
-      "company_website": "https://www.microsoft.com",
-      "origin": "US",
-      "title": "Recruiting Coordinator Microsoft AI, EMEA\nUnited Kingdom, London, London\nPosted 4 days ago",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393557002651",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-microsoft-3b9e6e301c49c8ce",
-      "company": "Microsoft",
-      "company_website": "https://www.microsoft.com",
-      "origin": "US",
-      "title": "Services Account Manager\nUnited Kingdom, London, London\nPosted 21 hours ago",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393557002185",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-microsoft-d0c713d3f58fb552",
-      "company": "Microsoft",
-      "company_website": "https://www.microsoft.com",
-      "origin": "US",
-      "title": "Strategic Account Director - Banking\nUnited Kingdom, London, London + 1 more\nPosted 8 days ago",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393556989135",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-microsoft-172d5c77528a862b",
-      "company": "Microsoft",
-      "company_website": "https://www.microsoft.com",
-      "origin": "US",
-      "title": "Strategic Account Executive, Media\nUnited Kingdom, London, London\nPosted 5 days ago",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393557004498",
-      "source": "dom-fallback-other",
+      "url": "https://www.mongodb.com/careers/job/?gh_jid=8153715",
+      "source": "dom-fallback-greenhouse",
       "posted_at": null
     },
     {
@@ -2287,19 +2131,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://www.mongodb.com/careers/job/?gh_jid=7607210",
-      "source": "dom-fallback-greenhouse",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-greenhouse-mongodb-https://www.mongodb.com/careers/job/?gh_jid=8153715",
-      "company": "MongoDB",
-      "company_website": "https://www.mongodb.com",
-      "origin": "US",
-      "title": "Enterprise Account Executive\nLondon\nFull-time",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.mongodb.com/careers/job/?gh_jid=8153715",
       "source": "dom-fallback-greenhouse",
       "posted_at": null
     },
@@ -2512,6 +2343,32 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-other-paloaltonetworks-896775f569a0faf3",
+      "company": "Palo Alto Networks",
+      "company_website": "https://www.paloaltonetworks.com",
+      "origin": "US",
+      "title": "Senior Manager, Renewal Sales\nLondon, United Kingdom",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.paloaltonetworks.com/en/job/london/senior-manager-renewal-sales/47263/99220482464",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-paloaltonetworks-3d16d9113b2a696c",
+      "company": "Palo Alto Networks",
+      "company_website": "https://www.paloaltonetworks.com",
+      "origin": "US",
+      "title": "Senior Partner Solution Architect - IDIRA\nLondon, United Kingdom, Amsterdam, Netherlands",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.paloaltonetworks.com/en/job/london/senior-partner-solution-architect-idira/47263/99846400016",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-other-paloaltonetworks-94cbabfd185a38a2",
       "company": "Palo Alto Networks",
       "company_website": "https://www.paloaltonetworks.com",
@@ -2551,15 +2408,15 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-paloaltonetworks-dd6fcbdbdc36ef3d",
+      "id": "dom-fallback-other-paloaltonetworks-4ddaa83849ad4c23",
       "company": "Palo Alto Networks",
       "company_website": "https://www.paloaltonetworks.com",
       "origin": "US",
-      "title": "Sr IT Systems Engineer\nLondon, London, United Kingdom\nIT",
+      "title": "Sr Channel Solution Consulant\nLondon, United Kingdom",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://jobs.paloaltonetworks.com/en/job/london/sr-it-systems-engineer/47263/97571254496",
+      "url": "https://jobs.paloaltonetworks.com/en/job/london/sr-channel-solution-consulant/47263/99346502016",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -2599,6 +2456,19 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://jobs.paloaltonetworks.com/en/job/london/strategic-identity-account-manager/47263/101129242768",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-paloaltonetworks-0262a306cadd8483",
+      "company": "Palo Alto Networks",
+      "company_website": "https://www.paloaltonetworks.com",
+      "origin": "US",
+      "title": "Transformation Success Engineer (TSE)\nLondon, London, City of, United Kingdom\nSales",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.paloaltonetworks.com/en/job/london/transformation-success-engineer-tse/47263/101311780896",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -2742,6 +2612,19 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://job-boards.eu.greenhouse.io/physicsx/jobs/4965864101",
+      "source": "dom-fallback-greenhouse",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-greenhouse-physicsx-https://job-boards.eu.greenhouse.io/physicsx/jobs/4804769101",
+      "company": "PhysicsX",
+      "company_website": "https://www.physicsx.ai",
+      "origin": "UK",
+      "title": "Senior AI / Agentic Engineer\n\nLondon",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://job-boards.eu.greenhouse.io/physicsx/jobs/4804769101",
       "source": "dom-fallback-greenhouse",
       "posted_at": null
     },
@@ -3318,19 +3201,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-greenhouse-scaleai-https://scale.com/careers/4602177005",
-      "company": "Scale AI",
-      "company_website": "https://scale.com",
-      "origin": "US",
-      "title": "Frontier Agent Engineering Manager, Enterprise\nSAN FRANCISCO, CA\nAPPLY \u2192",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://scale.com/careers/4602177005",
-      "source": "dom-fallback-greenhouse",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-greenhouse-scaleai-https://scale.com/careers/4536659005",
       "company": "Scale AI",
       "company_website": "https://scale.com",
@@ -3470,6 +3340,19 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://scale.com/careers/4694863005",
+      "source": "dom-fallback-greenhouse",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-greenhouse-scaleai-https://scale.com/careers/4676606005",
+      "company": "Scale AI",
+      "company_website": "https://scale.com",
+      "origin": "US",
+      "title": "Senior Full-Stack Software Engineer, (Forward Deployed), GPS\nDOHA, QATAR\nAPPLY \u2192",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://scale.com/careers/4676606005",
       "source": "dom-fallback-greenhouse",
       "posted_at": null
     },
@@ -4384,6 +4267,19 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-other-wise-ec217ea86ff13831",
+      "company": "Wise",
+      "company_website": "https://wise.com",
+      "origin": "UK",
+      "title": "Senior Legal Counsel, Disputes (UK and Europe)",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://wise.jobs/job/senior-legal-counsel-disputes-uk-and-europe-in-london-jid-4235",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-other-wise-6dc43af0f9b0462c",
       "company": "Wise",
       "company_website": "https://wise.com",
@@ -4410,19 +4306,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-wise-29f56f0e289c4771",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Senior Software Engineer II - KYC Experience",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/senior-software-engineer-ii-kyc-experience-in-london-jid-4052",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-other-wise-https://wise.jobs/#/",
       "company": "Wise",
       "company_website": "https://wise.com",
@@ -4432,6 +4315,19 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://wise.jobs/#/",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-wise-https://wise.jobs/job/workplace-adviser-in-london-jid-4223",
+      "company": "Wise",
+      "company_website": "https://wise.com",
+      "origin": "UK",
+      "title": "Workplace Adviser",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://wise.jobs/job/workplace-adviser-in-london-jid-4223",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -4498,19 +4394,6 @@
       "description_snippet": "",
       "url": "https://www.wiz.io/careers/job/4704730006/security-engineer-product?gh_jid=4704730006",
       "source": "dom-fallback-greenhouse",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-workday-14ef160aec7c2971",
-      "company": "Workday",
-      "company_website": "https://www.workday.com",
-      "origin": "US",
-      "title": "Engagement Manager - Sana (London)",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://workday.wd5.myworkdayjobs.com/en-US/Workday/job/United-Kingdom-London/Engagement-Manager---Sana--London-_JR-0110504",
-      "source": "dom-fallback-other",
       "posted_at": null
     },
     {
