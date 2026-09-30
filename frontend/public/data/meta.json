@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-09-30T13:40:44.607634+00:00",
+  "generated_at": "2026-09-30T18:38:55.881211+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Figma",
+    "Legora",
     "Multiverse"
   ],
   "companies_with_unconfirmed": [
@@ -15,12 +16,10 @@
     "Cohere",
     "CreativeX",
     "Databricks",
-    "Datadog",
     "Edra",
     "Expedia Group",
     "FIXR",
     "Freetrade",
-    "GoCardless",
     "GoodNotes",
     "Graphcore",
     "H Company",
@@ -32,7 +31,6 @@
     "Mercor",
     "Meta",
     "MongoDB",
-    "Monzo",
     "Palo Alto Networks",
     "Pendo",
     "PhysicsX",
@@ -191,5 +189,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 4,
-  "total_unconfirmed_found": 380
+  "total_unconfirmed_found": 377
 }
