@@ -1,13 +1,10 @@
 {
-  "generated_at": "2026-09-29T18:49:23.451108+00:00",
+  "generated_at": "2026-09-30T13:40:44.607634+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Figma",
-    "Griffin",
-    "Multiverse",
-    "Vanta",
-    "hyperexponential"
+    "Multiverse"
   ],
   "companies_with_unconfirmed": [
     "1Password",
@@ -39,6 +36,7 @@
     "Palo Alto Networks",
     "Pendo",
     "PhysicsX",
+    "Pinterest",
     "Profound",
     "Quantexa",
     "Ravelin",
@@ -52,6 +50,7 @@
     "Temporal Technologies",
     "Uber",
     "Vercel",
+    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -191,6 +190,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 6,
-  "total_unconfirmed_found": 368
+  "total_jobs_found": 4,
+  "total_unconfirmed_found": 380
 }
