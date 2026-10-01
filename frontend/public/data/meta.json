@@ -1,11 +1,12 @@
 {
-  "generated_at": "2026-09-30T18:38:55.881211+00:00",
+  "generated_at": "2026-10-01T14:33:53.787027+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Figma",
     "Legora",
-    "Multiverse"
+    "Multiverse",
+    "Vanta"
   ],
   "companies_with_unconfirmed": [
     "1Password",
@@ -16,13 +17,16 @@
     "Cohere",
     "CreativeX",
     "Databricks",
+    "Datadog",
     "Edra",
     "Expedia Group",
     "FIXR",
     "Freetrade",
+    "GoCardless",
     "GoodNotes",
     "Graphcore",
     "H Company",
+    "Harvey AI",
     "Intercom",
     "Klaviyo",
     "Lendable",
@@ -30,7 +34,9 @@
     "Marshmallow",
     "Mercor",
     "Meta",
+    "Microsoft",
     "MongoDB",
+    "Monzo",
     "Palo Alto Networks",
     "Pendo",
     "PhysicsX",
@@ -188,6 +194,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 4,
-  "total_unconfirmed_found": 377
+  "total_jobs_found": 6,
+  "total_unconfirmed_found": 387
 }
