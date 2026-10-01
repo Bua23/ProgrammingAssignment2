@@ -1,9 +1,8 @@
 {
-  "generated_at": "2026-10-01T14:33:53.787027+00:00",
+  "generated_at": "2026-10-01T19:04:16.379063+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Figma",
     "Legora",
     "Multiverse",
     "Vanta"
@@ -13,7 +12,6 @@
     "Amazon",
     "Apple",
     "Atlassian",
-    "Canva",
     "Cohere",
     "CreativeX",
     "Databricks",
@@ -34,13 +32,11 @@
     "Marshmallow",
     "Mercor",
     "Meta",
-    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
     "Pendo",
     "PhysicsX",
-    "Pinterest",
     "Profound",
     "Quantexa",
     "Ravelin",
@@ -194,6 +190,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 6,
-  "total_unconfirmed_found": 387
+  "total_jobs_found": 4,
+  "total_unconfirmed_found": 381
 }
