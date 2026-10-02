@@ -1,11 +1,9 @@
 {
-  "generated_at": "2026-10-01T19:04:16.379063+00:00",
+  "generated_at": "2026-10-02T13:56:25.875151+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Legora",
-    "Multiverse",
-    "Vanta"
+    "Griffin"
   ],
   "companies_with_unconfirmed": [
     "1Password",
@@ -32,6 +30,7 @@
     "Marshmallow",
     "Mercor",
     "Meta",
+    "Microsoft",
     "MongoDB",
     "Monzo",
     "Palo Alto Networks",
@@ -190,6 +189,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 4,
-  "total_unconfirmed_found": 381
+  "total_jobs_found": 1,
+  "total_unconfirmed_found": 395
 }
