@@ -1,11 +1,8 @@
 {
-  "generated_at": "2026-10-02T18:36:27.169746+00:00",
+  "generated_at": "2026-10-05T15:55:18.987327+00:00",
   "window_hours": 24,
   "companies_checked": 144,
-  "companies_with_matches": [
-    "Griffin",
-    "hyperexponential"
-  ],
+  "companies_with_matches": [],
   "companies_with_unconfirmed": [
     "1Password",
     "Amazon",
@@ -31,7 +28,7 @@
     "Marshmallow",
     "Mercor",
     "Meta",
-    "MongoDB",
+    "Microsoft",
     "Monzo",
     "Palo Alto Networks",
     "Pendo",
@@ -50,7 +47,6 @@
     "Thought Machine",
     "Uber",
     "Vercel",
-    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -190,6 +186,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 2,
-  "total_unconfirmed_found": 397
+  "total_jobs_found": 0,
+  "total_unconfirmed_found": 373
 }
