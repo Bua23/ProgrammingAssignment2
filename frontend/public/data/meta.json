@@ -1,12 +1,16 @@
 {
-  "generated_at": "2026-10-05T21:29:21.503632+00:00",
+  "generated_at": "2026-10-06T14:16:16.345187+00:00",
   "window_hours": 24,
   "companies_checked": 144,
-  "companies_with_matches": [],
+  "companies_with_matches": [
+    "Figma",
+    "Gong",
+    "Legora",
+    "Multiverse"
+  ],
   "companies_with_unconfirmed": [
     "1Password",
     "Amazon",
-    "Apple",
     "Atlassian",
     "Cohere",
     "CreativeX",
@@ -28,6 +32,7 @@
     "Marshmallow",
     "Mercor",
     "Meta",
+    "MongoDB",
     "Monzo",
     "Palo Alto Networks",
     "Pendo",
@@ -186,6 +191,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 0,
-  "total_unconfirmed_found": 383
+  "total_jobs_found": 4,
+  "total_unconfirmed_found": 392
 }
