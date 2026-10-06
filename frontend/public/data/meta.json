@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T14:16:16.345187+00:00",
+  "generated_at": "2026-10-06T19:08:38.820497+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -11,6 +11,7 @@
   "companies_with_unconfirmed": [
     "1Password",
     "Amazon",
+    "Apple",
     "Atlassian",
     "Cohere",
     "CreativeX",
@@ -24,7 +25,6 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
-    "Harvey AI",
     "Intercom",
     "Klaviyo",
     "Lendable",
@@ -191,6 +191,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 4,
-  "total_unconfirmed_found": 392
+  "total_jobs_found": 5,
+  "total_unconfirmed_found": 377
 }

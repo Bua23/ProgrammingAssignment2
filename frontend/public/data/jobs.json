@@ -1,6 +1,19 @@
 {
   "jobs": [
     {
+      "id": "ashby-multiverse-2b4791fd-67af-4624-862a-020e07148b38",
+      "company": "Multiverse",
+      "company_website": "https://www.multiverse.io",
+      "origin": "UK",
+      "title": "Senior People Partner - GTM",
+      "location": "London",
+      "description_text": "Multiverse is the upskilling platform for AI and Tech adoption.\nWe have partnered with 1,500+ companies to deliver a new kind of learning that's transforming today\u2019s workforce.\nOur upskilling apprenticeships are designed for people of any age and career stage to build critical AI, data, and tech skills. Our learners have driven $2bn+ ROI for their employers, using the skills they\u2019ve learned to improve productivity and measurable performance.\nIn April 2026, we announced $70 million in strategic funding, led by Schroders Capital, with participation from StepStone Group, Lightspeed Venture Partners and General Catalyst. At an increased valuation of $2.1bn, the round makes us Europe\u2019s first EdTech double unicorn.\nBut we aren\u2019t stopping there. With a strong operational footprint and 800+ employees, we have ambitious plans to continue scaling. We\u2019re building a world where tech skills unlock people\u2019s potential and output.\nJoin Multiverse and power our mission to equip the workforce to win in the AI era.\nThe opportunity\nAt Multiverse, People Partnering is a driver of commercial performance, not a support function. We measure ourselves on whether the business performs better because we're in the room.\nThis role partners our GTM organisation\n \u2014 Sales, Customer Impact, B2B Marketing, Revenue Operations and Enablement. It's the largest, fastest-moving and most commercially exposed part of the company, and it's where people decisions show up in the numbers fastest.\nYou'll work directly with our CRO and his leadership layer.\n They are sharp, direct, and want a partner who brings a point of view and the data to back it. You'll operate as both advisor and operator: helping leaders make better decisions, and making sure the fundamentals are genuinely excellent underneath.\nWhat you'll do:\nCommercial partnering\nPartner the CRO, Sales SVP and their leadership teams on performance, productivity and team effectiveness.\nTranslate commercial targets \u2014 pipeline, attainment, retention, revenue per head \u2014 into people plans that move those numbers.\nCoach managers on performance, decision-making and holding a high bar. Challenge senior leaders directly when the call is wrong.\nOrg design, workforce planning and reward\nShape GTM org design, role clarity, levelling and spans in service of efficiency, not headcount growth.\nPartner with Revenue Operations, Reward and Finance on comp structures, quota and incentive design\nBring rigour to headcount decisions: every role justified against commercial return.\nPerformance and talent\nOwn performance cycles, calibrations and promotion decisions across GTM.\nMove early and decisively on performance management; build manager capability to do the same.\nBuild succession depth in a function where key-person risk is real.\nOperating well at pace\nRun complex ER and restructure work with sound judgement and clean execution.\nApply policy pragmatically and consistently in a fast-moving, commercially pressured environment.\nUse AI to take the operational load out of partnering so your time goes to the work only you can do.\nAbout you\nEssential\nYou've partnered a quota-carrying sales organisation at a playbook or MEDDICC sales org, not just \"commercial\" teams generally.\nYou've been through an efficiency inflection, not only a growth one. You've helped leaders take cost out of an org without breaking revenue.\nYou're fluent in GTM numbers. Ramp time, attainment distribution, revenue per head, regretted vs non-regretted attrition, cost of sale \u2014 you can read them, interrogate them and act on them.\nYou handle complex performance and ER situations at volume, at pace, with judgement that holds up under scrutiny.\nYou don\u2019t shy away from having the difficult but right conversation, managing to balance relationships at the same time\nYou're highly organised and detail-oriented. You know sustainable impact comes from strong fundamentals, not just good ideas.\nYou already use AI in your own workflow and can show us what you've changed in the last",
+      "description_snippet": "Multiverse is the upskilling platform for AI and Tech adoption.\nWe have partnered with 1,500+ companies to deliver a new kind of learning that's transforming today\u2019s workforce.\nOur upskilling apprenticeships are designed for people of any age and career stage to build critical\u2026",
+      "url": "https://jobs.ashbyhq.com/multiverse/2b4791fd-67af-4624-862a-020e07148b38",
+      "source": "ashby",
+      "posted_at": "2026-10-06T16:07:45.425000+00:00"
+    },
+    {
       "id": "greenhouse-gongio-4719346006",
       "company": "Gong",
       "company_website": "https://www.gong.io",
@@ -133,15 +146,15 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-9684fff7bb159ef7",
+      "id": "dom-fallback-other-amazon-a0f9dc364188a1fc",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Critical Facilities Technician (Shift), Data Centre Engineering Operations (DCEO)",
+      "title": "Design Manager, EMEA Portfolio, Design, Sustainability & Engineering",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10570177/critical-facilities-technician-shift-data-centre-engineering-operations-dceo",
+      "url": "https://www.amazon.jobs/en/jobs/10561387/design-manager-emea-portfolio-design-sustainability-engineering",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -155,32 +168,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://www.amazon.jobs/en/jobs/10570267/graduate-business-development-representative",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-amazon-b9bff6f6bdb413af",
-      "company": "Amazon",
-      "company_website": "https://www.amazon.com",
-      "origin": "US",
-      "title": "Infrastructure Technical Program Manager, Interconnect Team",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10570130/infrastructure-technical-program-manager-interconnect-team",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-amazon-530e2ca7a4fa411b",
-      "company": "Amazon",
-      "company_website": "https://www.amazon.com",
-      "origin": "US",
-      "title": "Internal Auditor, Internal Audit",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10570151/internal-auditor-internal-audit",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -211,15 +198,28 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-b0f2e801907024cb",
+      "id": "dom-fallback-other-amazon-112ef62926d40a99",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Product manager - Tech, Supply Chain Optimization Technology",
+      "title": "Reliability Maintenance Engineering Technician , AMZL",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10570133/product-manager-tech-supply-chain-optimization-technology",
+      "url": "https://www.amazon.jobs/en/jobs/10566335/reliability-maintenance-engineering-technician-amzl",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-amazon-16bb91f5e09208ff",
+      "company": "Amazon",
+      "company_website": "https://www.amazon.com",
+      "origin": "US",
+      "title": "Risk Manager, Counterfeit Crimes Unit",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.amazon.jobs/en/jobs/10570669/risk-manager-counterfeit-crimes-unit",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -237,15 +237,15 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-f50cbc589605a3bf",
+      "id": "dom-fallback-other-amazon-cfba614680c5e03e",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Senior Regulatory Assurance Specialist, Security & Privacy Regulatory Enablement (SPRe)",
+      "title": "Senior Technical Engagement Manager, UKGI PubSec Engagement Management Team",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10468117/senior-regulatory-assurance-specialist-security-privacy-regulatory-enablement-spre",
+      "url": "https://www.amazon.jobs/en/jobs/10570352/senior-technical-engagement-manager-ukgi-pubsec-engagement-management-team",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -263,15 +263,54 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-6ebcb7b1f5f25ab8",
+      "id": "dom-fallback-other-amazon-8d9c9ddc50a56135",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Supply Chain Manager, Offsite Yard Team",
+      "title": "Software Development Engineer, Alexa For Shopping MultiModal Experiences",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10570153/supply-chain-manager-offsite-yard-team",
+      "url": "https://www.amazon.jobs/en/jobs/10570725/software-development-engineer-alexa-for-shopping-multimodal-experiences",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-amazon-07e0ae3da9a99fd0",
+      "company": "Amazon",
+      "company_website": "https://www.amazon.com",
+      "origin": "US",
+      "title": "UX Designer - Amazon Developer, FireTV Applications, Devices Experience Design",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.amazon.jobs/en/jobs/3155480/ux-designer-amazon-developer-firetv-applications-devices-experience-design",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-apple-35399d48d9744791",
+      "company": "Apple",
+      "company_website": "https://www.apple.com",
+      "origin": "US",
+      "title": "SRE, London",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.apple.com/en-gb/details/200669097-2114/sre-london?team=SFTWR",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-apple-de14667b0928ddb2",
+      "company": "Apple",
+      "company_website": "https://www.apple.com",
+      "origin": "US",
+      "title": "Site Reliability Engineer (SRE), Observability, London",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.apple.com/en-gb/details/200671520/site-reliability-engineer-sre-observability-london?team=SFTWR",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -406,7 +445,7 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-atlassian-https://www.atlassian.com/company/careers/details/27313",
+      "id": "dom-fallback-other-atlassian-https://www.atlassian.com/company/careers/details/27616",
       "company": "Atlassian",
       "company_website": "https://www.atlassian.com",
       "origin": "Intl",
@@ -414,7 +453,7 @@
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.atlassian.com/company/careers/details/27313",
+      "url": "https://www.atlassian.com/company/careers/details/27616",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -445,19 +484,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-atlassian-https://www.atlassian.com/company/careers/details/25783",
-      "company": "Atlassian",
-      "company_website": "https://www.atlassian.com",
-      "origin": "Intl",
-      "title": "Principal Value Advisor, EMEA",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.atlassian.com/company/careers/details/25783",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-other-atlassian-https://www.atlassian.com/company/careers/details/27373",
       "company": "Atlassian",
       "company_website": "https://www.atlassian.com",
@@ -467,6 +493,19 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://www.atlassian.com/company/careers/details/27373",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-atlassian-https://www.atlassian.com/company/careers/details/27505",
+      "company": "Atlassian",
+      "company_website": "https://www.atlassian.com",
+      "origin": "Intl",
+      "title": "Sales Development Representative, Strategic DACH",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.atlassian.com/company/careers/details/27505",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -831,19 +870,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://job-boards.greenhouse.io/creativex/jobs/6167013004",
-      "source": "dom-fallback-greenhouse",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-greenhouse-creativex-https://job-boards.greenhouse.io/creativex/jobs/5661373004",
-      "company": "CreativeX",
-      "company_website": "https://www.creativex.com",
-      "origin": "UK",
-      "title": "Partnerships Director\n\nLondon or New York",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://job-boards.greenhouse.io/creativex/jobs/5661373004",
       "source": "dom-fallback-greenhouse",
       "posted_at": null
     },
@@ -1797,149 +1823,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-ashby-harvey-fcc3092b028fbbcb",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Account Executive, Mid Market (French Speaking)\n\nDublin\n\nApply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/758d43a5-eb76-4ca6-b79c-6607415a7e86",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-harvey-92e5435521822cb7",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Account Executive, Mid Market (German Speaking)\n\nLondon\n\nApply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/568a6afb-89fa-46bc-96cf-a7e75c8602e8",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-harvey-1c94ca6bdeeff232",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Advisory CISO\n\nNew York\n\nApply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/e196283b-5615-4688-a37b-4fe325a6ec3d",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-harvey-01d261ad871fcbd0",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Enterprise Customer Success Manager\n\nDallas\n\nApply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/2c604a0d-cd85-499b-93ee-4b8fb1538001",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-harvey-f1c89bd123864fd9",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Head of Marketing, APAC\n\nSydney\n\nApply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/ff7aabda-b2d9-422b-aa63-eae9a27ca1c1",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-harvey-74e176fceb1bbd9c",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Legal Engineer Manager, Product Specialist, EMEA\n\nLondon\n\nApply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/49a7d953-df6f-4f03-83b4-49e3b641c5eb",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-harvey-35ee019cbbb31ae7",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Legal Engineer, EMEA\n\nLondon\n\nApply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/4154ddf4-99e3-4863-9509-826a6faddeea",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-harvey-https://www.harvey.ai/careers?page=2#company-careers",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Next",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/careers?page=2#company-careers",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-harvey-fd24aeb14dc98025",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Sales Development Representative, ANZ\n\nSydney\n\nApply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/b8a9dded-d9f4-4295-8216-fdc93beec6d1",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-harvey-2b74021d32ddede9",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Senior Field Marketing Manager, EMEA\n\nLondon\n\nApply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/d6ea5dcb-17a9-4aad-82a3-c789812ca9ed",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-harvey-6513a3fbfe01a7d5",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Senior Manager, SMB Sales, EMEA\n\nLondon\n\nApply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/4ef44ab1-e402-4799-8d7c-e83f011b591b",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-greenhouse-intercom-https://fin.ai/careers/listings?loc=london",
       "company": "Intercom",
       "company_website": "https://www.intercom.com",
@@ -2512,6 +2395,19 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-other-paloaltonetworks-a52f5f93cdbd8461",
+      "company": "Palo Alto Networks",
+      "company_website": "https://www.paloaltonetworks.com",
+      "origin": "US",
+      "title": "Channel Business Manager\nLondon, London, City of, United Kingdom\nSales",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.paloaltonetworks.com/en/job/london/channel-business-manager/47263/101430523008",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-other-paloaltonetworks-58348ac754e0b0f0",
       "company": "Palo Alto Networks",
       "company_website": "https://www.paloaltonetworks.com",
@@ -2577,45 +2473,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-paloaltonetworks-3b73c47d7c223d38",
-      "company": "Palo Alto Networks",
-      "company_website": "https://www.paloaltonetworks.com",
-      "origin": "US",
-      "title": "Senior Channel Business Manager\nLondon, London, City of, United Kingdom\nSales",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://jobs.paloaltonetworks.com/en/job/london/senior-channel-business-manager/47263/101430523008",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-paloaltonetworks-896775f569a0faf3",
-      "company": "Palo Alto Networks",
-      "company_website": "https://www.paloaltonetworks.com",
-      "origin": "US",
-      "title": "Senior Manager, Renewal Sales\nLondon, United Kingdom",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://jobs.paloaltonetworks.com/en/job/london/senior-manager-renewal-sales/47263/99220482464",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-paloaltonetworks-3d16d9113b2a696c",
-      "company": "Palo Alto Networks",
-      "company_website": "https://www.paloaltonetworks.com",
-      "origin": "US",
-      "title": "Senior Partner Solution Architect - IDIRA\nLondon, United Kingdom, Amsterdam, Netherlands",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://jobs.paloaltonetworks.com/en/job/london/senior-partner-solution-architect-idira/47263/99846400016",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-other-paloaltonetworks-94cbabfd185a38a2",
       "company": "Palo Alto Networks",
       "company_website": "https://www.paloaltonetworks.com",
@@ -2651,32 +2508,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://jobs.paloaltonetworks.com/en/job/london/solutions-consultant-higher-education-and-research/47263/101264326400",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-paloaltonetworks-4ddaa83849ad4c23",
-      "company": "Palo Alto Networks",
-      "company_website": "https://www.paloaltonetworks.com",
-      "origin": "US",
-      "title": "Sr Channel Solution Consulant\nLondon, United Kingdom",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://jobs.paloaltonetworks.com/en/job/london/sr-channel-solution-consulant/47263/99346502016",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-paloaltonetworks-859d416803ba6c76",
-      "company": "Palo Alto Networks",
-      "company_website": "https://www.paloaltonetworks.com",
-      "origin": "US",
-      "title": "Strategic Account Manager - Idira\nLondon, United Kingdom",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://jobs.paloaltonetworks.com/en/job/london/strategic-account-manager-idira/47263/99346496448",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -3058,6 +2889,19 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-other-Profound-06d79a461aedf981",
+      "company": "Profound",
+      "company_website": "https://tryprofound.com",
+      "origin": "US",
+      "title": "GTM Operations Business Partner\n\nGTM Operations\n\nNew York / San Francisco / London",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.tryprofound.com/careers/467e6bb9-7343-47ec-8cd7-b43137e6541b",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-other-Profound-42a406421999785f",
       "company": "Profound",
       "company_website": "https://tryprofound.com",
@@ -3119,19 +2963,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://www.tryprofound.com/careers/f19954eb-4a10-4999-acf6-c0187e1aa170",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-Profound-a3066a4f96de5c02",
-      "company": "Profound",
-      "company_website": "https://tryprofound.com",
-      "origin": "US",
-      "title": "Office Operations Manager\n\nSan Francisco / London",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.tryprofound.com/careers/a7037753-804b-446a-a6fb-ad6239ec2bfd",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -3760,19 +3591,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-greenhouse-snap-https://careers.snap.com/job?id=R0046558",
-      "company": "Snap Inc.",
-      "company_website": "https://www.snap.com",
-      "origin": "US",
-      "title": "Global Strategic Brand Planner",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://careers.snap.com/job?id=R0046558",
-      "source": "dom-fallback-greenhouse",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-greenhouse-snap-https://careers.snap.com/job?id=R0046894",
       "company": "Snap Inc.",
       "company_website": "https://www.snap.com",
@@ -3795,19 +3613,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://careers.snap.com/job?id=R0045982",
-      "source": "dom-fallback-greenhouse",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-greenhouse-snap-https://careers.snap.com/job?id=R0046559",
-      "company": "Snap Inc.",
-      "company_website": "https://www.snap.com",
-      "origin": "US",
-      "title": "Marketing Operations Specialist",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://careers.snap.com/job?id=R0046559",
       "source": "dom-fallback-greenhouse",
       "posted_at": null
     },
@@ -3851,15 +3656,15 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-snowflake-f68461e7e3c0a7f1",
+      "id": "dom-fallback-other-snowflake-fb66e29f7ba7374c",
       "company": "Snowflake",
       "company_website": "https://www.snowflake.com",
       "origin": "US",
-      "title": "Senior Solution Engineer - Global Accounts",
+      "title": "Staff Product Manager - AI FDE",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://careers.snowflake.com/us/en/job/SNCOUS0621B333E1484A6DBFAC251BA1309934EXTERNALENUSE32988E04E3942A0A9D3E3E98248668E/Senior-Solution-Engineer-Global-Accounts",
+      "url": "https://careers.snowflake.com/us/en/job/SNCOUSCACA807AEC05482C8E7B6F31EE3E081BEXTERNALENUS775F7C0EF4CA4334A3C5100811DAF192/Staff-Product-Manager-AI-FDE",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -3955,19 +3760,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-greenhouse-temporaltechnologies-92c11d6cc0c8ee1a",
-      "company": "Temporal Technologies",
-      "company_website": "https://temporal.io",
-      "origin": "US",
-      "title": "Senior Account Executive, New Logo\nBerlin, Germany",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://temporal.io/careers/2ebca428-89c2-4cd9-9b30-92bb6d20ad45",
-      "source": "dom-fallback-greenhouse",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-greenhouse-temporaltechnologies-57fab268ce45f612",
       "company": "Temporal Technologies",
       "company_website": "https://temporal.io",
@@ -4003,6 +3795,19 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://temporal.io/careers/d9b9d44f-0a87-4237-b101-360052373643",
+      "source": "dom-fallback-greenhouse",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-greenhouse-temporaltechnologies-f1172635787ab3f0",
+      "company": "Temporal Technologies",
+      "company_website": "https://temporal.io",
+      "origin": "US",
+      "title": "Senior Staff Product Marketing Engineer, Competitive Intelligence\nSeattle, Washington",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://temporal.io/careers/3c33e194-ae91-464d-8321-3f5a0693dc12",
       "source": "dom-fallback-greenhouse",
       "posted_at": null
     },
@@ -4553,15 +4358,15 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-wise-bdb7df59708cedc7",
+      "id": "dom-fallback-other-wise-bf16d25d21cafa72",
       "company": "Wise",
       "company_website": "https://wise.com",
       "origin": "UK",
-      "title": "Lead Data Scientist - Anti-Money Laundering (AML)",
+      "title": "Lead Researcher, Verification Experience",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://wise.jobs/job/lead-data-scientist-anti-money-laundering-aml-in-london-jid-4274",
+      "url": "https://wise.jobs/job/lead-researcher-verification-experience-in-london-jid-4154",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -4592,6 +4397,45 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-other-wise-9eb4ffe49d611508",
+      "company": "Wise",
+      "company_website": "https://wise.com",
+      "origin": "UK",
+      "title": "Paid Search Senior Executive",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://wise.jobs/job/paid-search-senior-executive-in-london-jid-4281",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-wise-d2b3084dd68e7795",
+      "company": "Wise",
+      "company_website": "https://wise.com",
+      "origin": "UK",
+      "title": "Paid Search Senior Executive (B2B)",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://wise.jobs/job/paid-search-senior-executive-b2b-in-london-jid-4282",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-wise-01a3d39a48d7655e",
+      "company": "Wise",
+      "company_website": "https://wise.com",
+      "origin": "UK",
+      "title": "Senior Software Engineer I - Account Integrity",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://wise.jobs/job/senior-software-engineer-i-account-integrity-in-london-jid-3711",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-other-wise-https://wise.jobs/#/",
       "company": "Wise",
       "company_website": "https://wise.com",
@@ -4601,32 +4445,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://wise.jobs/#/",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-wise-cc063b7fdda03152",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Staff Content Designer - Business Account Experience",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/staff-content-designer-business-account-experience-in-london-jid-4278",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-wise-https://wise.jobs/job/workplace-adviser-in-london-jid-4223",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Workplace Adviser",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/workplace-adviser-in-london-jid-4223",
       "source": "dom-fallback-other",
       "posted_at": null
     },
