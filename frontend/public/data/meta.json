@@ -1,17 +1,19 @@
 {
-  "generated_at": "2026-10-07T19:33:47.295831+00:00",
+  "generated_at": "2026-10-08T14:40:44.163382+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "Legora",
     "Multiverse",
-    "Talos"
+    "Talos",
+    "Vanta"
   ],
   "companies_with_unconfirmed": [
     "1Password",
     "Amazon",
     "Apple",
     "Atlassian",
+    "Canva",
     "Cohere",
     "CreativeX",
     "Databricks",
@@ -32,8 +34,8 @@
     "Marshmallow",
     "Mercor",
     "Meta",
+    "Microsoft",
     "MongoDB",
-    "Monzo",
     "Palo Alto Networks",
     "Pendo",
     "PhysicsX",
@@ -51,10 +53,8 @@
     "Thought Machine",
     "Uber",
     "Vercel",
-    "Wayve",
     "Wise",
     "Wiz",
-    "Workday",
     "Writer (AI)",
     "Zego",
     "eBay"
@@ -192,6 +192,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 3,
-  "total_unconfirmed_found": 397
+  "total_jobs_found": 5,
+  "total_unconfirmed_found": 400
 }
