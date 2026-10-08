@@ -1,11 +1,9 @@
 {
-  "generated_at": "2026-10-08T14:40:44.163382+00:00",
+  "generated_at": "2026-10-08T19:33:35.821123+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Legora",
     "Multiverse",
-    "Talos",
     "Vanta"
   ],
   "companies_with_unconfirmed": [
@@ -34,10 +32,10 @@
     "Marshmallow",
     "Mercor",
     "Meta",
-    "Microsoft",
     "MongoDB",
     "Palo Alto Networks",
     "Pendo",
+    "Perplexity AI",
     "PhysicsX",
     "Profound",
     "Quantexa",
@@ -53,6 +51,7 @@
     "Thought Machine",
     "Uber",
     "Vercel",
+    "Wayve",
     "Wise",
     "Wiz",
     "Writer (AI)",
@@ -114,6 +113,7 @@
     "JFrog",
     "Junior AI",
     "Klaviyo",
+    "Legora",
     "Lendable",
     "LinkedIn",
     "Lovable",
@@ -192,6 +192,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 5,
-  "total_unconfirmed_found": 400
+  "total_jobs_found": 3,
+  "total_unconfirmed_found": 425
 }
