@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T14:28:39.668288+00:00",
+  "generated_at": "2026-10-09T19:00:42.056494+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -191,6 +191,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 8,
-  "total_unconfirmed_found": 396
+  "total_jobs_found": 9,
+  "total_unconfirmed_found": 394
 }

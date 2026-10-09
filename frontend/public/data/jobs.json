@@ -1,6 +1,19 @@
 {
   "jobs": [
     {
+      "id": "ashby-legora-1c641ba1-a7eb-47e2-bb8a-7b40b0b91f98",
+      "company": "Legora",
+      "company_website": "https://legora.com",
+      "origin": "Intl",
+      "title": "Strategic Programs Manager",
+      "location": "London",
+      "description_text": "About Us\nLegora is redefining how legal work gets done. Not built for lawyers, built with them. We work alongside the world\u2019s best legal teams, who expect excellence, precision, and speed, and we hold ourselves to the same bar.\nOur AI-native workspace lets legal professionals move faster, think more clearly, and operate with sharper precision. By analysing thousands of documents in minutes and powering end-to-end workflows, we cut through complexity, teams can focus on what matters: judgment, strategy, and outcomes.\n2,100+ customers across 80+ countries trust us, including Cleary Gottlieb, Goodwin, Linklaters, White & Case, Dentons, and Barclays. We\u2019ve scaled to\n $200M+ in ARR\n, with teams across Europe, North America and APAC, and continue to expand through acquisitions including Qura, Walter AI, Graceview, Cadastral, and Wexler.\nWe partner with world-class performers: including Aaron Judge and the New York Yankees, Ludvig \u00c5berg (and his caddie), and campaigns featuring Jude Law.\nJoining Legora means three things.\nWe \nlean in: \nownership over titles, outcomes over intentions.\nWe \nfight for excellence:\n high standards, direct, ego-free feedback.\nWe\n grow together:\n as a team and with our customers.\nMission before ego. Everyone contributes. No one coasts.\nIf you\u2019re driven by impact, pace, and raising the bar. This is the place.\nWhat You'll Do\nThis role sits within our Post-sales organization and is central to how we deliver world-class AI implementations for the world\u2019s leading law firms. As part of our Strategic Programs team, you will own the rollout program for our most strategic accounts, bringing structure, momentum, and follow-through to some of our highest-stakes launches. It sits at the intersection of strategy, operations, and execution, and is built for someone who leads programs, drives change, and moves ambitious initiatives from plan to measurable outcome.\nYou will report into our Strategic Programs Lead and coordinate closely across Legal Engineering, Engagement, and Customer Delivery to turn ambitious rollouts into reality.\nOwning the end-to-end rollout program for strategic accounts, including planning, sequencing, and execution across multi-office and multi-practice launches\nDriving change management and stakeholder alignment across KM, innovation, IT,  practice groups, and attorneys to build durable adoption\nCoordinating resources across Legal Engineering, Engagement, and Customer Delivery to deliver local and cross-border implementations, ensuring Legora best practices are followed for global consistency\nOwning success metrics and governance, defining what good looks like, establishing the reporting cadence, and making outcomes legible to executives\nMonitoring and analysing adoption metrics to identify friction points in the user journey and proposing strategic interventions during implementation\nOwning the feedback loop, turning rollout learnings and adoption signals into reusable playbooks, templates, and benchmarks that raise the bar for every future launch\nActing as a connective layer across teams, helping drive clarity, prioritization, and progress\nBringing a structured, execution-focused mindset to ambiguous problems and pushing work over the finish line\nIn short: you will own the operating system that de-risks and accelerates adoption for our most strategic clients, making them faster, more impactful, more consistent, and more measurable.\n\u00a0\nWhat You Bring\nYou are a strategist and an operator. You\u2019ve worked in environments where ambiguity is the norm, expectations are high, and outcomes matter, and you thrive in them.\nYou\u2019ll thrive in this role if you:\nHave 6+ years of experience in management consulting, strategy, or transformation / implementation-focused roles, with a Bachelor\u2019s degree required\nBring demonstrated leadership experience: you have led programs, workstreams, or teams and can point to outcomes you owned end to end\nHave experience within a professional services environment (Legal, Big 4, o",
+      "description_snippet": "About Us\nLegora is redefining how legal work gets done. Not built for lawyers, built with them. We work alongside the world\u2019s best legal teams, who expect excellence, precision, and speed, and we hold ourselves to the same bar.\nOur AI-native workspace lets legal professionals\u2026",
+      "url": "https://jobs.ashbyhq.com/legora/1c641ba1-a7eb-47e2-bb8a-7b40b0b91f98",
+      "source": "ashby",
+      "posted_at": "2026-10-09T17:27:37.064000+00:00"
+    },
+    {
       "id": "ashby-talos-trading-df6c8c7a-e8ee-4a40-9161-c15e5ff5a236",
       "company": "Talos",
       "company_website": "https://www.talos.com",
@@ -185,19 +198,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-https://www.amazon.jobs/en/jobs/10463499/automation-engineer",
-      "company": "Amazon",
-      "company_website": "https://www.amazon.com",
-      "origin": "US",
-      "title": "...Read more",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10463499/automation-engineer",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-other-amazon-5464bc92c66e5395",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
@@ -211,28 +211,15 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-be536166eb0c35a1",
+      "id": "dom-fallback-other-amazon-80e10f20f3b35084",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Construction Environmental Program Manager, AWS Data Center Environment",
+      "title": "Community Manager UKI-North, AWS Developer Experience",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10434363/construction-environmental-program-manager-aws-data-center-environment",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-amazon-11619341c7b893fc",
-      "company": "Amazon",
-      "company_website": "https://www.amazon.com",
-      "origin": "US",
-      "title": "Principal Professional Services Sales Executive, AWS Professional Services Energy",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10574405/principal-professional-services-sales-executive-aws-professional-services-energy",
+      "url": "https://www.amazon.jobs/en/jobs/10569135/community-manager-uki-north-aws-developer-experience",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -250,6 +237,19 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-other-amazon-7e4da9a25a8bd2ee",
+      "company": "Amazon",
+      "company_website": "https://www.amazon.com",
+      "origin": "US",
+      "title": "Senior Delivery Consultant \u2013 (Cloud Infrastructure Architect), AWS Professional Services, Media & Entertainment",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.amazon.jobs/en/jobs/10566537/senior-delivery-consultant-cloud-infrastructure-architect-aws-professional-services-media-entertainment",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-other-amazon-08b8cb71cdab5e06",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
@@ -259,32 +259,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://www.amazon.jobs/en/jobs/10574583/senior-engagement-manager-professional-services-uk-natsec-wwps",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-amazon-d79b9d2b4f236b12",
-      "company": "Amazon",
-      "company_website": "https://www.amazon.com",
-      "origin": "US",
-      "title": "Senior Product Manager - Tech, Prime Video Commerce",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10574462/senior-product-manager-tech-prime-video-commerce",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-amazon-aab22a4cb4fdeed3",
-      "company": "Amazon",
-      "company_website": "https://www.amazon.com",
-      "origin": "US",
-      "title": "Senior Specialist Solutions Architect, Bedrock, WWSO Startups",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10574436/senior-specialist-solutions-architect-bedrock-wwso-startups",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -302,15 +276,41 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-9d9bf022e64a67fa",
+      "id": "dom-fallback-other-amazon-e2a858888e7b014e",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Sr. Program Manager, Digital Supply Chain - Accessibility & Localization, Prime Video Partner Experience",
+      "title": "Software Development Engineer, Alexa for Shopping MultiModal team",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10574461/sr-program-manager-digital-supply-chain-accessibility-localization-prime-video-partner-experience",
+      "url": "https://www.amazon.jobs/en/jobs/10574909/software-development-engineer-alexa-for-shopping-multimodal-team",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-amazon-d83b999d19d49de6",
+      "company": "Amazon",
+      "company_website": "https://www.amazon.com",
+      "origin": "US",
+      "title": "Speed Programs Analyst - FTC 18 months, Sr Same Day Programs",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.amazon.jobs/en/jobs/10574697/speed-programs-analyst-ftc-18-months-sr-same-day-programs",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-amazon-86cf51f6cc857126",
+      "company": "Amazon",
+      "company_website": "https://www.amazon.com",
+      "origin": "US",
+      "title": "Strategy Manager Fixed Term, WW DSP",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.amazon.jobs/en/jobs/10573771/strategy-manager-fixed-term-ww-dsp",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -350,6 +350,19 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://www.atlassian.com/company/careers/details/27066",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-atlassian-https://www.atlassian.com/company/careers/details/27329",
+      "company": "Atlassian",
+      "company_website": "https://www.atlassian.com",
+      "origin": "Intl",
+      "title": "Account Executive, Mid-Market, Nordics",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.atlassian.com/company/careers/details/27329",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -445,15 +458,15 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-atlassian-https://www.atlassian.com/company/careers/details/26264",
+      "id": "dom-fallback-other-atlassian-https://www.atlassian.com/company/careers/details/27513",
       "company": "Atlassian",
       "company_website": "https://www.atlassian.com",
       "origin": "Intl",
-      "title": "Head of Sales Development, Strategic & Enterprise",
+      "title": "Manager, Strategic Account Management (German speaking)",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.atlassian.com/company/careers/details/26264",
+      "url": "https://www.atlassian.com/company/careers/details/27513",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -480,19 +493,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://www.atlassian.com/company/careers/details/27616",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-atlassian-https://www.atlassian.com/company/careers/details/26061",
-      "company": "Atlassian",
-      "company_website": "https://www.atlassian.com",
-      "origin": "Intl",
-      "title": "Principal Customer Success Manager, Strategic",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.atlassian.com/company/careers/details/26061",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -1732,6 +1732,19 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-ashby-hcompany-60bd7e65c97e9144",
+      "company": "H Company",
+      "company_website": "https://www.hcompany.ai",
+      "origin": "US",
+      "title": "Account Executive - Enterprise\n\nGTM \u2022 Hybrid Paris \u2022 Full time \u2022 Hybrid",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.ashbyhq.com/hcompany/abdc048f-bc46-4805-9684-fc65fe1475e3",
+      "source": "dom-fallback-ashby",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-ashby-hcompany-6f2d19587b291123",
       "company": "H Company",
       "company_website": "https://www.hcompany.ai",
@@ -1862,6 +1875,45 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-ashby-hcompany-710b5007b806a690",
+      "company": "H Company",
+      "company_website": "https://www.hcompany.ai",
+      "origin": "US",
+      "title": "Senior Account Executive - US\n\nGTM \u2022 Hybrid New York \u2022 Full time \u2022 Hybrid",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.ashbyhq.com/hcompany/d4f68d7e-275f-4df3-b741-4f16e8186131",
+      "source": "dom-fallback-ashby",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-ashby-hcompany-ef0b63f302b556f9",
+      "company": "H Company",
+      "company_website": "https://www.hcompany.ai",
+      "origin": "US",
+      "title": "Senior Business Development - US\n\nGTM \u2022 Hybrid Austin; Hybrid New York \u2022 Full time \u2022 Hybrid",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.ashbyhq.com/hcompany/bf30f76b-1b25-417c-9771-b5c1dadb7833",
+      "source": "dom-fallback-ashby",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-ashby-hcompany-9e6d63a79b256973",
+      "company": "H Company",
+      "company_website": "https://www.hcompany.ai",
+      "origin": "US",
+      "title": "Senior Full Stack Engineer\n\nEngineering \u2022 Hybrid London; Hybrid Paris \u2022 Full time \u2022 Hybrid",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.ashbyhq.com/hcompany/c14ed750-6561-4daa-b75d-7a9bfb1d88f9",
+      "source": "dom-fallback-ashby",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-ashby-hcompany-eeedaeb012adbbb0",
       "company": "H Company",
       "company_website": "https://www.hcompany.ai",
@@ -1901,6 +1953,19 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-ashby-hcompany-86122ff459667535",
+      "company": "H Company",
+      "company_website": "https://www.hcompany.ai",
+      "origin": "US",
+      "title": "Spontaneous Application\n\nGTM \u2022 Hybrid Paris; Hybrid London; Hybrid New York; Hybrid SF/Bay Area \u2022 Full time \u2022 Hybrid",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.ashbyhq.com/hcompany/dd1fdec1-2943-456e-ac9a-517d19a58fd6",
+      "source": "dom-fallback-ashby",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-ashby-hcompany-dce9cea6673478d5",
       "company": "H Company",
       "company_website": "https://www.hcompany.ai",
@@ -1927,19 +1992,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-ashby-hcompany-https://www.ashbyhq.com/disclosure",
-      "company": "H Company",
-      "company_website": "https://www.hcompany.ai",
-      "origin": "US",
-      "title": "Vulnerability Disclosure",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.ashbyhq.com/disclosure",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-ashby-harvey-5a66587e5d261e65",
       "company": "Harvey AI",
       "company_website": "https://www.harvey.ai",
@@ -1953,41 +2005,15 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-ashby-harvey-e5919d29477ccebe",
+      "id": "dom-fallback-ashby-harvey-9fd357291ebadb24",
       "company": "Harvey AI",
       "company_website": "https://www.harvey.ai",
       "origin": "US",
-      "title": "Account Executive, Mid-Market\n\nBoston\n\nApply",
+      "title": "Accounts Receivable Manager\n\nDublin\n\nApply",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/3240924a-de11-45c5-aabe-980474f8b0a8",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-harvey-928ac0a307a6c773",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Associate Commercial Counsel\n\nMunich\n\nApply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/95d7c087-8283-4e17-937d-2ee363ec95ef",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-harvey-00b1b2489549ec50",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Associate Commercial Counsel, London\n\nLondon\n\nApply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/0a8ca756-7d41-46cc-8cde-960af47658b2",
+      "url": "https://www.harvey.ai/company/careers/5d2e22a2-f9db-4baa-8398-38f3e52067fc",
       "source": "dom-fallback-ashby",
       "posted_at": null
     },
@@ -2014,6 +2040,58 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://www.harvey.ai/company/careers/633df5f6-fd69-4066-96c8-7c5c06d9ba33",
+      "source": "dom-fallback-ashby",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-ashby-harvey-438ec9425512d37a",
+      "company": "Harvey AI",
+      "company_website": "https://www.harvey.ai",
+      "origin": "US",
+      "title": "Head of Legal Engineering, EMEA\n\nLondon\n\nApply",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.harvey.ai/company/careers/b0570329-6c45-4446-9314-146c9dead90b",
+      "source": "dom-fallback-ashby",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-ashby-harvey-81b3f7160bd97761",
+      "company": "Harvey AI",
+      "company_website": "https://www.harvey.ai",
+      "origin": "US",
+      "title": "Head of Social Impact\n\nLondon\n\nApply",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.harvey.ai/company/careers/da103b63-c5ed-4544-b2b2-136511c1bd4e",
+      "source": "dom-fallback-ashby",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-ashby-harvey-c34e3af99a2236d8",
+      "company": "Harvey AI",
+      "company_website": "https://www.harvey.ai",
+      "origin": "US",
+      "title": "Incident Handler\n\nNew York\n\nApply",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.harvey.ai/company/careers/7046c0a2-6fd0-47e1-a6b3-e340a2db8885",
+      "source": "dom-fallback-ashby",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-ashby-harvey-3240f5c7a372dd1a",
+      "company": "Harvey AI",
+      "company_website": "https://www.harvey.ai",
+      "origin": "US",
+      "title": "Incident Handler\n\nSan Francisco\n\nApply",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.harvey.ai/company/careers/5fc18ede-0043-496c-a928-41acf9fedb51",
       "source": "dom-fallback-ashby",
       "posted_at": null
     },
@@ -2053,32 +2131,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://www.harvey.ai/careers?page=2#company-careers",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-harvey-9023ea5a4ed24da3",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Senior Solutions Architect, Sydney\n\nSydney\n\nApply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/3661244b-b411-429b-bafa-631eb5e274a0",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-harvey-d93f21eef27e1e9a",
-      "company": "Harvey AI",
-      "company_website": "https://www.harvey.ai",
-      "origin": "US",
-      "title": "Workplace Coordinator\n\nLondon\n\nApply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.harvey.ai/company/careers/c0449af2-3742-4ece-88d7-75fd076f80e9",
       "source": "dom-fallback-ashby",
       "posted_at": null
     },
@@ -2603,19 +2655,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-greenhouse-mongodb-https://www.mongodb.com/careers/job/?gh_jid=8153715",
-      "company": "MongoDB",
-      "company_website": "https://www.mongodb.com",
-      "origin": "US",
-      "title": "Enterprise Account Executive\nLondon\nFull-time",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.mongodb.com/careers/job/?gh_jid=8153715",
-      "source": "dom-fallback-greenhouse",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-greenhouse-mongodb-https://www.mongodb.com/careers/job/?gh_jid=8260947",
       "company": "MongoDB",
       "company_website": "https://www.mongodb.com",
@@ -2625,6 +2664,19 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://www.mongodb.com/careers/job/?gh_jid=8260947",
+      "source": "dom-fallback-greenhouse",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-greenhouse-mongodb-https://www.mongodb.com/careers/job/?gh_jid=8153715",
+      "company": "MongoDB",
+      "company_website": "https://www.mongodb.com",
+      "origin": "US",
+      "title": "Enterprise Account Executive\nLondon\nFull-time",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.mongodb.com/careers/job/?gh_jid=8153715",
       "source": "dom-fallback-greenhouse",
       "posted_at": null
     },
@@ -2742,19 +2794,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://jobs.paloaltonetworks.com/en/job/london/managed-xsiam-service-delivery-lead/47263/101129241856",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-paloaltonetworks-24077039c9abb0b7",
-      "company": "Palo Alto Networks",
-      "company_website": "https://www.paloaltonetworks.com",
-      "origin": "US",
-      "title": "Principal DevOps Engineer\nLondon, United Kingdom\nProduct Engineering",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://jobs.paloaltonetworks.com/en/job/london/principal-devops-engineer/47263/96174879888",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -4046,15 +4085,15 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-snowflake-fb66e29f7ba7374c",
+      "id": "dom-fallback-other-snowflake-f68461e7e3c0a7f1",
       "company": "Snowflake",
       "company_website": "https://www.snowflake.com",
       "origin": "US",
-      "title": "Staff Product Manager - AI FDE",
+      "title": "Senior Solution Engineer - Global Accounts",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://careers.snowflake.com/us/en/job/SNCOUSCACA807AEC05482C8E7B6F31EE3E081BEXTERNALENUS775F7C0EF4CA4334A3C5100811DAF192/Staff-Product-Manager-AI-FDE",
+      "url": "https://careers.snowflake.com/us/en/job/SNCOUS0621B333E1484A6DBFAC251BA1309934EXTERNALENUSE32988E04E3942A0A9D3E3E98248668E/Senior-Solution-Engineer-Global-Accounts",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -4670,67 +4709,28 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-wise-91741c066d4a463d",
+      "id": "dom-fallback-other-wise-8b9375151b5d5986",
       "company": "Wise",
       "company_website": "https://wise.com",
       "origin": "UK",
-      "title": "Senior Data Engineer II - Scalable Growth",
+      "title": "Process Management Lead",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://wise.jobs/job/senior-data-engineer-ii-scalable-growth-in-london-jid-3908",
+      "url": "https://wise.jobs/job/process-management-lead-in-london-jid-4299",
       "source": "dom-fallback-other",
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-wise-8e70227495592a17",
+      "id": "dom-fallback-other-wise-cb3a81e9a4bd4321",
       "company": "Wise",
       "company_website": "https://wise.com",
       "origin": "UK",
-      "title": "Senior Software Engineer - Global KYC and Onboarding",
+      "title": "Senior Process Engineer",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://wise.jobs/job/senior-software-engineer-global-kyc-and-onboarding-in-london-jid-4038",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-wise-7d48e7bf969530dc",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Senior Software Engineer I - Risk Control & Governance",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/senior-software-engineer-i-risk-control-and-governance-in-london-jid-4209",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-wise-9ba286d56f7c1ae4",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Senior iOS Engineer II - Account Mobile",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/senior-ios-engineer-ii-account-mobile-in-london-jid-3903",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-wise-7520c6eb57060d4c",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Senior/Staff Product Engineer - Risk & Control Governance",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/senior-staff-product-engineer-risk-and-control-governance-in-london-jid-4099",
+      "url": "https://wise.jobs/job/senior-process-engineer-in-london-jid-3560",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -5199,19 +5199,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://jobs.ebayinc.com/us/en/job/R0073088/Commercial-Dir-UK-Parts-Accessories",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-ebay-0e7fb63f7376f6c9",
-      "company": "eBay",
-      "company_website": "https://www.ebay.com",
-      "origin": "US",
-      "title": "Electronics Specialist",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://jobs.ebayinc.com/us/en/job/R0076219/Electronics-Specialist",
       "source": "dom-fallback-other",
       "posted_at": null
     },
