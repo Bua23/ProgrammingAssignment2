@@ -107,41 +107,28 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-490ba596278f694a",
+      "id": "dom-fallback-other-amazon-657229419b2c2e26",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "AI Senior Sales Specialist - Health, Public Sector",
+      "title": "Controls Design Engineer (EPMS), Electrical Power Monitoring System",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10575575/ai-senior-sales-specialist-health-public-sector",
+      "url": "https://www.amazon.jobs/en/jobs/10468776/controls-design-engineer-epms-electrical-power-monitoring-system",
       "source": "dom-fallback-other",
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-3489552bec2f5c00",
+      "id": "dom-fallback-other-amazon-4d9d0c544781487c",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Communication and Engagament Project Manager , UKI VP office",
+      "title": "Frontend Engineer, Amazon Advertising - Brand Innovation Lab",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10575533/communication-and-engagament-project-manager-uki-vp-office",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-amazon-e37db645d1dd32e7",
-      "company": "Amazon",
-      "company_website": "https://www.amazon.com",
-      "origin": "US",
-      "title": "GenAI/Agentic Sr. Customer Solutions Manager, EMEA ISV CSMs",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10431817/genai-agentic-sr-customer-solutions-manager-emea-isv-csms",
+      "url": "https://www.amazon.jobs/en/jobs/10576091/frontend-engineer-amazon-advertising-brand-innovation-lab",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -172,6 +159,19 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-other-amazon-f6a9ba674351d962",
+      "company": "Amazon",
+      "company_website": "https://www.amazon.com",
+      "origin": "US",
+      "title": "Principal Customer Success Specialist - Gen AI, Customer Success Center of Excellence",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.amazon.jobs/en/jobs/10434699/principal-customer-success-specialist-gen-ai-customer-success-center-of-excellence",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-other-amazon-9180cb34676c0a07",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
@@ -185,15 +185,41 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-76f0f673dd55691c",
+      "id": "dom-fallback-other-amazon-ac8797de81b83190",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Senior Engagement Manager, AWS AI Engineering (EMEA)",
+      "title": "Security Support Engineer, Identity and Access Management",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10575557/senior-engagement-manager-aws-ai-engineering-emea",
+      "url": "https://www.amazon.jobs/en/jobs/10576288/security-support-engineer-identity-and-access-management",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-amazon-5c7b3ef06039a099",
+      "company": "Amazon",
+      "company_website": "https://www.amazon.com",
+      "origin": "US",
+      "title": "Security Support Engineer, Identity and Access Management",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.amazon.jobs/en/jobs/10576287/security-support-engineer-identity-and-access-management",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
+      "id": "dom-fallback-other-amazon-bcb46834c23f622d",
+      "company": "Amazon",
+      "company_website": "https://www.amazon.com",
+      "origin": "US",
+      "title": "Senior Art Director, Brand Innovation Lab",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://www.amazon.jobs/en/jobs/10576089/senior-art-director-brand-innovation-lab",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -211,41 +237,15 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-amazon-2b62d27bb15805db",
+      "id": "dom-fallback-other-amazon-56cceb7dd415edf9",
       "company": "Amazon",
       "company_website": "https://www.amazon.com",
       "origin": "US",
-      "title": "Sr Strategic Account Manager, AB - EU - UK Government",
+      "title": "Talent Marketing Manager, AIM (Attraction, Influence and Marketing)",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10575630/sr-strategic-account-manager-ab-eu-uk-government",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-amazon-5631536d13871171",
-      "company": "Amazon",
-      "company_website": "https://www.amazon.com",
-      "origin": "US",
-      "title": "Sr. Solutions Architect, Retail & CPG, AWS, EMEA Retail CPG",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10575821/sr-solutions-architect-retail-cpg-aws-emea-retail-cpg",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-amazon-3be7b9b185c7a621",
-      "company": "Amazon",
-      "company_website": "https://www.amazon.com",
-      "origin": "US",
-      "title": "Technical Account Manager, AWS Enterprise Support",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.amazon.jobs/en/jobs/10575619/technical-account-manager-aws-enterprise-support",
+      "url": "https://www.amazon.jobs/en/jobs/10576108/talent-marketing-manager-aim-attraction-influence-and-marketing",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -536,32 +536,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-canva-9402813596e56984",
-      "company": "Canva",
-      "company_website": "https://www.canva.com",
-      "origin": "Intl",
-      "title": "Account Executive, Government & Healthcare - DACH (German Speaking)",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.lifeatcanva.com/en/jobs/6000000001473183/account-executive-government-healthcare-dach-german-speaking/",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-canva-7d03989e15a7eac6",
-      "company": "Canva",
-      "company_website": "https://www.canva.com",
-      "origin": "Intl",
-      "title": "Enterprise Support Specialist - EMEA (German speaking)",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://www.lifeatcanva.com/en/jobs/6000000001470622/enterprise-support-specialist-emea-german-speaking/",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-ashby-cohere-6e3877607a285f9f",
       "company": "Cohere",
       "company_website": "https://cohere.com",
@@ -601,15 +575,15 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-ashby-cohere-16810b15cd4ade48",
+      "id": "dom-fallback-ashby-cohere-c762f5e780c3983c",
       "company": "Cohere",
       "company_website": "https://cohere.com",
       "origin": "Intl",
-      "title": "Head of Strategic Finance\n\nFinance \u2022 San Francisco; New York \u2022 Full time \u2022 Remote",
+      "title": "Manager, Security Engineering\n\nSecurity \u2022 United States; Canada \u2022 Full time \u2022 On-site",
       "location": "London (unconfirmed)",
       "description_text": "",
       "description_snippet": "",
-      "url": "https://jobs.ashbyhq.com/cohere/39ae8da6-9c3d-4f36-80a3-310159ee1f8d",
+      "url": "https://jobs.ashbyhq.com/cohere/1599cc22-313e-49c9-ac69-b365f5f8f227",
       "source": "dom-fallback-ashby",
       "posted_at": null
     },
@@ -1546,19 +1520,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://freetrade.io/careers?ashby_location_id=f97aa4ef-38c2-4958-b88c-20bc05f2986a#roles",
-      "source": "dom-fallback-ashby",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-ashby-freetrade-https://freetrade.io/careers#",
-      "company": "Freetrade",
-      "company_website": "https://freetrade.io",
-      "origin": "UK",
-      "title": "see roles in london",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://freetrade.io/careers#",
       "source": "dom-fallback-ashby",
       "posted_at": null
     },
@@ -2564,32 +2525,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-microsoft-57b8ea786cc6154f",
-      "company": "Microsoft",
-      "company_website": "https://www.microsoft.com",
-      "origin": "US",
-      "title": "Account Executive - Digital Natives\nUnited Kingdom, London, London + 4 more\nPosted 4 hours ago",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393557037511",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-microsoft-763dc0571543647d",
-      "company": "Microsoft",
-      "company_website": "https://www.microsoft.com",
-      "origin": "US",
-      "title": "Snr Solution Area Specialist - Consumer Goods\nUnited Kingdom, London, London\nPosted an hour ago",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://apply.careers.microsoft.com/careers/job/1970393557026557",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-greenhouse-mongodb-https://www.mongodb.com/careers/job/?gh_jid=8260947",
       "company": "MongoDB",
       "company_website": "https://www.mongodb.com",
@@ -2746,6 +2681,19 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-other-paloaltonetworks-bb27f72fd85144b6",
+      "company": "Palo Alto Networks",
+      "company_website": "https://www.paloaltonetworks.com",
+      "origin": "US",
+      "title": "Principal Technical Product Engineer\nSeville, Sevilla, Spain\nLondon, London, City of, United Kingdom\nProduct Engineering",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.paloaltonetworks.com/en/job/seville/principal-technical-product-engineer/47263/100674862480",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-other-paloaltonetworks-7b559a4da51d8d74",
       "company": "Palo Alto Networks",
       "company_website": "https://www.paloaltonetworks.com",
@@ -2863,6 +2811,19 @@
       "posted_at": null
     },
     {
+      "id": "dom-fallback-other-paloaltonetworks-c4a64ed4c39435b0",
+      "company": "Palo Alto Networks",
+      "company_website": "https://www.paloaltonetworks.com",
+      "origin": "US",
+      "title": "Sr. Technical Product Engineer\nLondon, London, City of, United Kingdom\nSeville, Sevilla, Spain\nProduct Engineering",
+      "location": "London (unconfirmed)",
+      "description_text": "",
+      "description_snippet": "",
+      "url": "https://jobs.paloaltonetworks.com/en/job/london/sr-technical-product-engineer/47263/100703642160",
+      "source": "dom-fallback-other",
+      "posted_at": null
+    },
+    {
       "id": "dom-fallback-other-paloaltonetworks-859d416803ba6c76",
       "company": "Palo Alto Networks",
       "company_website": "https://www.paloaltonetworks.com",
@@ -2872,19 +2833,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://jobs.paloaltonetworks.com/en/job/london/strategic-account-manager-idira/47263/99346496448",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-paloaltonetworks-7c2e8c99d85b2d6f",
-      "company": "Palo Alto Networks",
-      "company_website": "https://www.paloaltonetworks.com",
-      "origin": "US",
-      "title": "Strategic Deal Desk Manager\nLondon, London, United Kingdom\nSales",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://jobs.paloaltonetworks.com/en/job/london/strategic-deal-desk-manager/47263/101022365904",
       "source": "dom-fallback-other",
       "posted_at": null
     },
@@ -3431,19 +3379,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://jobs.ashbyhq.com/quantexa/daa521bd-d313-4b96-bbcb-2df0e8fcfeed",
-      "source": "dom-fallback-workable",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-workable-quantexa-a01983f9a7d267be",
-      "company": "Quantexa",
-      "company_website": "https://www.quantexa.com",
-      "origin": "UK",
-      "title": "View and apply",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://jobs.ashbyhq.com/quantexa/17aee6cf-60d8-4df7-830e-e302fdf8f49a",
       "source": "dom-fallback-workable",
       "posted_at": null
     },
@@ -4631,19 +4566,6 @@
       "posted_at": null
     },
     {
-      "id": "dom-fallback-other-wise-29f56f0e289c4771",
-      "company": "Wise",
-      "company_website": "https://wise.com",
-      "origin": "UK",
-      "title": "Senior Software Engineer II - KYC Experience",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://wise.jobs/job/senior-software-engineer-ii-kyc-experience-in-london-jid-4052",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
       "id": "dom-fallback-other-wise-https://wise.jobs/#/",
       "company": "Wise",
       "company_website": "https://wise.com",
@@ -5134,19 +5056,6 @@
       "description_text": "",
       "description_snippet": "",
       "url": "https://jobs.ebayinc.com/us/en/job/R0074466/Security-Compliance-Engineer",
-      "source": "dom-fallback-other",
-      "posted_at": null
-    },
-    {
-      "id": "dom-fallback-other-ebay-e03c4a55a4cface7",
-      "company": "eBay",
-      "company_website": "https://www.ebay.com",
-      "origin": "US",
-      "title": "Strategic Ops & Communications Lead",
-      "location": "London (unconfirmed)",
-      "description_text": "",
-      "description_snippet": "",
-      "url": "https://jobs.ebayinc.com/us/en/job/R0075585/Strategic-Ops-Communications-Lead",
       "source": "dom-fallback-other",
       "posted_at": null
     }

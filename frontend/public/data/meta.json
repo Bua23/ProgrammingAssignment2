@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T16:50:22.254822+00:00",
+  "generated_at": "2026-10-12T21:56:55.308621+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -10,7 +10,6 @@
     "Amazon",
     "Apple",
     "Atlassian",
-    "Canva",
     "Cohere",
     "CreativeX",
     "Databricks",
@@ -31,7 +30,6 @@
     "Marshmallow",
     "Mercor",
     "Meta",
-    "Microsoft",
     "MongoDB",
     "Palo Alto Networks",
     "Pendo",
@@ -190,5 +188,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 1,
-  "total_unconfirmed_found": 395
+  "total_unconfirmed_found": 388
 }
