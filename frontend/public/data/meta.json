@@ -1,8 +1,11 @@
 {
-  "generated_at": "2026-10-13T15:07:13.251284+00:00",
+  "generated_at": "2026-10-13T20:05:35.395745+00:00",
   "window_hours": 24,
   "companies_checked": 144,
-  "companies_with_matches": [],
+  "companies_with_matches": [
+    "Multiverse",
+    "hyperexponential"
+  ],
   "companies_with_unconfirmed": [
     "1Password",
     "Amazon",
@@ -13,7 +16,6 @@
     "Databricks",
     "Datadog",
     "Edra",
-    "Expedia Group",
     "FIXR",
     "Freetrade",
     "GoCardless",
@@ -28,6 +30,7 @@
     "Marshmallow",
     "Mercor",
     "Meta",
+    "Microsoft",
     "MongoDB",
     "Palo Alto Networks",
     "Pendo",
@@ -183,6 +186,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 0,
-  "total_unconfirmed_found": 388
+  "total_jobs_found": 3,
+  "total_unconfirmed_found": 383
 }
