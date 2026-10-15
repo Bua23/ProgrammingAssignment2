@@ -1,10 +1,9 @@
 {
-  "generated_at": "2026-10-14T18:12:53.900632+00:00",
+  "generated_at": "2026-10-15T12:45:58.753641+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Legora",
-    "Multiverse"
+    "Legora"
   ],
   "companies_with_unconfirmed": [
     "1Password",
@@ -24,13 +23,13 @@
     "Graphcore",
     "H Company",
     "Intercom",
+    "Junior AI",
     "Klaviyo",
     "Lendable",
     "Lovable",
     "Marshmallow",
     "Mercor",
     "Meta",
-    "Microsoft",
     "MongoDB",
     "Palo Alto Networks",
     "Pendo",
@@ -186,6 +185,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 3,
-  "total_unconfirmed_found": 377
+  "total_jobs_found": 1,
+  "total_unconfirmed_found": 369
 }
