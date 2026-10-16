@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-10-15T17:59:09.714981+00:00",
+  "generated_at": "2026-10-16T12:25:03.217400+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
+    "Legora",
     "Multiverse",
     "Vanta"
   ],
@@ -15,13 +16,13 @@
     "CreativeX",
     "Databricks",
     "Edra",
-    "Expedia Group",
     "FIXR",
     "Freetrade",
     "GoCardless",
     "GoodNotes",
     "Graphcore",
     "H Company",
+    "Harvey AI",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -185,6 +186,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 2,
-  "total_unconfirmed_found": 369
+  "total_jobs_found": 8,
+  "total_unconfirmed_found": 375
 }
