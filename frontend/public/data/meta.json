@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-10-16T12:25:03.217400+00:00",
+  "generated_at": "2026-10-16T17:34:36.074645+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
+    "Figma",
     "Legora",
     "Multiverse",
     "Vanta"
@@ -16,6 +17,7 @@
     "CreativeX",
     "Databricks",
     "Edra",
+    "Expedia Group",
     "FIXR",
     "Freetrade",
     "GoCardless",
@@ -31,6 +33,7 @@
     "Marshmallow",
     "Mercor",
     "Meta",
+    "Microsoft",
     "MongoDB",
     "Palo Alto Networks",
     "Pendo",
@@ -186,6 +189,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 8,
-  "total_unconfirmed_found": 375
+  "total_jobs_found": 7,
+  "total_unconfirmed_found": 381
 }
