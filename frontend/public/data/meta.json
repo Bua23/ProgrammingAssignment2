@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T14:42:01.974629+00:00",
+  "generated_at": "2026-10-19T19:28:35.998912+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -8,7 +8,6 @@
   "companies_with_unconfirmed": [
     "1Password",
     "Amazon",
-    "Apple",
     "Atlassian",
     "Cohere",
     "CreativeX",
@@ -185,5 +184,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 1,
-  "total_unconfirmed_found": 373
+  "total_unconfirmed_found": 367
 }
