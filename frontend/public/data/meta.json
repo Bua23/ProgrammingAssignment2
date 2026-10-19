@@ -1,12 +1,9 @@
 {
-  "generated_at": "2026-10-16T17:34:36.074645+00:00",
+  "generated_at": "2026-10-19T14:42:01.974629+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Figma",
-    "Legora",
-    "Multiverse",
-    "Vanta"
+    "Talos"
   ],
   "companies_with_unconfirmed": [
     "1Password",
@@ -24,7 +21,6 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
-    "Harvey AI",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -33,7 +29,6 @@
     "Marshmallow",
     "Mercor",
     "Meta",
-    "Microsoft",
     "MongoDB",
     "Palo Alto Networks",
     "Pendo",
@@ -189,6 +184,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 7,
-  "total_unconfirmed_found": 381
+  "total_jobs_found": 1,
+  "total_unconfirmed_found": 373
 }
