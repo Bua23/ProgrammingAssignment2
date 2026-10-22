@@ -1,18 +1,19 @@
 {
-  "generated_at": "2026-10-22T13:05:58.868230+00:00",
+  "generated_at": "2026-10-22T18:10:58.462498+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
     "LaunchDarkly",
-    "Legora",
     "Multiverse",
-    "Talos"
+    "Vanta"
   ],
   "companies_with_unconfirmed": [
     "1Password",
     "Algolia",
     "Amazon",
+    "Apple",
     "Atlassian",
+    "Autodesk",
     "Cohere",
     "CreativeX",
     "Databricks",
@@ -24,6 +25,7 @@
     "GoodNotes",
     "Graphcore",
     "H Company",
+    "Harvey AI",
     "Intercom",
     "Junior AI",
     "Klaviyo",
@@ -32,6 +34,7 @@
     "Marshmallow",
     "Mercor",
     "Meta",
+    "Microsoft",
     "MongoDB",
     "Palo Alto Networks",
     "Pendo",
@@ -186,6 +189,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 7,
-  "total_unconfirmed_found": 371
+  "total_jobs_found": 6,
+  "total_unconfirmed_found": 380
 }
