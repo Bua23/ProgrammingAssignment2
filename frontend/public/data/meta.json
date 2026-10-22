@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-10-21T18:14:35.661569+00:00",
+  "generated_at": "2026-10-22T13:05:58.868230+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "Griffin",
+    "LaunchDarkly",
     "Legora",
     "Multiverse",
     "Talos"
   ],
   "companies_with_unconfirmed": [
     "1Password",
+    "Algolia",
     "Amazon",
-    "Apple",
     "Atlassian",
     "Cohere",
     "CreativeX",
@@ -186,6 +186,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 6,
-  "total_unconfirmed_found": 353
+  "total_jobs_found": 7,
+  "total_unconfirmed_found": 371
 }
