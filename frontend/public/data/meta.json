@@ -1,11 +1,8 @@
 {
-  "generated_at": "2026-10-23T12:43:52.525398+00:00",
+  "generated_at": "2026-10-23T18:05:59.935659+00:00",
   "window_hours": 24,
   "companies_checked": 144,
-  "companies_with_matches": [
-    "Multiverse",
-    "Vanta"
-  ],
+  "companies_with_matches": [],
   "companies_with_unconfirmed": [
     "1Password",
     "Algolia",
@@ -187,6 +184,6 @@
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 3,
-  "total_unconfirmed_found": 392
+  "total_jobs_found": 0,
+  "total_unconfirmed_found": 393
 }
