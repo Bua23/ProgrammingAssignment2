@@ -1,9 +1,8 @@
 {
-  "generated_at": "2026-10-22T18:10:58.462498+00:00",
+  "generated_at": "2026-10-23T12:43:52.525398+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
-    "LaunchDarkly",
     "Multiverse",
     "Vanta"
   ],
@@ -13,7 +12,6 @@
     "Amazon",
     "Apple",
     "Atlassian",
-    "Autodesk",
     "Cohere",
     "CreativeX",
     "Databricks",
@@ -34,7 +32,6 @@
     "Marshmallow",
     "Mercor",
     "Meta",
-    "Microsoft",
     "MongoDB",
     "Palo Alto Networks",
     "Pendo",
@@ -183,12 +180,13 @@
     "Workday",
     "Writer (AI)",
     "Yapily",
+    "Zapier",
     "Zego",
     "Zopa",
     "eBay",
     "monday.com"
   ],
   "companies_failed": [],
-  "total_jobs_found": 6,
-  "total_unconfirmed_found": 380
+  "total_jobs_found": 3,
+  "total_unconfirmed_found": 392
 }
