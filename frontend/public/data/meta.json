@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T14:15:29.773404+00:00",
+  "generated_at": "2026-10-26T19:25:25.142876+00:00",
   "window_hours": 24,
   "companies_checked": 144,
   "companies_with_matches": [
@@ -31,7 +31,6 @@
     "Marshmallow",
     "Mercor",
     "Meta",
-    "MongoDB",
     "Palo Alto Networks",
     "Pendo",
     "PhysicsX",
@@ -187,5 +186,5 @@
   ],
   "companies_failed": [],
   "total_jobs_found": 2,
-  "total_unconfirmed_found": 384
+  "total_unconfirmed_found": 374
 }
