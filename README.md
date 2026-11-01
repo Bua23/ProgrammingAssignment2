@@ -94,6 +94,30 @@ timestamp — a role that was edited stays looking "fresh" even if it was
 originally posted earlier. Lever and Ashby both expose true creation/publish
 timestamps, so this only affects Greenhouse-listed companies.
 
+## Role filter (what the dashboard shows)
+
+Only jobs whose **title** matches one of five AI role families (or adjacent
+roles) are kept — everything else is dropped before it reaches the
+dashboard. The families and their keywords live in
+[`crawler/roles.yaml`](crawler/roles.yaml) and are edited there, not in code:
+
+1. **AI Manager / Lead / Senior Manager** (also Head / Director / VP / Principal of AI)
+2. **AI Customer Success** (also AI value partner, adoption, enablement, technical account)
+3. **AI Governance** (also Responsible AI, AI ethics, risk, compliance, policy, assurance)
+4. **AI Strategy** (also AI transformation, roadmap, programme management, Chief AI Officer)
+5. **AI Consulting** (also AI consultant, advisory / advisor)
+
+Individual-contributor titles (engineer, scientist, researcher, intern, ...)
+are dropped unless a strong management word (manager, head, director, ...) is
+also present; sales/marketing/recruiting titles are always dropped. Each kept
+job carries a `matched_roles` list, shown as badges and a dropdown filter in
+the UI. `meta.json` records how many jobs the filter dropped. Run the crawler
+with `--no-role-filter` to see everything, or `--roles other.yaml` to use a
+different config. Tests: `cd crawler && python -m unittest discover -s tests`.
+
+Unconfirmed (page-scraped) cards that clearly belong to another city (their
+card text has a location line with no "London") are also dropped.
+
 ## Repository layout
 
 ```
@@ -106,6 +130,9 @@ crawler/
                            response if the page makes one (or one click-through
                            away), else DOM fallback
   crawl.py                 orchestrates crawl → filter → write JSON
+  roles.yaml / role_filter.py  title-based AI role-family filter (see above)
+  debug_probe.py           manual diagnostic for companies stuck in DOM fallback
+  tests/                   unit tests (role filter + crawl orchestration)
   requirements.txt
 frontend/
   src/                     React + TypeScript dashboard

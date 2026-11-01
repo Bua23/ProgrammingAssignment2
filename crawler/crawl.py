@@ -28,6 +28,7 @@ from playwright.sync_api import sync_playwright
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from browser_crawl import crawl_company  # noqa: E402
+from role_filter import RoleFilter  # noqa: E402
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s"
@@ -65,6 +66,18 @@ def html_to_text(html: str, max_len: int = 4000) -> str:
     return text[:max_len]
 
 
+def dom_location_ok(raw_title: str) -> bool:
+    """DOM-fallback titles are raw link text: first line is the title, any
+    later lines are usually location/team. If there ARE later lines and none
+    mention London, the card is for another city (the page only mentioned
+    London somewhere nearby) — drop it. A bare single-line title carries no
+    location info, so keep it as unconfirmed."""
+    lines = [ln.strip() for ln in (raw_title or "").splitlines() if ln.strip()]
+    if len(lines) <= 1:
+        return True
+    return any("london" in ln.lower() for ln in lines[1:])
+
+
 def make_id(source: str, token: str, external_id: str) -> str:
     if len(external_id) > 60:
         external_id = hashlib.sha1(external_id.encode()).hexdigest()[:16]
@@ -77,7 +90,11 @@ def load_companies(path: Path) -> list[dict]:
     return data.get("companies", [])
 
 
-def crawl(companies: list[dict], cutoff: datetime) -> tuple[list[dict], list[dict], dict]:
+def crawl(
+    companies: list[dict], cutoff: datetime, role_filter: RoleFilter | None = None
+) -> tuple[list[dict], list[dict], dict]:
+    dropped_by_role_filter = 0
+    dropped_wrong_city = 0
     confirmed_jobs: list[dict] = []
     unconfirmed_jobs: list[dict] = []
     companies_checked = 0
@@ -108,6 +125,17 @@ def crawl(companies: list[dict], cutoff: datetime) -> tuple[list[dict], list[dic
                 for job in raw_jobs:
                     if not is_london_uk(job["location"]):
                         continue
+                    if job["posted_at"] is None and not dom_location_ok(job["title"]):
+                        dropped_wrong_city += 1
+                        continue
+
+                    clean_title = (job["title"].strip().splitlines() or [""])[0].strip()
+                    matched_roles: list[str] = []
+                    if role_filter is not None:
+                        matched_roles = role_filter.match(clean_title)
+                        if not matched_roles:
+                            dropped_by_role_filter += 1
+                            continue
 
                     description_text = html_to_text(job["description_html"])
                     entry = {
@@ -115,7 +143,8 @@ def crawl(companies: list[dict], cutoff: datetime) -> tuple[list[dict], list[dic
                         "company": name,
                         "company_website": company.get("website", ""),
                         "origin": company.get("origin", ""),
-                        "title": job["title"],
+                        "title": clean_title,
+                        "matched_roles": matched_roles,
                         "location": job["location"],
                         "description_text": description_text,
                         "description_snippet": description_text[:280].rsplit(" ", 1)[0] + "…"
@@ -152,6 +181,9 @@ def crawl(companies: list[dict], cutoff: datetime) -> tuple[list[dict], list[dic
         "companies_failed": companies_failed,
         "total_jobs_found": len(confirmed_jobs),
         "total_unconfirmed_found": len(unconfirmed_jobs),
+        "role_filter": role_filter.labels if role_filter is not None else None,
+        "dropped_by_role_filter": dropped_by_role_filter,
+        "dropped_wrong_city": dropped_wrong_city,
     }
     return confirmed_jobs, unconfirmed_jobs, meta
 
@@ -170,8 +202,20 @@ def main() -> None:
         default=Path(__file__).resolve().parent.parent / "frontend" / "public" / "data",
         help="Directory to write jobs.json and meta.json into",
     )
+    parser.add_argument(
+        "--roles",
+        type=Path,
+        default=Path(__file__).resolve().parent / "roles.yaml",
+        help="Role-filter config; only jobs whose title matches a role family are kept",
+    )
+    parser.add_argument(
+        "--no-role-filter",
+        action="store_true",
+        help="Keep every London job regardless of title",
+    )
     args = parser.parse_args()
 
+    role_filter = None if args.no_role_filter else RoleFilter.from_yaml(args.roles)
     cutoff = datetime.now(timezone.utc) - timedelta(hours=args.hours)
     companies = load_companies(args.companies)
 
@@ -179,7 +223,7 @@ def main() -> None:
         "Rendering careers pages for %d companies, keeping London, UK roles posted since %s",
         len(companies), cutoff.isoformat(),
     )
-    confirmed_jobs, unconfirmed_jobs, meta = crawl(companies, cutoff)
+    confirmed_jobs, unconfirmed_jobs, meta = crawl(companies, cutoff, role_filter)
     meta["window_hours"] = args.hours
 
     args.output.mkdir(parents=True, exist_ok=True)

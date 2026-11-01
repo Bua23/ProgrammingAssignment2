@@ -1,0 +1,138 @@
+# Role filter for the crawl: only jobs whose TITLE matches at least one role
+# family below are kept (everything else is dropped before it reaches the
+# dashboard). Matching is case-insensitive and applied to the first line of
+# the title only.
+#
+# A role family matches when EVERY group in `all_of` has at least one
+# matching regex, OR any regex in `standalone` matches on its own.
+# Group names "ai", "management" and "strong_management" refer to the shared
+# lists below.
+#
+# Edit freely — e.g. add "product manager" to the AI-management family's
+# exclude list below if AI Product Manager roles turn out to be noise.
+
+ai_terms:
+  - '\bai\b'
+  - '\bgen\s?ai\b'
+  - '\bgenerative\b'
+  - '\bartificial intelligence\b'
+  - '\bllm\b'
+  - '\bagentic\b'
+
+# Seniority / people-leadership words. "Lead" and "principal" are weak (an
+# "AI Lead" is a leadership role, a "Lead AI Engineer" is an IC) so
+# ic_exclude below is only waived by the strong terms.
+management_terms:
+  - '\bmanager\b'
+  - '\bhead\b'
+  - '\bdirector\b'
+  - '\blead\b'
+  - '\bvp\b'
+  - '\bvice president\b'
+  - '\bprincipal\b'
+  - '\bchief\b'
+
+strong_management_terms:
+  - '\bmanager\b'
+  - '\bhead\b'
+  - '\bdirector\b'
+  - '\bvp\b'
+  - '\bvice president\b'
+  - '\bchief\b'
+
+# Individual-contributor technical titles: dropped unless a strong
+# management term is also present (so "AI Engineering Manager" survives,
+# "Senior AI Engineer" does not).
+ic_exclude:
+  - '\bengineer\b'
+  - '\bengineering\b'
+  - '\bdeveloper\b'
+  - '\bscientist\b'
+  - '\bresearcher\b'
+  - '\bresearch\b'
+  - '\bintern\b'
+  - '\binternship\b'
+  - '\bgraduate\b'
+  - '\bapprentice\b'
+  - '\bdesigner\b'
+  - '\bmember of technical staff\b'
+
+# Dropped outright regardless of the above.
+exclude_titles:
+  - '\bsales\b'
+  - '\baccount executive\b'
+  - '\baccount manager\b'
+  - '\bbusiness development\b'
+  - '\brecruit'
+  - '\btalent\b'
+  - '\bsdr\b'
+  - '\bbdr\b'
+  - '\bmarketing\b'
+
+roles:
+  - key: ai_management
+    label: AI Manager / Lead / Senior Manager
+    all_of:
+      - ai
+      - management
+
+  - key: ai_customer_success
+    label: AI Customer Success
+    all_of:
+      - ai
+      - - 'customer success'
+        - 'client success'
+        - 'customer outcome'
+        - 'technical account'
+        - 'value partner'
+        - 'adoption'
+        - 'enablement'
+
+  - key: ai_governance
+    label: AI Governance
+    standalone:
+      - 'responsible ai'
+      - 'ai governance'
+      - 'ai ethic'
+    all_of:
+      - ai
+      - - 'governance'
+        - 'ethics'
+        - 'risk'
+        - 'compliance'
+        - 'policy'
+        - 'regulatory'
+        - 'assurance'
+        - 'trust'
+        - 'safety'
+        - 'oversight'
+        - 'privacy'
+
+  - key: ai_strategy
+    label: AI Strategy
+    standalone:
+      - 'chief ai officer'
+      - '\bcaio\b'
+    all_of:
+      - ai
+      - - 'strategy'
+        - 'strategist'
+        - 'strategic'
+        - 'transformation'
+        - 'roadmap'
+        - 'operating model'
+        - 'advisory'
+        - 'programme'
+        - 'program'
+        - 'portfolio'
+        - 'adoption'
+
+  - key: ai_consulting
+    label: AI Consulting
+    all_of:
+      - ai
+      - - 'consulting'
+        - 'consultant'
+        - 'advisory'
+        - 'advisor'
+        - 'adviser'

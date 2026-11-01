@@ -259,6 +259,11 @@ header.hero p {
   color: var(--text-primary);
 }
 
+.badge-role {
+  background: color-mix(in srgb, var(--series-1) 18%, transparent);
+  color: var(--text-primary);
+}
+
 .section-heading {
   margin: 32px 0 4px;
 }

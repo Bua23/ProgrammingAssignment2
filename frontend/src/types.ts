@@ -10,6 +10,7 @@ export interface Job {
   url: string;
   source: string;
   posted_at: string | null; // ISO 8601, or null for unconfirmed (DOM-fallback) jobs
+  matched_roles?: string[]; // keys into Meta.role_filter
 }
 
 export interface Meta {
@@ -22,4 +23,7 @@ export interface Meta {
   companies_failed: string[];
   total_jobs_found: number;
   total_unconfirmed_found: number;
+  role_filter?: Record<string, string> | null; // role key -> display label
+  dropped_by_role_filter?: number;
+  dropped_wrong_city?: number;
 }

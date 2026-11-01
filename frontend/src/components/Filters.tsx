@@ -4,6 +4,9 @@ interface Props {
   company: string;
   onCompanyChange: (v: string) => void;
   companies: string[];
+  role: string;
+  onRoleChange: (v: string) => void;
+  roles: [string, string][]; // [key, label]
 }
 
 export function Filters({
@@ -12,6 +15,9 @@ export function Filters({
   company,
   onCompanyChange,
   companies,
+  role,
+  onRoleChange,
+  roles,
 }: Props) {
   return (
     <div className="filters">
@@ -22,6 +28,20 @@ export function Filters({
         onChange={(e) => onSearchChange(e.target.value)}
         aria-label="Search jobs"
       />
+      {roles.length > 0 && (
+        <select
+          value={role}
+          onChange={(e) => onRoleChange(e.target.value)}
+          aria-label="Filter by role family"
+        >
+          <option value="">All role families</option>
+          {roles.map(([key, label]) => (
+            <option key={key} value={key}>
+              {label}
+            </option>
+          ))}
+        </select>
+      )}
       <select
         value={company}
         onChange={(e) => onCompanyChange(e.target.value)}

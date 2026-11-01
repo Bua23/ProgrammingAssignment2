@@ -16,6 +16,7 @@ export default function App() {
   const [loadError, setLoadError] = useState<string | null>(null);
   const [search, setSearch] = useState("");
   const [company, setCompany] = useState("");
+  const [role, setRole] = useState("");
 
   useEffect(() => {
     Promise.all([
@@ -39,6 +40,7 @@ export default function App() {
           companies_dom_fallback: [],
           companies_failed: [],
           total_unconfirmed_found: 0,
+          role_filter: null,
           ...metaData,
         });
       })
@@ -50,6 +52,7 @@ export default function App() {
     const q = search.trim().toLowerCase();
     return jobs.filter((job) => {
       if (company && job.company !== company) return false;
+      if (role && !(job.matched_roles ?? []).includes(role)) return false;
       if (!q) return true;
       return (
         job.title.toLowerCase().includes(q) ||
@@ -57,16 +60,17 @@ export default function App() {
         job.description_text.toLowerCase().includes(q)
       );
     });
-  }, [jobs, search, company]);
+  }, [jobs, search, company, role]);
 
   const filteredUnconfirmed = useMemo(() => {
     const q = search.trim().toLowerCase();
     return unconfirmedJobs.filter((job) => {
       if (company && job.company !== company) return false;
+      if (role && !(job.matched_roles ?? []).includes(role)) return false;
       if (!q) return true;
       return job.title.toLowerCase().includes(q) || job.company.toLowerCase().includes(q);
     });
-  }, [unconfirmedJobs, search, company]);
+  }, [unconfirmedJobs, search, company, role]);
 
   const companyCounts = useMemo(() => {
     if (!jobs) return [] as [string, number][];
@@ -81,16 +85,19 @@ export default function App() {
     [jobs, unconfirmedJobs]
   );
 
+  const roleLabels: Record<string, string> = meta?.role_filter ?? {};
+  const roleOptions = Object.entries(roleLabels);
+
   return (
     <>
       <header className="hero">
-        <h1>London software jobs — last 24 hours</h1>
+        <h1>London AI leadership roles — last 24 hours</h1>
         <p>
-          A curated set of UK software product companies, crawled by rendering
-          each company's own public careers page in a headless browser and
-          reading the job data as their own site loads it — filtered to roles
-          based in London, UK and posted within the last 24 hours. Runs
-          automatically twice each weekday.
+          AI Manager/Lead, AI Customer Success, AI Governance, AI Strategy and
+          AI Consulting roles (and adjacent ones) at ~144 tech companies,
+          crawled from each company's own public careers page — filtered to
+          London, UK and posted within the last 24 hours. Runs automatically
+          twice each weekday.
         </p>
       </header>
 
@@ -124,14 +131,17 @@ export default function App() {
             company={company}
             onCompanyChange={setCompany}
             companies={allCompanies}
+            role={role}
+            onRoleChange={setRole}
+            roles={roleOptions}
           />
 
           {filteredJobs.length === 0 ? (
-            <EmptyState hasFilters={Boolean(search || company)} />
+            <EmptyState hasFilters={Boolean(search || company || role)} />
           ) : (
             <div className="job-grid">
               {filteredJobs.map((job) => (
-                <JobCard job={job} key={job.id} />
+                <JobCard job={job} roleLabels={roleLabels} key={job.id} />
               ))}
             </div>
           )}
@@ -148,7 +158,7 @@ export default function App() {
               </div>
               <div className="job-grid">
                 {filteredUnconfirmed.map((job) => (
-                  <JobCard job={job} key={job.id} />
+                  <JobCard job={job} roleLabels={roleLabels} key={job.id} />
                 ))}
               </div>
             </>

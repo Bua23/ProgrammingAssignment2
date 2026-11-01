@@ -1,7 +1,13 @@
 import { Job } from "../types";
 import { relativeTime } from "../format";
 
-export function JobCard({ job }: { job: Job }) {
+export function JobCard({
+  job,
+  roleLabels,
+}: {
+  job: Job;
+  roleLabels: Record<string, string>;
+}) {
   return (
     <article className="job-card">
       <div className="company-row">
@@ -15,6 +21,11 @@ export function JobCard({ job }: { job: Job }) {
         <span className="badge">{job.location}</span>
         <span className="badge">{job.source}</span>
         {!job.posted_at && <span className="badge badge-warning">unconfirmed</span>}
+        {(job.matched_roles ?? []).map((key) => (
+          <span className="badge badge-role" key={key}>
+            {roleLabels[key] ?? key}
+          </span>
+        ))}
       </div>
       <p className="snippet">
         {job.description_snippet || "No description available from this page — open the original posting for details."}
