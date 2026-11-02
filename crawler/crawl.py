@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Render each curated UK software product company's own careers page in a
 headless browser, keep roles that are (a) based in London, UK and (b)
-posted within the last N hours, and write the result to a JSON file the
+posted within the last N hours (default 168 = 7 days), and write the result to a JSON file the
 frontend reads directly.
 
 Usage:
-    python crawl.py [--hours 24] [--output ../frontend/public/data]
+    python crawl.py [--hours 168] [--highlight-hours 48] [--output ../frontend/public/data]
 
 Exit code is always 0 on a "successful run" even if individual companies
 fail to load (those are logged as warnings and skipped) so a single bad
@@ -84,6 +84,24 @@ def make_id(source: str, token: str, external_id: str) -> str:
     return f"{source}-{token}-{external_id}"
 
 
+def load_previous_first_seen(output_dir: Path) -> dict[str, str]:
+    """id -> first_seen_at from the previous crawl's output, so roles without a
+    posted date can be aged by when we first saw them. Roles from data that
+    predates first_seen_at fall back to the previous crawl's timestamp (they
+    were on the site no later than then)."""
+    seen: dict[str, str] = {}
+    try:
+        jobs = json.loads((output_dir / "jobs.json").read_text())
+        prev_generated = json.loads((output_dir / "meta.json").read_text()).get("generated_at")
+    except (OSError, ValueError):
+        return seen
+    for job in jobs.get("jobs", []) + jobs.get("unconfirmed_jobs", []):
+        first_seen = job.get("first_seen_at") or prev_generated
+        if first_seen and job.get("id"):
+            seen[job["id"]] = first_seen
+    return seen
+
+
 def load_companies(path: Path) -> list[dict]:
     with open(path) as f:
         data = yaml.safe_load(f)
@@ -91,8 +109,15 @@ def load_companies(path: Path) -> list[dict]:
 
 
 def crawl(
-    companies: list[dict], cutoff: datetime, role_filter: RoleFilter | None = None
+    companies: list[dict],
+    cutoff: datetime,
+    role_filter: RoleFilter | None = None,
+    previous_first_seen: dict[str, str] | None = None,
+    highlight_hours: int = 48,
 ) -> tuple[list[dict], list[dict], dict]:
+    previous_first_seen = previous_first_seen or {}
+    now = datetime.now(timezone.utc)
+    dropped_stale_unconfirmed = 0
     dropped_by_role_filter = 0
     dropped_wrong_city = 0
     confirmed_jobs: list[dict] = []
@@ -153,6 +178,7 @@ def crawl(
                         "url": job["url"],
                         "source": job["source"],
                     }
+                    entry["first_seen_at"] = previous_first_seen.get(entry["id"]) or now.isoformat()
 
                     if job["posted_at"] is not None and within_window(job["posted_at"], cutoff):
                         entry["posted_at"] = job["posted_at"].isoformat()
@@ -160,7 +186,13 @@ def crawl(
                         companies_with_matches.add(name)
                     elif job["posted_at"] is None:
                         # DOM-fallback match: London-relevant but no reliable
-                        # posted-date, so we can't confirm the 24h window.
+                        # posted-date. Age it by when we first saw it instead:
+                        # still on the site after a full window means it was
+                        # posted before the window, so drop it.
+                        first_seen = datetime.fromisoformat(entry["first_seen_at"])
+                        if first_seen < cutoff:
+                            dropped_stale_unconfirmed += 1
+                            continue
                         entry["posted_at"] = None
                         unconfirmed_jobs.append(entry)
                         companies_with_unconfirmed.add(name)
@@ -172,8 +204,9 @@ def crawl(
     unconfirmed_jobs.sort(key=lambda j: (j["company"], j["title"]))
 
     meta = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": now.isoformat(),
         "window_hours": None,  # filled in by caller
+        "highlight_hours": highlight_hours,
         "companies_checked": companies_checked,
         "companies_with_matches": sorted(companies_with_matches),
         "companies_with_unconfirmed": sorted(companies_with_unconfirmed),
@@ -184,13 +217,21 @@ def crawl(
         "role_filter": role_filter.labels if role_filter is not None else None,
         "dropped_by_role_filter": dropped_by_role_filter,
         "dropped_wrong_city": dropped_wrong_city,
+        "dropped_stale_unconfirmed": dropped_stale_unconfirmed,
     }
     return confirmed_jobs, unconfirmed_jobs, meta
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--hours", type=int, default=24, help="Lookback window in hours")
+    parser.add_argument(
+        "--hours", type=int, default=168,
+        help="Keep roles posted within this many hours (default 168 = 7 days)",
+    )
+    parser.add_argument(
+        "--highlight-hours", type=int, default=48,
+        help="Roles posted within this many hours are highlighted as new in the UI (default 48)",
+    )
     parser.add_argument(
         "--companies",
         type=Path,
@@ -223,7 +264,10 @@ def main() -> None:
         "Rendering careers pages for %d companies, keeping London, UK roles posted since %s",
         len(companies), cutoff.isoformat(),
     )
-    confirmed_jobs, unconfirmed_jobs, meta = crawl(companies, cutoff, role_filter)
+    previous_first_seen = load_previous_first_seen(args.output)
+    confirmed_jobs, unconfirmed_jobs, meta = crawl(
+        companies, cutoff, role_filter, previous_first_seen, args.highlight_hours
+    )
     meta["window_hours"] = args.hours
 
     args.output.mkdir(parents=True, exist_ok=True)

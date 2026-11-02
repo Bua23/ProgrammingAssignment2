@@ -11,6 +11,7 @@ export interface Job {
   source: string;
   posted_at: string | null; // ISO 8601, or null for unconfirmed (DOM-fallback) jobs
   matched_roles?: string[]; // keys into Meta.role_filter
+  first_seen_at?: string; // when the crawler first saw this role (ISO 8601)
 }
 
 export interface Meta {
@@ -26,4 +27,6 @@ export interface Meta {
   role_filter?: Record<string, string> | null; // role key -> display label
   dropped_by_role_filter?: number;
   dropped_wrong_city?: number;
+  dropped_stale_unconfirmed?: number;
+  highlight_hours?: number;
 }

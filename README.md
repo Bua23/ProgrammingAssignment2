@@ -1,12 +1,26 @@
 # London Software Jobs Dashboard
 
 A dashboard that surfaces software-engineering roles based in **London, UK**
-that were posted in the **last 24 hours**, at a curated list of ~144
+that were posted in the **last 7 days** (roles from the last 2 days are highlighted), at a curated list of ~144
 companies: large employers already established in the UK (Google, Meta,
 Amazon, ...), UK-native scaleups and unicorns (Monzo, Revolut, Darktrace,
 ...), and smaller US/international companies actively expanding into
 London (Cresta, Ramp, Harvey AI, ...) — consultancies excluded throughout.
 Crawls run automatically **twice on every weekday**.
+
+### How "last 7 days" and "new" work
+
+- Roles with a real posted date (Greenhouse/Lever/Ashby/Workable data) are
+  kept if posted within 7 days (`crawl.py --hours 168`); those posted within
+  2 days (`--highlight-hours 48`) get a **New** highlight.
+- Page-scraped roles have **no posted date**, so the crawler records
+  `first_seen_at` (carried over from the previous crawl's `jobs.json`) and
+  drops them once they've been on the site for more than 7 days. They are
+  never highlighted as new, because first-seen is not the same as posted.
+  Until that first-seen history builds up (the first week after this change),
+  they may include roles posted earlier.
+- The dashboard applies the same 7-day cut-off when it renders, so a
+  stalled crawler can't leave week-old roles on screen.
 
 > This repository started life as a Coursera R programming assignment. That
 > original content is preserved at
@@ -36,7 +50,7 @@ crawler/browser_crawl.py  renders careers_url in a headless browser (Playwright)
         │                     rendered page (no reliable posted-date this way)
         ▼
 crawler/crawl.py          keeps roles located in London, UK; splits results into
-        │                 "confirmed" (real posted-date within the last 24h)
+        │                 "confirmed" (real posted-date within the last 7 days)
         │                 and "unconfirmed" (DOM fallback, date unknown)
         ▼
 frontend/public/data/     jobs.json ({jobs, unconfirmed_jobs}) + meta.json

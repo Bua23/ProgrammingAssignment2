@@ -4,20 +4,27 @@ import { relativeTime } from "../format";
 export function JobCard({
   job,
   roleLabels,
+  isNew,
+  seenAt,
 }: {
   job: Job;
   roleLabels: Record<string, string>;
+  isNew: boolean; // confirmed posted date within the highlight window
+  seenAt: string; // first_seen_at (used when there is no posted date)
 }) {
   return (
-    <article className="job-card">
+    <article className={isNew ? "job-card job-card-new" : "job-card"}>
       <div className="company-row">
         <span className="company-name">{job.company}</span>
         <span className="posted">
-          {job.posted_at ? relativeTime(job.posted_at) : "date unknown"}
+          {job.posted_at
+            ? `posted ${relativeTime(job.posted_at)}`
+            : `first seen ${relativeTime(seenAt)}`}
         </span>
       </div>
       <h3 className="title">{job.title}</h3>
       <div className="badge-row">
+        {isNew && <span className="badge badge-new">New</span>}
         <span className="badge">{job.location}</span>
         <span className="badge">{job.source}</span>
         {!job.posted_at && <span className="badge badge-warning">unconfirmed</span>}
