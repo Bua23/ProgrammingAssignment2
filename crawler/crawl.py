@@ -144,8 +144,16 @@ def crawl(
     workers: int = 1,
     min_salary: int | None = MIN_SALARY_GBP,
     permanent_only: bool = True,
+    drop_log: list | None = None,
 ) -> tuple[list[dict], list[dict], dict]:
     previous_first_seen = previous_first_seen or {}
+
+    def dropped(reason: str, company_name: str, title: str) -> None:
+        drops[reason] += 1
+        if drop_log is not None:
+            drop_log.append({"reason": reason, "company": company_name,
+                             "title": (title.strip().splitlines() or [""])[0].strip()})
+
     now = datetime.now(timezone.utc)
     started = time.time()
     drops = {"role_filter": 0, "wrong_city": 0, "not_permanent": 0, "not_senior": 0,
@@ -184,7 +192,7 @@ def crawl(
             if kind is None:
                 continue
             if job["posted_at"] is None and not dom_location_ok(job["title"]):
-                drops["wrong_city"] += 1
+                dropped("wrong_city", name, job["title"])
                 continue
 
             clean_title = (job["title"].strip().splitlines() or [""])[0].strip()
@@ -192,18 +200,18 @@ def crawl(
             if role_filter is not None:
                 matched_roles = role_filter.match(clean_title)
                 if not matched_roles:
-                    drops["role_filter"] += 1
+                    dropped("role_filter", name, clean_title)
                     continue
 
             full_text = html_to_text(job["description_html"], None)
             employment_type = job.get("employment_type", "")
             if permanent_only and not is_permanent(clean_title, employment_type, full_text):
-                drops["not_permanent"] += 1
+                dropped("not_permanent", name, clean_title)
                 continue
 
             salary = extract_gbp_salary(f"{clean_title}\n{full_text}")
             if min_salary is not None and not passes_salary_filter(clean_title, salary, min_salary):
-                drops["below_salary" if salary else "not_senior"] += 1
+                dropped("below_salary" if salary else "not_senior", name, clean_title)
                 continue
 
             description_text = full_text[:4000]
@@ -237,7 +245,7 @@ def crawl(
                 # still on the site after a full window means it was posted
                 # before the window, so drop it.
                 if datetime.fromisoformat(entry["first_seen_at"]) < cutoff:
-                    drops["stale_unconfirmed"] += 1
+                    dropped("stale_unconfirmed", name, clean_title)
                     continue
                 entry["posted_at"] = None
                 unconfirmed_jobs.append(entry)
@@ -295,6 +303,10 @@ def main() -> None:
         help="Keep contract / fixed-term / intern / part-time roles too",
     )
     parser.add_argument(
+        "--debug-drops", action="store_true",
+        help="Also write dropped.json (company, title, reason) next to the output, to check what the filters remove",
+    )
+    parser.add_argument(
         "--only", type=str, default="",
         help="Comma-separated company names to crawl (default: all) — for quick tests",
     )
@@ -334,11 +346,13 @@ def main() -> None:
         len(companies), args.workers, cutoff.isoformat(),
     )
     previous_first_seen = load_previous_first_seen(args.output)
+    drop_log: list | None = [] if args.debug_drops else None
     confirmed_jobs, unconfirmed_jobs, meta = crawl(
         companies, cutoff, role_filter, previous_first_seen, args.highlight_hours,
         workers=args.workers,
         min_salary=args.min_salary or None,
         permanent_only=not args.include_non_permanent,
+        drop_log=drop_log,
     )
     meta["window_hours"] = args.hours
 
@@ -347,6 +361,8 @@ def main() -> None:
         json.dumps({"jobs": confirmed_jobs, "unconfirmed_jobs": unconfirmed_jobs}, indent=2)
     )
     (args.output / "meta.json").write_text(json.dumps(meta, indent=2))
+    if drop_log is not None:
+        (args.output / "dropped.json").write_text(json.dumps(drop_log, indent=1))
 
     logger.info(
         "Done in %ss. %d confirmed + %d unconfirmed roles; %d companies failed, %d used page-scraping.",
