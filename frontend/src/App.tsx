@@ -117,11 +117,12 @@ export default function App() {
       <header className="hero">
         <h1>London AI leadership roles — last 7 days</h1>
         <p>
-          AI Manager/Lead, AI Customer Success, AI Governance, AI Strategy and
-          AI Consulting roles (and adjacent ones) at ~144 tech companies,
-          crawled from each company's own public careers page — London, UK only,
-          posted within the last 7 days, with anything from the last 2 days
-          highlighted. Runs automatically twice each weekday.
+          Senior AI Manager/Lead, Customer Success, Governance, Strategy and
+          Consulting roles (and adjacent ones) at ~144 tech companies, read
+          from each company's own careers page. Permanent roles in London, the
+          South East or remote in the UK, likely to pay £110k or more. Posted
+          within the last 7 days, with the last 2 days highlighted. Refreshed
+          Tuesday to Thursday at 1pm.
         </p>
       </header>
 
@@ -197,6 +198,15 @@ export default function App() {
               7 days · {meta.companies_checked} companies checked
               {meta.companies_failed.length > 0 && (
                 <> · {meta.companies_failed.length} unreachable this run</>
+              )}
+              {meta.filters && (
+                <>
+                  {" "}· filters: {meta.filters.permanent_only ? "permanent, " : ""}
+                  {meta.filters.locations.join(" / ")}
+                  {meta.filters.min_salary_gbp
+                    ? `, senior or £${Math.round(meta.filters.min_salary_gbp / 1000)}k+`
+                    : ""}
+                </>
               )}
               {meta.companies_dom_fallback.length > 0 && (
                 <> · {meta.companies_dom_fallback.length} used DOM fallback (no ATS call observed)</>

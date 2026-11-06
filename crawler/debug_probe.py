@@ -23,7 +23,7 @@ from playwright.sync_api import sync_playwright
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from ats_clients import API_URL_PATTERNS, BOARD_URL_PATTERNS  # noqa: E402
-from browser_crawl import DESKTOP_USER_AGENT, PAGE_TIMEOUT_MS, POST_LOAD_WAIT_MS  # noqa: E402
+from browser_crawl import DESKTOP_USER_AGENT, PAGE_TIMEOUT_MS, POST_LOAD_WAIT_MS, launch_chromium  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger("debug_probe")
@@ -196,7 +196,7 @@ def main() -> None:
     print(f"Probing {len(companies)} companies...")
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(args=["--no-sandbox"])
+        browser = launch_chromium(p)
         try:
             for company in companies:
                 probe(browser, company, args.screenshot_dir)

@@ -9,6 +9,7 @@ NormalizedJob dicts out:
         "location": str,
         "url": str,
         "description_html": str,
+        "employment_type": str,         # "" when the feed doesn't say
         "posted_at": datetime | None,   # tz-aware UTC
         "source": "greenhouse" | "lever" | "ashby" | "workable",
     }
@@ -106,6 +107,7 @@ def parse_greenhouse(data: dict) -> list[dict]:
                 "location": location,
                 "url": job.get("absolute_url", ""),
                 "description_html": job.get("content", "") or "",
+                "employment_type": "",  # not exposed by Greenhouse's public list feed
                 "posted_at": _parse_iso(job.get("updated_at")),
                 "source": "greenhouse",
             }
@@ -132,6 +134,7 @@ def parse_lever(data: list) -> list[dict]:
                 "location": location,
                 "url": job.get("hostedUrl", ""),
                 "description_html": job.get("descriptionPlain") or job.get("description", "") or "",
+                "employment_type": categories.get("commitment", "") or "",
                 "posted_at": posted_at,
                 "source": "lever",
             }
@@ -151,6 +154,7 @@ def parse_ashby(data: dict) -> list[dict]:
                 "location": location,
                 "url": job.get("jobUrl") or job.get("applyUrl", ""),
                 "description_html": job.get("descriptionHtml", "") or "",
+                "employment_type": job.get("employmentType", "") or "",
                 "posted_at": _parse_iso(job.get("publishedAt")),
                 "source": "ashby",
             }
@@ -171,6 +175,7 @@ def parse_workable(data: dict) -> list[dict]:
                 "location": location,
                 "url": job.get("url", ""),
                 "description_html": job.get("description", "") or "",
+                "employment_type": job.get("employment_type", "") or "",
                 "posted_at": _parse_iso(job.get("published_on")),
                 "source": "workable",
             }

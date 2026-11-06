@@ -340,3 +340,9 @@ header.hero p {
   color: var(--surface-1);
   font-weight: 600;
 }
+
+.badge-salary {
+  background: color-mix(in srgb, var(--status-good) 20%, transparent);
+  color: var(--text-primary);
+  font-weight: 600;
+}

@@ -21,11 +21,14 @@ own domain and watch what the page itself does while it loads.
 from __future__ import annotations
 
 import logging
+import re
 
 from playwright.sync_api import Browser, Response
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 
 from ats_clients import API_URL_PATTERNS, BOARD_URL_PATTERNS, parse_captured_response
+from jobposting import find_jobposting, jobposting_fields
+from locations import LOCATION_LABELS, classify_location
 
 logger = logging.getLogger(__name__)
 
@@ -48,9 +51,33 @@ NAV_WORDS = {
 }
 
 
-def crawl_company(browser: Browser, company: dict) -> tuple[list[dict], str]:
+def launch_chromium(playwright):
+    """Launch headless Chromium. Prefers an explicit CRAWLER_CHROMIUM path, then
+    a browser pre-installed under PLAYWRIGHT_BROWSERS_PATH / /opt/pw-browsers
+    (whose revision may not match the pip playwright version), else Playwright's
+    own download (what GitHub Actions gets from `playwright install`)."""
+    import glob
+    import os
+
+    exe = os.environ.get("CRAWLER_CHROMIUM")
+    if not exe:
+        root = os.environ.get("PLAYWRIGHT_BROWSERS_PATH", "/opt/pw-browsers")
+        found = sorted(glob.glob(os.path.join(root, "chromium-*", "chrome-linux*", "chrome")))
+        exe = found[-1] if found else None
+    kwargs = {"args": ["--no-sandbox"]}
+    if exe:
+        kwargs["executable_path"] = exe
+    return playwright.chromium.launch(**kwargs)
+
+
+def crawl_company(browser: Browser, company: dict, title_prefilter=None) -> tuple[list[dict], str]:
     """Returns (jobs, capture_method); capture_method is one of
-    'network' | 'dom_fallback' | 'failed'."""
+    'network' | 'dom_fallback' | 'failed'.
+
+    title_prefilter: optional callable(title) -> bool. When given, page-scraped
+    jobs whose title fails it are dropped, and the survivors are opened one by
+    one to read the posted date, employment type, location and pay from the
+    job page's own JobPosting data (see jobposting.py)."""
     ats = company["ats"]
     pattern = API_URL_PATTERNS.get(ats)
     careers_url = company.get("careers_url")
@@ -107,7 +134,31 @@ def crawl_company(browser: Browser, company: dict) -> tuple[list[dict], str]:
 
     jobs = _dom_fallback(page, company)
     page.close()
+    if title_prefilter is not None:
+        jobs = [j for j in jobs if title_prefilter(j["title"])]
+        _enrich_from_job_pages(browser, jobs)
     return jobs, "dom_fallback"
+
+
+def _enrich_from_job_pages(browser: Browser, jobs: list[dict], limit: int = 40) -> None:
+    """Open each job's own page and merge in whatever its JobPosting JSON-LD
+    says (posted date, employment type, location, pay, description)."""
+    for job in jobs[:limit]:
+        page = browser.new_page(user_agent=DESKTOP_USER_AGENT)
+        try:
+            page.goto(job["url"], timeout=20_000, wait_until="domcontentloaded")
+            page.wait_for_timeout(1_500)
+            blocks = page.eval_on_selector_all(
+                'script[type="application/ld+json"]', "els => els.map(e => e.textContent)"
+            )
+            posting = find_jobposting(blocks)
+            if posting:
+                job.update(jobposting_fields(posting))
+                job["source"] = "jobposting-data"
+        except Exception as exc:  # noqa: BLE001 - enrichment is best-effort
+            logger.info("Could not read job page %s: %s", job.get("url"), exc)
+        finally:
+            page.close()
 
 
 def _find_board_link(page, ats: str) -> str | None:
@@ -121,19 +172,29 @@ def _find_board_link(page, ats: str) -> str | None:
     except Exception:  # noqa: BLE001
         return None
     for href in hrefs:
-        if pattern.search(href):
-            return href
+        m = pattern.search(href)
+        if not m:
+            continue
+        host_and_token = m.group(0)
+        if host_and_token.rstrip("/").endswith("/embed"):
+            # boards.greenhouse.io/embed/job_board?for=<token>
+            q = re.search(r"[?&]for=([^&#]+)", href)
+            if not q:
+                continue
+            host_and_token = host_and_token.rsplit("/", 1)[0] + "/" + q.group(1)
+        # Go to the board itself, not the single job the link pointed at.
+        return "https://" + host_and_token
     return None
 
 
-def _dom_fallback(page, company: dict, max_results: int = 20) -> list[dict]:
+def _dom_fallback(page, company: dict, max_results: int = 300) -> list[dict]:
     """Best-effort: find links on the page whose surrounding card/row
-    mentions London. No reliable posted-date is available this way."""
+    mentions London, the South East or UK-remote. No reliable posted-date is available this way."""
     try:
         body_text = page.inner_text("body").lower()
     except Exception:  # noqa: BLE001
         return []
-    if "london" not in body_text:
+    if not classify_location(body_text):
         return []
 
     try:
@@ -161,7 +222,8 @@ def _dom_fallback(page, company: dict, max_results: int = 20) -> list[dict]:
             continue
         if not href.startswith("http"):
             continue
-        if "london" not in context.lower():
+        kind = classify_location(context)
+        if not kind:
             continue
         if href in seen_urls:
             continue
@@ -170,9 +232,10 @@ def _dom_fallback(page, company: dict, max_results: int = 20) -> list[dict]:
             {
                 "external_id": href,
                 "title": text,
-                "location": "London (unconfirmed)",
+                "location": f"{LOCATION_LABELS[kind]} (unconfirmed)",
                 "url": href,
                 "description_html": "",
+                "employment_type": "",
                 "posted_at": None,
                 "source": f"dom-fallback-{company['ats']}",
             }

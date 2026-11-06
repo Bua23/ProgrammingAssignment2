@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
-"""Render each curated UK software product company's own careers page in a
-headless browser, keep roles that are (a) based in London, UK and (b)
-posted within the last N hours (default 168 = 7 days), and write the result to a JSON file the
-frontend reads directly.
+"""Render each curated company's own careers page in a headless browser and
+keep only the roles you care about:
+
+  * title matches an AI role family (roles.yaml)
+  * based in London, the South East of England, or remote within the UK
+  * permanent (not contract / fixed-term / intern / part-time)
+  * senior, likely to pay >= GBP 110k (stated pay if given, else title)
+  * posted within the last N hours (default 168 = 7 days)
+
+and write jobs.json / meta.json for the dashboard.
 
 Usage:
-    python crawl.py [--hours 168] [--highlight-hours 48] [--output ../frontend/public/data]
+    python crawl.py [--hours 168] [--highlight-hours 48] [--workers 4]
+                    [--min-salary 110000] [--output ../frontend/public/data]
 
-Exit code is always 0 on a "successful run" even if individual companies
-fail to load (those are logged as warnings and skipped) so a single bad
-company doesn't take down the scheduled crawl.
+Exit code is 0 even if individual companies fail to load (logged and skipped)
+so a single bad company doesn't take down a scheduled run.
 """
 from __future__ import annotations
 
@@ -19,6 +25,8 @@ import json
 import logging
 import re
 import sys
+import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -27,29 +35,16 @@ from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from browser_crawl import crawl_company  # noqa: E402
+from browser_crawl import crawl_company, launch_chromium  # noqa: E402
+from job_filters import (  # noqa: E402
+    MIN_SALARY_GBP, extract_gbp_salary, format_salary, is_permanent, passes_salary_filter)
+from locations import LOCATION_LABELS, classify_location  # noqa: E402
 from role_filter import RoleFilter  # noqa: E402
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s"
 )
 logger = logging.getLogger("crawl")
-
-NON_UK_LONDON_MARKERS = (
-    "ontario", "canada", "ca,", ", on", "kentucky", " ky", "ohio", " oh",
-    "south africa", "texas", " tx", "california", " ca ",
-)
-
-
-def is_london_uk(location: str) -> bool:
-    if not location:
-        return False
-    loc = location.lower()
-    if "london" not in loc:
-        return False
-    if any(marker in loc for marker in NON_UK_LONDON_MARKERS):
-        return False
-    return True
 
 
 def within_window(posted_at: datetime | None, cutoff: datetime) -> bool:
@@ -58,24 +53,25 @@ def within_window(posted_at: datetime | None, cutoff: datetime) -> bool:
     return posted_at >= cutoff
 
 
-def html_to_text(html: str, max_len: int = 4000) -> str:
+def html_to_text(html: str, max_len: int | None = 4000) -> str:
     if not html:
         return ""
     text = BeautifulSoup(html, "html.parser").get_text(separator="\n").strip()
     text = re.sub(r"\n{3,}", "\n\n", text)
-    return text[:max_len]
+    return text if max_len is None else text[:max_len]
 
 
 def dom_location_ok(raw_title: str) -> bool:
     """DOM-fallback titles are raw link text: first line is the title, any
     later lines are usually location/team. If there ARE later lines and none
-    mention London, the card is for another city (the page only mentioned
-    London somewhere nearby) — drop it. A bare single-line title carries no
-    location info, so keep it as unconfirmed."""
+    is a target location (London / South East / UK-remote), the card is for
+    another place — the page only mentioned a target location somewhere
+    nearby — so drop it. A bare single-line title carries no location info,
+    so keep it as unconfirmed."""
     lines = [ln.strip() for ln in (raw_title or "").splitlines() if ln.strip()]
     if len(lines) <= 1:
         return True
-    return any("london" in ln.lower() for ln in lines[1:])
+    return any(classify_location(ln) for ln in lines[1:])
 
 
 def make_id(source: str, token: str, external_id: str) -> str:
@@ -108,97 +104,145 @@ def load_companies(path: Path) -> list[dict]:
     return data.get("companies", [])
 
 
+def _crawl_chunk(companies: list[dict], title_prefilter=None) -> dict[str, tuple]:
+    """One browser, a slice of companies. Returns name -> ("ok", jobs, method)
+    or ("error", exception)."""
+    results: dict[str, tuple] = {}
+    with sync_playwright() as p:
+        browser = launch_chromium(p)
+        try:
+            for company in companies:
+                name = company["name"]
+                try:
+                    raw_jobs, method = crawl_company(browser, company, title_prefilter=title_prefilter)
+                    results[name] = ("ok", raw_jobs, method)
+                except Exception as exc:  # noqa: BLE001 - one bad company shouldn't kill the run
+                    results[name] = ("error", exc)
+        finally:
+            browser.close()
+    return results
+
+
+def fetch_all(companies: list[dict], workers: int, title_prefilter=None) -> dict[str, tuple]:
+    workers = max(1, min(workers, len(companies) or 1))
+    if workers == 1:
+        return _crawl_chunk(companies, title_prefilter)
+    chunks = [companies[i::workers] for i in range(workers)]  # round-robin keeps slow sites spread out
+    merged: dict[str, tuple] = {}
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for part in pool.map(lambda chunk: _crawl_chunk(chunk, title_prefilter), chunks):
+            merged.update(part)
+    return merged
+
+
 def crawl(
     companies: list[dict],
     cutoff: datetime,
     role_filter: RoleFilter | None = None,
     previous_first_seen: dict[str, str] | None = None,
     highlight_hours: int = 48,
+    workers: int = 1,
+    min_salary: int | None = MIN_SALARY_GBP,
+    permanent_only: bool = True,
 ) -> tuple[list[dict], list[dict], dict]:
     previous_first_seen = previous_first_seen or {}
     now = datetime.now(timezone.utc)
-    dropped_stale_unconfirmed = 0
-    dropped_by_role_filter = 0
-    dropped_wrong_city = 0
+    started = time.time()
+    drops = {"role_filter": 0, "wrong_city": 0, "not_permanent": 0, "not_senior": 0,
+             "below_salary": 0, "stale_unconfirmed": 0}
     confirmed_jobs: list[dict] = []
     unconfirmed_jobs: list[dict] = []
-    companies_checked = 0
     companies_failed = []
     companies_dom_fallback = set()
     companies_with_matches = set()
     companies_with_unconfirmed = set()
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(args=["--no-sandbox"])
-        try:
-            for company in companies:
-                companies_checked += 1
-                name = company["name"]
-                try:
-                    raw_jobs, method = crawl_company(browser, company)
-                except Exception as exc:  # noqa: BLE001 - one bad company shouldn't kill the run
-                    logger.warning("Failed to crawl %s: %s", name, exc)
-                    companies_failed.append(name)
+    def title_prefilter(raw_title: str) -> bool:
+        first = (raw_title.strip().splitlines() or [""])[0].strip()
+        if permanent_only and not is_permanent(first):
+            return False
+        return role_filter is None or bool(role_filter.match(first))
+
+    fetched = fetch_all(companies, workers, title_prefilter)
+
+    for company in companies:
+        name = company["name"]
+        result = fetched.get(name)
+        if result is None or result[0] == "error":
+            logger.warning("Failed to crawl %s: %s", name, result[1] if result else "no result")
+            companies_failed.append(name)
+            continue
+        _, raw_jobs, method = result
+        if method == "failed":
+            companies_failed.append(name)
+            continue
+        if method == "dom_fallback":
+            companies_dom_fallback.add(name)
+
+        for job in raw_jobs:
+            kind = classify_location(job["location"])
+            if kind is None:
+                continue
+            if job["posted_at"] is None and not dom_location_ok(job["title"]):
+                drops["wrong_city"] += 1
+                continue
+
+            clean_title = (job["title"].strip().splitlines() or [""])[0].strip()
+            matched_roles: list[str] = []
+            if role_filter is not None:
+                matched_roles = role_filter.match(clean_title)
+                if not matched_roles:
+                    drops["role_filter"] += 1
                     continue
 
-                if method == "failed":
-                    companies_failed.append(name)
+            full_text = html_to_text(job["description_html"], None)
+            employment_type = job.get("employment_type", "")
+            if permanent_only and not is_permanent(clean_title, employment_type, full_text):
+                drops["not_permanent"] += 1
+                continue
+
+            salary = extract_gbp_salary(f"{clean_title}\n{full_text}")
+            if min_salary is not None and not passes_salary_filter(clean_title, salary, min_salary):
+                drops["below_salary" if salary else "not_senior"] += 1
+                continue
+
+            description_text = full_text[:4000]
+            entry = {
+                "id": make_id(job["source"], company["token"], job["external_id"]),
+                "company": name,
+                "company_website": company.get("website", ""),
+                "origin": company.get("origin", ""),
+                "title": clean_title,
+                "matched_roles": matched_roles,
+                "location": job["location"],
+                "location_kind": kind,
+                "employment_type": employment_type,
+                "salary_text": format_salary(*salary) if salary else None,
+                "salary_max_gbp": salary[1] if salary else None,
+                "description_text": description_text,
+                "description_snippet": description_text[:280].rsplit(" ", 1)[0] + "…"
+                if len(description_text) > 280
+                else description_text,
+                "url": job["url"],
+                "source": job["source"],
+            }
+            entry["first_seen_at"] = previous_first_seen.get(entry["id"]) or now.isoformat()
+
+            if job["posted_at"] is not None and within_window(job["posted_at"], cutoff):
+                entry["posted_at"] = job["posted_at"].isoformat()
+                confirmed_jobs.append(entry)
+                companies_with_matches.add(name)
+            elif job["posted_at"] is None:
+                # Page-scraped: no posted date. Age it by when we first saw it:
+                # still on the site after a full window means it was posted
+                # before the window, so drop it.
+                if datetime.fromisoformat(entry["first_seen_at"]) < cutoff:
+                    drops["stale_unconfirmed"] += 1
                     continue
-                if method == "dom_fallback":
-                    companies_dom_fallback.add(name)
-
-                for job in raw_jobs:
-                    if not is_london_uk(job["location"]):
-                        continue
-                    if job["posted_at"] is None and not dom_location_ok(job["title"]):
-                        dropped_wrong_city += 1
-                        continue
-
-                    clean_title = (job["title"].strip().splitlines() or [""])[0].strip()
-                    matched_roles: list[str] = []
-                    if role_filter is not None:
-                        matched_roles = role_filter.match(clean_title)
-                        if not matched_roles:
-                            dropped_by_role_filter += 1
-                            continue
-
-                    description_text = html_to_text(job["description_html"])
-                    entry = {
-                        "id": make_id(job["source"], company["token"], job["external_id"]),
-                        "company": name,
-                        "company_website": company.get("website", ""),
-                        "origin": company.get("origin", ""),
-                        "title": clean_title,
-                        "matched_roles": matched_roles,
-                        "location": job["location"],
-                        "description_text": description_text,
-                        "description_snippet": description_text[:280].rsplit(" ", 1)[0] + "…"
-                        if len(description_text) > 280
-                        else description_text,
-                        "url": job["url"],
-                        "source": job["source"],
-                    }
-                    entry["first_seen_at"] = previous_first_seen.get(entry["id"]) or now.isoformat()
-
-                    if job["posted_at"] is not None and within_window(job["posted_at"], cutoff):
-                        entry["posted_at"] = job["posted_at"].isoformat()
-                        confirmed_jobs.append(entry)
-                        companies_with_matches.add(name)
-                    elif job["posted_at"] is None:
-                        # DOM-fallback match: London-relevant but no reliable
-                        # posted-date. Age it by when we first saw it instead:
-                        # still on the site after a full window means it was
-                        # posted before the window, so drop it.
-                        first_seen = datetime.fromisoformat(entry["first_seen_at"])
-                        if first_seen < cutoff:
-                            dropped_stale_unconfirmed += 1
-                            continue
-                        entry["posted_at"] = None
-                        unconfirmed_jobs.append(entry)
-                        companies_with_unconfirmed.add(name)
-                    # else: has a real timestamp but it's outside the window — drop.
-        finally:
-            browser.close()
+                entry["posted_at"] = None
+                unconfirmed_jobs.append(entry)
+                companies_with_unconfirmed.add(name)
+            # else: has a real timestamp but it's outside the window — drop.
 
     confirmed_jobs.sort(key=lambda j: j["posted_at"], reverse=True)
     unconfirmed_jobs.sort(key=lambda j: (j["company"], j["title"]))
@@ -207,7 +251,7 @@ def crawl(
         "generated_at": now.isoformat(),
         "window_hours": None,  # filled in by caller
         "highlight_hours": highlight_hours,
-        "companies_checked": companies_checked,
+        "companies_checked": len(companies),
         "companies_with_matches": sorted(companies_with_matches),
         "companies_with_unconfirmed": sorted(companies_with_unconfirmed),
         "companies_dom_fallback": sorted(companies_dom_fallback),
@@ -215,9 +259,18 @@ def crawl(
         "total_jobs_found": len(confirmed_jobs),
         "total_unconfirmed_found": len(unconfirmed_jobs),
         "role_filter": role_filter.labels if role_filter is not None else None,
-        "dropped_by_role_filter": dropped_by_role_filter,
-        "dropped_wrong_city": dropped_wrong_city,
-        "dropped_stale_unconfirmed": dropped_stale_unconfirmed,
+        "filters": {
+            "locations": [LOCATION_LABELS[k] for k in ("london", "south_east", "remote_uk")],
+            "permanent_only": permanent_only,
+            "min_salary_gbp": min_salary,
+        },
+        "dropped_by_role_filter": drops["role_filter"],
+        "dropped_wrong_city": drops["wrong_city"],
+        "dropped_not_permanent": drops["not_permanent"],
+        "dropped_not_senior": drops["not_senior"],
+        "dropped_below_salary": drops["below_salary"],
+        "dropped_stale_unconfirmed": drops["stale_unconfirmed"],
+        "crawl_seconds": round(time.time() - started),
     }
     return confirmed_jobs, unconfirmed_jobs, meta
 
@@ -232,6 +285,19 @@ def main() -> None:
         "--highlight-hours", type=int, default=48,
         help="Roles posted within this many hours are highlighted as new in the UI (default 48)",
     )
+    parser.add_argument("--workers", type=int, default=4, help="Parallel browsers (default 4)")
+    parser.add_argument(
+        "--min-salary", type=int, default=MIN_SALARY_GBP,
+        help="GBP floor: stated pay must reach it, or (if unstated) the title must be senior. 0 turns the seniority/salary filter off.",
+    )
+    parser.add_argument(
+        "--include-non-permanent", action="store_true",
+        help="Keep contract / fixed-term / intern / part-time roles too",
+    )
+    parser.add_argument(
+        "--only", type=str, default="",
+        help="Comma-separated company names to crawl (default: all) — for quick tests",
+    )
     parser.add_argument(
         "--companies",
         type=Path,
@@ -241,7 +307,7 @@ def main() -> None:
         "--output",
         type=Path,
         default=Path(__file__).resolve().parent.parent / "frontend" / "public" / "data",
-        help="Directory to write jobs.json and meta.json into",
+        help="Directory to write jobs.json and meta.json into (also read for previous first-seen dates)",
     )
     parser.add_argument(
         "--roles",
@@ -252,21 +318,27 @@ def main() -> None:
     parser.add_argument(
         "--no-role-filter",
         action="store_true",
-        help="Keep every London job regardless of title",
+        help="Keep every matching-location job regardless of title",
     )
     args = parser.parse_args()
 
     role_filter = None if args.no_role_filter else RoleFilter.from_yaml(args.roles)
     cutoff = datetime.now(timezone.utc) - timedelta(hours=args.hours)
     companies = load_companies(args.companies)
+    if args.only:
+        wanted = {n.strip() for n in args.only.split(",")}
+        companies = [c for c in companies if c["name"] in wanted]
 
     logger.info(
-        "Rendering careers pages for %d companies, keeping London, UK roles posted since %s",
-        len(companies), cutoff.isoformat(),
+        "Rendering careers pages for %d companies with %d workers; keeping roles posted since %s",
+        len(companies), args.workers, cutoff.isoformat(),
     )
     previous_first_seen = load_previous_first_seen(args.output)
     confirmed_jobs, unconfirmed_jobs, meta = crawl(
-        companies, cutoff, role_filter, previous_first_seen, args.highlight_hours
+        companies, cutoff, role_filter, previous_first_seen, args.highlight_hours,
+        workers=args.workers,
+        min_salary=args.min_salary or None,
+        permanent_only=not args.include_non_permanent,
     )
     meta["window_hours"] = args.hours
 
@@ -277,9 +349,9 @@ def main() -> None:
     (args.output / "meta.json").write_text(json.dumps(meta, indent=2))
 
     logger.info(
-        "Done. %d confirmed + %d unconfirmed jobs from %d/%d companies (%d failed, %d via DOM fallback).",
-        len(confirmed_jobs), len(unconfirmed_jobs), len(meta["companies_with_matches"]) + len(meta["companies_with_unconfirmed"]),
-        meta["companies_checked"], len(meta["companies_failed"]), len(meta["companies_dom_fallback"]),
+        "Done in %ss. %d confirmed + %d unconfirmed roles; %d companies failed, %d used page-scraping.",
+        meta["crawl_seconds"], len(confirmed_jobs), len(unconfirmed_jobs),
+        len(meta["companies_failed"]), len(meta["companies_dom_fallback"]),
     )
 
 

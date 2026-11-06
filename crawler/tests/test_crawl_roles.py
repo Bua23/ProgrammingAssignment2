@@ -12,9 +12,9 @@ NOW = datetime.now(timezone.utc)
 RF = RoleFilter.from_yaml(Path(__file__).resolve().parents[1] / "roles.yaml")
 
 
-def job(title, location="London, UK", posted_at=None, ext="1", source="ashby"):
+def job(title, location="London, UK", posted_at=None, ext="1", source="ashby", desc="", etype=""):
     return {"external_id": ext, "title": title, "location": location, "url": f"https://x/{ext}",
-            "description_html": "", "posted_at": posted_at, "source": source}
+            "description_html": desc, "employment_type": etype, "posted_at": posted_at, "source": source}
 
 
 FAKE = {
@@ -34,11 +34,11 @@ FAKE = {
 COMPANIES = [{"name": n, "token": n.lower(), "ats": "ashby", "careers_url": "https://x"} for n in FAKE]
 
 
-def run(role_filter, fake=FAKE, hours=24, first_seen=None):
+def run(role_filter, fake=FAKE, hours=24, first_seen=None, min_salary=None):
     companies = [{"name": n, "token": n.lower(), "ats": "ashby", "careers_url": "https://x"} for n in fake]
-    with patch("crawl.crawl_company", side_effect=lambda b, c: fake[c["name"]]), patch("crawl.sync_playwright") as sp:
+    with patch("crawl.crawl_company", side_effect=lambda b, c, **kw: fake[c["name"]]), patch("crawl.sync_playwright") as sp:
         sp.return_value.__enter__.return_value.chromium.launch.return_value = MagicMock()
-        return crawl.crawl(companies, NOW - timedelta(hours=hours), role_filter, first_seen)
+        return crawl.crawl(companies, NOW - timedelta(hours=hours), role_filter, first_seen, min_salary=min_salary)
 
 
 class CrawlRoleFilterTest(unittest.TestCase):
@@ -90,6 +90,54 @@ class SevenDayWindowTest(unittest.TestCase):
         self.assertEqual(len(unconfirmed), 2)
         for j in unconfirmed:
             self.assertLess((datetime.now(timezone.utc) - datetime.fromisoformat(j["first_seen_at"])).total_seconds(), 60)
+
+
+class TargetRoleFiltersTest(unittest.TestCase):
+    """Location (London / South East / UK-remote), permanent-only, senior/£110k+."""
+
+    def fake(self):
+        recent = NOW - timedelta(hours=2)
+        return {"Co": ([
+            job("Head of AI Governance", posted_at=recent, ext="keep-pay",
+                desc="<p>Salary £130,000 - £160,000 plus bonus</p>"),
+            job("Senior AI Strategy Manager", location="Reading, England, United Kingdom", posted_at=recent, ext="keep-se"),
+            job("Director of AI Strategy", location="Remote - UK", posted_at=recent, ext="keep-remote"),
+            job("AI Governance Manager", posted_at=recent, ext="low-pay", desc="<p>£80,000 - £95,000</p>"),
+            job("AI Governance Manager", posted_at=recent, ext="no-pay-not-senior"),
+            job("Head of AI (12 Month FTC)", posted_at=recent, ext="ftc"),
+            job("Director of AI Strategy", location="Remote - UK", posted_at=recent, ext="contract", etype="Contract"),
+            job("Director of AI", location="Remote - United States", posted_at=recent, ext="us-remote"),
+            job("Principal AI Consultant", location="Manchester, UK", posted_at=recent, ext="manchester"),
+            job("AI Lead", posted_at=recent, ext="lead-fixedterm-desc", desc="<p>This is a 12 month fixed term contract.</p>"),
+        ], "network")}
+
+    def test_filters(self):
+        confirmed, _, meta = self._run()
+        titles = {(j["title"], j["location_kind"]) for j in confirmed}
+        self.assertEqual(titles, {("Head of AI Governance", "london"),
+                                  ("Senior AI Strategy Manager", "south_east"),
+                                  ("Director of AI Strategy", "remote_uk")})
+        pay = next(j for j in confirmed if j["title"] == "Head of AI Governance")
+        self.assertEqual((pay["salary_text"], pay["salary_max_gbp"]), ("£130k–£160k", 160000))
+        self.assertEqual(meta["dropped_below_salary"], 1)
+        self.assertEqual(meta["dropped_not_senior"], 1)
+        self.assertEqual(meta["dropped_not_permanent"], 3)      # FTC title, Contract type, fixed-term description
+        self.assertEqual(meta["filters"]["min_salary_gbp"], 110000)
+
+    def _run(self):
+        fake = self.fake()
+        with patch("crawl.crawl_company", side_effect=lambda b, c, **kw: fake[c["name"]]), patch("crawl.sync_playwright") as sp:
+            sp.return_value.__enter__.return_value.chromium.launch.return_value = MagicMock()
+            return crawl.crawl([{"name": "Co", "token": "co", "ats": "ashby", "careers_url": "https://x"}],
+                               NOW - timedelta(hours=168), RF, None, min_salary=110_000)
+
+    def test_salary_filter_off(self):
+        fake = self.fake()
+        with patch("crawl.crawl_company", side_effect=lambda b, c, **kw: fake[c["name"]]), patch("crawl.sync_playwright") as sp:
+            sp.return_value.__enter__.return_value.chromium.launch.return_value = MagicMock()
+            confirmed, _, _ = crawl.crawl([{"name": "Co", "token": "co", "ats": "ashby", "careers_url": "https://x"}],
+                                          NOW - timedelta(hours=168), RF, None, min_salary=None)
+        self.assertIn("AI Governance Manager", {j["title"] for j in confirmed})   # junior-ish titles return
 
 
 if __name__ == "__main__":
