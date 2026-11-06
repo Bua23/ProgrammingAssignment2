@@ -35,6 +35,7 @@ from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from ats_clients import FETCHERS, fetch_company_jobs  # noqa: E402
 from browser_crawl import crawl_company, launch_chromium  # noqa: E402
 from job_filters import (  # noqa: E402
     MIN_SALARY_GBP, extract_gbp_salary, format_salary, is_permanent, passes_salary_filter)
@@ -104,10 +105,24 @@ def load_companies(path: Path) -> list[dict]:
     return data.get("companies", [])
 
 
-def _crawl_chunk(companies: list[dict], title_prefilter=None) -> dict[str, tuple]:
+def _crawl_chunk(companies: list[dict], title_prefilter=None, ats_direct: bool = False) -> dict[str, tuple]:
     """One browser, a slice of companies. Returns name -> ("ok", jobs, method)
-    or ("error", exception)."""
+    or ("error", exception).
+
+    ats_direct: for companies on Greenhouse / Lever / Ashby / Workable, read the
+    ATS's public job-board feed instead of the company's own page. Complete and
+    dated, but it is a call to the ATS, not to the company's website."""
     results: dict[str, tuple] = {}
+    if ats_direct:
+        for company in list(companies):
+            if company["ats"] in FETCHERS:
+                try:
+                    results[company["name"]] = ("ok", fetch_company_jobs(company), "ats_direct")
+                except Exception as exc:  # noqa: BLE001
+                    results[company["name"]] = ("error", exc)
+        companies = [c for c in companies if c["name"] not in results]
+        if not companies:
+            return results
     with sync_playwright() as p:
         browser = launch_chromium(p)
         try:
@@ -123,14 +138,14 @@ def _crawl_chunk(companies: list[dict], title_prefilter=None) -> dict[str, tuple
     return results
 
 
-def fetch_all(companies: list[dict], workers: int, title_prefilter=None) -> dict[str, tuple]:
+def fetch_all(companies: list[dict], workers: int, title_prefilter=None, ats_direct: bool = False) -> dict[str, tuple]:
     workers = max(1, min(workers, len(companies) or 1))
     if workers == 1:
-        return _crawl_chunk(companies, title_prefilter)
+        return _crawl_chunk(companies, title_prefilter, ats_direct)
     chunks = [companies[i::workers] for i in range(workers)]  # round-robin keeps slow sites spread out
     merged: dict[str, tuple] = {}
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        for part in pool.map(lambda chunk: _crawl_chunk(chunk, title_prefilter), chunks):
+        for part in pool.map(lambda chunk: _crawl_chunk(chunk, title_prefilter, ats_direct), chunks):
             merged.update(part)
     return merged
 
@@ -145,6 +160,7 @@ def crawl(
     min_salary: int | None = MIN_SALARY_GBP,
     permanent_only: bool = True,
     drop_log: list | None = None,
+    ats_direct: bool = False,
 ) -> tuple[list[dict], list[dict], dict]:
     previous_first_seen = previous_first_seen or {}
 
@@ -171,7 +187,7 @@ def crawl(
             return False
         return role_filter is None or bool(role_filter.match(first))
 
-    fetched = fetch_all(companies, workers, title_prefilter)
+    fetched = fetch_all(companies, workers, title_prefilter, ats_direct)
 
     for company in companies:
         name = company["name"]
@@ -263,6 +279,7 @@ def crawl(
         "companies_with_matches": sorted(companies_with_matches),
         "companies_with_unconfirmed": sorted(companies_with_unconfirmed),
         "companies_dom_fallback": sorted(companies_dom_fallback),
+        "ats_direct": ats_direct,
         "companies_failed": companies_failed,
         "total_jobs_found": len(confirmed_jobs),
         "total_unconfirmed_found": len(unconfirmed_jobs),
@@ -301,6 +318,10 @@ def main() -> None:
     parser.add_argument(
         "--include-non-permanent", action="store_true",
         help="Keep contract / fixed-term / intern / part-time roles too",
+    )
+    parser.add_argument(
+        "--ats-direct", action="store_true",
+        help="For companies on Greenhouse/Lever/Ashby/Workable, read the ATS's public job-board feed directly (complete, dated) instead of the company's own page",
     )
     parser.add_argument(
         "--debug-drops", action="store_true",
@@ -353,6 +374,7 @@ def main() -> None:
         min_salary=args.min_salary or None,
         permanent_only=not args.include_non_permanent,
         drop_log=drop_log,
+        ats_direct=args.ats_direct,
     )
     meta["window_hours"] = args.hours
 
