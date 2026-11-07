@@ -10,8 +10,11 @@ previous crawl's data under `data/`. Nothing is read from or written to GitHub.
 1. **Fetch** `index.html`, `data/*` and `code/*` from the published page.
 2. **Install** (`python3 -m venv`, `pip install -r code/requirements.txt`).
    Chromium is already installed in the environment; `launch_chromium()` finds it.
-3. **Crawl**, in the background, because it takes about 10-15 minutes:
+3. **Crawl**, in the background, because it takes a few minutes:
    `python code/crawl.py --workers 4 --output <dir holding the previous data>`.
+   Companies on Greenhouse / Lever / Ashby / Workable are read from the job
+   board's public feed (complete, with posted dates); if a feed fails, or the
+   company uses another system, its own careers page is rendered instead.
    The previous `jobs.json` / `meta.json` are in that directory so roles with
    no posted date keep their "first seen" date between runs.
 4. **Sanity check.** If more than half the companies failed to load, or the

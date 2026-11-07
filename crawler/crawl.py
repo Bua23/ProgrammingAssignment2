@@ -111,7 +111,8 @@ def _crawl_chunk(companies: list[dict], title_prefilter=None, ats_direct: bool =
 
     ats_direct: for companies on Greenhouse / Lever / Ashby / Workable, read the
     ATS's public job-board feed instead of the company's own page. Complete and
-    dated, but it is a call to the ATS, not to the company's website."""
+    dated, but it is a call to the ATS, not to the company's website. If the
+    feed fails the company falls back to the normal careers-page route."""
     results: dict[str, tuple] = {}
     if ats_direct:
         for company in list(companies):
@@ -119,7 +120,8 @@ def _crawl_chunk(companies: list[dict], title_prefilter=None, ats_direct: bool =
                 try:
                     results[company["name"]] = ("ok", fetch_company_jobs(company), "ats_direct")
                 except Exception as exc:  # noqa: BLE001
-                    results[company["name"]] = ("error", exc)
+                    # Wrong/changed board name etc. -> fall back to the company's own page.
+                    logger.info("ATS feed failed for %s (%s); falling back to its careers page", company["name"], exc)
         companies = [c for c in companies if c["name"] not in results]
         if not companies:
             return results
@@ -320,8 +322,8 @@ def main() -> None:
         help="Keep contract / fixed-term / intern / part-time roles too",
     )
     parser.add_argument(
-        "--ats-direct", action="store_true",
-        help="For companies on Greenhouse/Lever/Ashby/Workable, read the ATS's public job-board feed directly (complete, dated) instead of the company's own page",
+        "--ats-direct", action=argparse.BooleanOptionalAction, default=True,
+        help="For companies on Greenhouse/Lever/Ashby/Workable, read the ATS's public job-board feed (complete, with posted dates), falling back to the company's own careers page if the feed fails. Default on; --no-ats-direct reads company pages only.",
     )
     parser.add_argument(
         "--debug-drops", action="store_true",
