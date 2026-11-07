@@ -46,7 +46,8 @@ def main() -> None:
     (args.out / "code").mkdir(exist_ok=True)
     for name in CODE_FILES:
         shutil.copy(HERE / name, args.out / "code" / name)
-        files[f"code/{name}"] = str(args.out / "code" / name)
+        # .py/.yaml are not served types; publish them as plain text.
+        files[f"code/{name}"] = {"from": str(args.out / "code" / name), "contentType": "text/plain"}
     print(json.dumps({"file_path": str(args.out / "index.html"), "files": files}, indent=2))
 
 
