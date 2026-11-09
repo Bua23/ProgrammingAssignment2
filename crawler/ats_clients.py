@@ -25,8 +25,11 @@ from __future__ import annotations
 
 import logging
 import re
+import threading
+import time
 from datetime import datetime, timezone
 from typing import Any
+from urllib.parse import urlparse
 
 import requests
 
@@ -63,13 +66,56 @@ BOARD_URL_PATTERNS: dict[str, re.Pattern] = {
 }
 
 
+# Some feeds throttle hard. Workable, for one, answers HTTP 429 with a
+# Retry-After of many hours after a short burst. So: space requests to such
+# hosts out (one at a time, MIN_GAP seconds apart), and once a host refuses
+# with 429 stop asking it for the rest of the process, so the crawl falls back
+# to the company's own careers page instead of deepening the block.
+HOST_MIN_GAP_SECONDS = {"apply.workable.com": 12.0}
+_host_locks: dict[str, threading.Lock] = {}
+_host_last_request: dict[str, float] = {}
+_blocked_hosts: set[str] = set()
+_registry_lock = threading.Lock()
+
+
+class FeedRefused(Exception):
+    """The feed's host returned HTTP 429; not retried for the rest of the run."""
+
+
 def _get(url: str, params: dict | None = None) -> Any:
+    host = urlparse(url).hostname or ""
+    if host in _blocked_hosts:
+        raise FeedRefused(f"{host} refused earlier in this run (HTTP 429); skipping")
+    gap = HOST_MIN_GAP_SECONDS.get(host, 0.0)
+    if gap:
+        with _registry_lock:
+            lock = _host_locks.setdefault(host, threading.Lock())
+        lock.acquire()
+        try:
+            if host in _blocked_hosts:
+                raise FeedRefused(f"{host} refused earlier in this run (HTTP 429); skipping")
+            wait = _host_last_request.get(host, 0.0) + gap - time.monotonic()
+            if wait > 0:
+                time.sleep(wait)
+            try:
+                return _request_json(url, params, host)
+            finally:
+                _host_last_request[host] = time.monotonic()
+        finally:
+            lock.release()
+    return _request_json(url, params, host)
+
+
+def _request_json(url: str, params: dict | None, host: str) -> Any:
     resp = requests.get(
         url,
         params=params,
         headers={"User-Agent": USER_AGENT, "Accept": "application/json"},
         timeout=REQUEST_TIMEOUT,
     )
+    if resp.status_code == 429:
+        _blocked_hosts.add(host)
+        raise FeedRefused(f"{host} returned HTTP 429 (Retry-After {resp.headers.get('Retry-After')}s)")
     resp.raise_for_status()
     return resp.json()
 
