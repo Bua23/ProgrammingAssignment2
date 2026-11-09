@@ -18,7 +18,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 CODE_FILES = [
-    "crawl.py", "browser_crawl.py", "ats_clients.py", "role_filter.py", "job_filters.py",
+    "crawl.py", "browser_crawl.py", "ats_clients.py", "workday_client.py", "role_filter.py", "job_filters.py",
     "locations.py", "jobposting.py", "roles.yaml", "companies.yaml", "requirements.txt",
 ]
 TITLE = "London AI Roles"

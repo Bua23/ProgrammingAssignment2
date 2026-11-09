@@ -387,10 +387,10 @@ companies:
   - name: Darktrace
     website: https://www.darktrace.com
     careers_url: https://www.darktrace.com/careers
-    ats: other
+    ats: workday
     token: darktrace
     origin: UK
-    note: ATS not confidently identified — DOM fallback expected.
+    workday_url: https://darktrace.wd3.myworkdayjobs.com/DarktaceExternal
 
   - name: Synthesia
     website: https://www.synthesia.io
@@ -451,10 +451,10 @@ companies:
   - name: Depop
     website: https://www.depop.com
     careers_url: https://depopcareers.com/
-    ats: other
+    ats: workday
     token: depop
     origin: UK
-    note: Backed by Workday (Etsy-owned since 2021) — DOM fallback expected.
+    workday_url: https://etsy.wd5.myworkdayjobs.com/Depop_Careers
 
   - name: Skyscanner
     website: https://www.skyscanner.net
@@ -1028,32 +1028,34 @@ companies:
   - name: Workday
     website: https://www.workday.com
     careers_url: https://workday.wd5.myworkdayjobs.com/Workday
-    ats: other
+    ats: workday
     token: workday
     origin: US
-    note: Workday runs its own hiring on its own product (Workday) — DOM fallback expected.
+    workday_url: https://workday.wd5.myworkdayjobs.com/Workday
 
   - name: Palo Alto Networks
     website: https://www.paloaltonetworks.com
     careers_url: https://jobs.paloaltonetworks.com/en/location/london-jobs/47263/2635167-6269131-2643743/4
-    ats: other
+    ats: workday
     token: paloaltonetworks
     origin: US
-    note: Backend is SmartRecruiters — DOM fallback expected.
+    workday_url: https://paloaltonetworks.wd5.myworkdayjobs.com/panwexternalcareers
 
   - name: CrowdStrike
     website: https://www.crowdstrike.com
     careers_url: https://crowdstrike.wd5.myworkdayjobs.com/crowdstrikecareers
-    ats: other
+    ats: workday
     token: crowdstrike
     origin: US
+    workday_url: https://crowdstrike.wd5.myworkdayjobs.com/crowdstrikecareers
 
   - name: Autodesk
     website: https://www.autodesk.com
     careers_url: https://autodesk.wd1.myworkdayjobs.com/Ext
-    ats: other
+    ats: workday
     token: autodesk
     origin: US
+    workday_url: https://autodesk.wd1.myworkdayjobs.com/Ext
 
   - name: Dropbox
     website: https://www.dropbox.com
@@ -1080,9 +1082,10 @@ companies:
   - name: PayPal
     website: https://www.paypal.com
     careers_url: https://careers.pypl.com/search-results/
-    ats: other
+    ats: workday
     token: paypal
     origin: US
+    workday_url: https://paypal.wd1.myworkdayjobs.com/jobs
 
   - name: Booking.com
     website: https://www.booking.com
@@ -1094,16 +1097,18 @@ companies:
   - name: Expedia Group
     website: https://www.expediagroup.com
     careers_url: https://careers.expediagroup.com/locations/london-england/
-    ats: other
+    ats: workday
     token: expedia
     origin: US
+    workday_url: https://expedia.wd108.myworkdayjobs.com/search
 
   - name: Adobe
     website: https://www.adobe.com
     careers_url: https://careers.adobe.com/us/en
-    ats: other
+    ats: workday
     token: adobe
     origin: US
+    workday_url: https://adobe.wd5.myworkdayjobs.com/external_experienced
 
   - name: LinkedIn
     website: https://www.linkedin.com

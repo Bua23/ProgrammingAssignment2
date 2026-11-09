@@ -109,7 +109,7 @@ def _crawl_chunk(companies: list[dict], title_prefilter=None, ats_direct: bool =
     """One browser, a slice of companies. Returns name -> ("ok", jobs, method)
     or ("error", exception).
 
-    ats_direct: for companies on Greenhouse / Lever / Ashby / Workable, read the
+    ats_direct: for companies on Greenhouse / Lever / Ashby / Workable / Workday, read the
     ATS's public job-board feed instead of the company's own page. Complete and
     dated, but it is a call to the ATS, not to the company's website. If the
     feed fails the company falls back to the normal careers-page route."""
@@ -118,7 +118,7 @@ def _crawl_chunk(companies: list[dict], title_prefilter=None, ats_direct: bool =
         for company in list(companies):
             if company["ats"] in FETCHERS:
                 try:
-                    results[company["name"]] = ("ok", fetch_company_jobs(company), "ats_direct")
+                    results[company["name"]] = ("ok", fetch_company_jobs(company, title_prefilter=title_prefilter), "ats_direct")
                 except Exception as exc:  # noqa: BLE001
                     # Wrong/changed board name etc. -> fall back to the company's own page.
                     logger.info("ATS feed failed for %s (%s); falling back to its careers page", company["name"], exc)

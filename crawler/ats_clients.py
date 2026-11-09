@@ -272,10 +272,17 @@ FETCHERS = {
     "lever": fetch_lever,
     "ashby": fetch_ashby,
     "workable": fetch_workable,
+    "workday": None,  # needs the whole company entry; handled in fetch_company_jobs
 }
 
 
-def fetch_company_jobs(company: dict) -> list[dict]:
+def fetch_company_jobs(company: dict, title_prefilter=None) -> list[dict]:
+    """Read a company's job board feed. `title_prefilter` (callable(title) ->
+    bool) is only used by Workday, whose list has no descriptions: it limits
+    which titles get a detail request."""
+    if company["ats"] == "workday":
+        from workday_client import fetch_workday  # local import: keeps the dependency optional for tests
+        return fetch_workday(company, title_prefilter=title_prefilter)
     fetcher = FETCHERS.get(company["ats"])
     if fetcher is None:
         raise ValueError(f"Unsupported ATS type: {company['ats']}")
