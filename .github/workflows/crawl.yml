@@ -36,7 +36,7 @@ jobs:
         run: playwright install --with-deps chromium
 
       - name: Run crawler
-        run: python crawler/crawl.py --hours 24
+        run: python crawler/crawl.py --hours 168
 
       - name: Commit updated data
         run: |

@@ -42,16 +42,18 @@ companies:
   - name: DeepMind
     website: https://deepmind.google
     careers_url: https://deepmind.google/careers/
-    ats: greenhouse
+    ats: other
     token: deepmind
     origin: UK
+    note: Roles are listed on Google's careers system (google.com/about/careers); no Greenhouse feed.
 
   - name: Wayve
     website: https://wayve.ai
     careers_url: https://wayve.ai/careers/
-    ats: greenhouse
+    ats: ashby
     token: wayve
     origin: UK
+    note: Moved from Greenhouse to Ashby; feed verified 2026-11-09.
 
   - name: GoodNotes
     website: https://www.goodnotes.com
@@ -85,9 +87,10 @@ companies:
   - name: Teleport
     website: https://goteleport.com
     careers_url: https://goteleport.com/careers/
-    ats: lever
-    token: teleport
+    ats: ashby
+    token: goteleport
     origin: UK
+    note: Moved from Lever to Ashby; feed verified 2026-11-09.
 
   - name: Multiverse
     website: https://www.multiverse.io
@@ -121,10 +124,10 @@ companies:
   - name: Deductive AI
     website: https://www.deductive.ai
     careers_url: https://jobs.ashbyhq.com/deductive
-    ats: ashby
+    ats: other
     token: deductive
     origin: UK
-    note: No separate branded careers page found; jobs live entirely on this ATS board.
+    note: Ashby board "deductive" returns not found as of 2026-11-09; no public feed found.
 
   - name: Trainline
     website: https://www.trainlinegroup.com
@@ -347,9 +350,10 @@ companies:
   - name: TrueLayer
     website: https://truelayer.com
     careers_url: https://truelayer.com/careers/
-    ats: workable
+    ats: ashby
     token: truelayer
     origin: UK
+    note: Moved from Workable to Ashby; feed verified 2026-11-09.
 
   - name: Checkout.com
     website: https://www.checkout.com
@@ -383,10 +387,10 @@ companies:
   - name: Darktrace
     website: https://www.darktrace.com
     careers_url: https://www.darktrace.com/careers
-    ats: other
+    ats: workday
     token: darktrace
     origin: UK
-    note: ATS not confidently identified — DOM fallback expected.
+    workday_url: https://darktrace.wd3.myworkdayjobs.com/DarktaceExternal
 
   - name: Synthesia
     website: https://www.synthesia.io
@@ -415,24 +419,26 @@ companies:
   - name: Signal AI
     website: https://signal-ai.com
     careers_url: https://signal-ai.com/careers/
-    ats: workable
-    token: signal
+    ats: ashby
+    token: signal-ai
     origin: UK
+    note: Moved to Ashby; feed verified 2026-11-09 but it had no open roles at the time.
 
   - name: Ravelin
     website: https://www.ravelin.com
     careers_url: https://www.ravelin.com/careers
-    ats: workable
+    ats: other
     token: ravelin
     origin: UK
-    note: Acquired by Worldpay (Feb 2025) — page may not be actively maintained.
+    note: Uses Pinpoint (no reader yet) — careers page only.
 
   - name: Zego
     website: https://www.zego.com
     careers_url: https://www.zego.com/careers/
-    ats: workable
+    ats: ashby
     token: zego
     origin: UK
+    note: Moved from Workable to Ashby; feed verified 2026-11-09.
 
   - name: Sage
     website: https://www.sage.com
@@ -445,10 +451,10 @@ companies:
   - name: Depop
     website: https://www.depop.com
     careers_url: https://depopcareers.com/
-    ats: other
+    ats: workday
     token: depop
     origin: UK
-    note: Backed by Workday (Etsy-owned since 2021) — DOM fallback expected.
+    workday_url: https://etsy.wd5.myworkdayjobs.com/Depop_Careers
 
   - name: Skyscanner
     website: https://www.skyscanner.net
@@ -469,9 +475,10 @@ companies:
   - name: Quantexa
     website: https://www.quantexa.com
     careers_url: https://www.quantexa.com/careers/
-    ats: workable
+    ats: ashby
     token: quantexa
     origin: UK
+    note: Moved from Workable to Ashby; feed verified 2026-11-09.
 
   - name: Featurespace
     website: https://www.featurespace.com
@@ -547,9 +554,10 @@ companies:
   - name: Retool
     website: https://retool.com
     careers_url: https://retool.com/careers
-    ats: lever
+    ats: other
     token: retool
     origin: US
+    note: Own careers pages (retool.com/careers/<role>); no public feed found (Lever board gone).
 
   - name: Notion
     website: https://www.notion.com
@@ -656,9 +664,10 @@ companies:
   - name: Temporal Technologies
     website: https://temporal.io
     careers_url: https://temporal.io/careers
-    ats: greenhouse
-    token: temporaltechnologies
+    ats: ashby
+    token: temporal
     origin: US
+    note: Moved from Greenhouse to Ashby; feed verified 2026-11-09.
 
   - name: LaunchDarkly
     website: https://launchdarkly.com
@@ -740,9 +749,10 @@ companies:
   - name: Amplitude
     website: https://amplitude.com
     careers_url: https://amplitude.com/careers
-    ats: greenhouse
+    ats: ashby
     token: amplitude
     origin: US
+    note: Moved from Greenhouse to Ashby; feed verified 2026-11-09.
 
   - name: Braze
     website: https://www.braze.com
@@ -895,9 +905,10 @@ companies:
   - name: Uber
     website: https://www.uber.com
     careers_url: https://jobs.uber.com/en/locations/london/
-    ats: greenhouse
+    ats: other
     token: uber
     origin: US
+    note: Own careers site, behind a Cloudflare bot challenge that blocks automated visits.
 
   - name: Spotify
     website: https://www.spotify.com
@@ -946,9 +957,10 @@ companies:
   - name: Snap Inc.
     website: https://www.snap.com
     careers_url: https://careers.snap.com/jobs
-    ats: greenhouse
+    ats: other
     token: snap
     origin: US
+    note: Own careers site (careers.snap.com); no public Greenhouse feed.
 
   - name: Atlassian
     website: https://www.atlassian.com
@@ -1016,32 +1028,34 @@ companies:
   - name: Workday
     website: https://www.workday.com
     careers_url: https://workday.wd5.myworkdayjobs.com/Workday
-    ats: other
+    ats: workday
     token: workday
     origin: US
-    note: Workday runs its own hiring on its own product (Workday) — DOM fallback expected.
+    workday_url: https://workday.wd5.myworkdayjobs.com/Workday
 
   - name: Palo Alto Networks
     website: https://www.paloaltonetworks.com
     careers_url: https://jobs.paloaltonetworks.com/en/location/london-jobs/47263/2635167-6269131-2643743/4
-    ats: other
+    ats: workday
     token: paloaltonetworks
     origin: US
-    note: Backend is SmartRecruiters — DOM fallback expected.
+    workday_url: https://paloaltonetworks.wd5.myworkdayjobs.com/panwexternalcareers
 
   - name: CrowdStrike
     website: https://www.crowdstrike.com
     careers_url: https://crowdstrike.wd5.myworkdayjobs.com/crowdstrikecareers
-    ats: other
+    ats: workday
     token: crowdstrike
     origin: US
+    workday_url: https://crowdstrike.wd5.myworkdayjobs.com/crowdstrikecareers
 
   - name: Autodesk
     website: https://www.autodesk.com
     careers_url: https://autodesk.wd1.myworkdayjobs.com/Ext
-    ats: other
+    ats: workday
     token: autodesk
     origin: US
+    workday_url: https://autodesk.wd1.myworkdayjobs.com/Ext
 
   - name: Dropbox
     website: https://www.dropbox.com
@@ -1068,9 +1082,10 @@ companies:
   - name: PayPal
     website: https://www.paypal.com
     careers_url: https://careers.pypl.com/search-results/
-    ats: other
+    ats: workday
     token: paypal
     origin: US
+    workday_url: https://paypal.wd1.myworkdayjobs.com/jobs
 
   - name: Booking.com
     website: https://www.booking.com
@@ -1082,16 +1097,18 @@ companies:
   - name: Expedia Group
     website: https://www.expediagroup.com
     careers_url: https://careers.expediagroup.com/locations/london-england/
-    ats: other
+    ats: workday
     token: expedia
     origin: US
+    workday_url: https://expedia.wd108.myworkdayjobs.com/search
 
   - name: Adobe
     website: https://www.adobe.com
     careers_url: https://careers.adobe.com/us/en
-    ats: other
+    ats: workday
     token: adobe
     origin: US
+    workday_url: https://adobe.wd5.myworkdayjobs.com/external_experienced
 
   - name: LinkedIn
     website: https://www.linkedin.com

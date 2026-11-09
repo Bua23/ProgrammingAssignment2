@@ -8,6 +8,8 @@ import { EmptyState } from "./components/EmptyState";
 import { formatDateTime, relativeTime } from "./format";
 
 const DATA_BASE = `${import.meta.env.BASE_URL}data/`;
+const HOUR_MS = 3_600_000;
+const WINDOW_MS = 7 * 24 * HOUR_MS; // only roles from the last 7 days are shown
 
 export default function App() {
   const [jobs, setJobs] = useState<Job[] | null>(null);
@@ -16,6 +18,7 @@ export default function App() {
   const [loadError, setLoadError] = useState<string | null>(null);
   const [search, setSearch] = useState("");
   const [company, setCompany] = useState("");
+  const [role, setRole] = useState("");
 
   useEffect(() => {
     Promise.all([
@@ -39,17 +42,41 @@ export default function App() {
           companies_dom_fallback: [],
           companies_failed: [],
           total_unconfirmed_found: 0,
+          role_filter: null,
           ...metaData,
         });
       })
       .catch((err) => setLoadError(String(err)));
   }, []);
 
+  const now = Date.now();
+  const highlightMs = (meta?.highlight_hours ?? 48) * HOUR_MS;
+  const ageOf = (iso: string | undefined | null): number =>
+    iso ? now - Date.parse(iso) : Infinity;
+  // Posted date when we have one, else when we first saw the role.
+  const seenAtOf = (job: Job): string => job.first_seen_at ?? meta?.generated_at ?? "";
+  const isNewJob = (job: Job): boolean =>
+    Boolean(job.posted_at) && ageOf(job.posted_at) <= highlightMs;
+
+  // Applied at view time as well as crawl time, so a stalled crawler can't
+  // leave week-old roles on screen.
+  const recentJobs = useMemo(
+    () => (jobs ?? []).filter((j) => ageOf(j.posted_at) <= WINDOW_MS),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [jobs]
+  );
+  const recentUnconfirmed = useMemo(
+    () => unconfirmedJobs.filter((j) => ageOf(j.first_seen_at ?? meta?.generated_at) <= WINDOW_MS),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [unconfirmedJobs, meta]
+  );
+
   const filteredJobs = useMemo(() => {
     if (!jobs) return [];
     const q = search.trim().toLowerCase();
-    return jobs.filter((job) => {
+    return recentJobs.filter((job) => {
       if (company && job.company !== company) return false;
+      if (role && !(job.matched_roles ?? []).includes(role)) return false;
       if (!q) return true;
       return (
         job.title.toLowerCase().includes(q) ||
@@ -57,40 +84,45 @@ export default function App() {
         job.description_text.toLowerCase().includes(q)
       );
     });
-  }, [jobs, search, company]);
+  }, [jobs, recentJobs, search, company, role]);
 
   const filteredUnconfirmed = useMemo(() => {
     const q = search.trim().toLowerCase();
-    return unconfirmedJobs.filter((job) => {
+    return recentUnconfirmed.filter((job) => {
       if (company && job.company !== company) return false;
+      if (role && !(job.matched_roles ?? []).includes(role)) return false;
       if (!q) return true;
       return job.title.toLowerCase().includes(q) || job.company.toLowerCase().includes(q);
     });
-  }, [unconfirmedJobs, search, company]);
+  }, [recentUnconfirmed, search, company, role]);
 
   const companyCounts = useMemo(() => {
     if (!jobs) return [] as [string, number][];
     const map = new Map<string, number>();
-    for (const job of jobs) map.set(job.company, (map.get(job.company) ?? 0) + 1);
+    for (const job of recentJobs) map.set(job.company, (map.get(job.company) ?? 0) + 1);
     return [...map.entries()].sort((a, b) => b[1] - a[1]);
-  }, [jobs]);
+  }, [jobs, recentJobs]);
 
   const allCompanies = useMemo(
     () =>
-      [...new Set([...(jobs ?? []), ...unconfirmedJobs].map((j) => j.company))].sort(),
-    [jobs, unconfirmedJobs]
+      [...new Set([...recentJobs, ...recentUnconfirmed].map((j) => j.company))].sort(),
+    [recentJobs, recentUnconfirmed]
   );
+
+  const roleLabels: Record<string, string> = meta?.role_filter ?? {};
+  const roleOptions = Object.entries(roleLabels);
 
   return (
     <>
       <header className="hero">
-        <h1>London software jobs — last 24 hours</h1>
+        <h1>London AI leadership roles — last 7 days</h1>
         <p>
-          A curated set of UK software product companies, crawled by rendering
-          each company's own public careers page in a headless browser and
-          reading the job data as their own site loads it — filtered to roles
-          based in London, UK and posted within the last 24 hours. Runs
-          automatically twice each weekday.
+          Senior AI Manager/Lead, Customer Success, Governance, Strategy and
+          Consulting roles (and adjacent ones) at ~144 tech companies, read
+          from each company's own careers page. Permanent roles in London, the
+          South East or remote in the UK, likely to pay £110k or more. Posted
+          within the last 7 days, with the last 2 days highlighted. Refreshed
+          Tuesday to Thursday at 1pm.
         </p>
       </header>
 
@@ -110,8 +142,9 @@ export default function App() {
       {jobs && meta && (
         <>
           <div className="stat-grid">
-            <StatTile value={meta.total_jobs_found} label="Matching roles" />
-            <StatTile value={meta.companies_with_matches.length} label="Companies hiring" />
+            <StatTile value={recentJobs.length} label="Posted in last 7 days" />
+            <StatTile value={recentJobs.filter(isNewJob).length} label={`New (last ${Math.round(highlightMs / HOUR_MS)}h)`} />
+            <StatTile value={new Set(recentJobs.map((j) => j.company)).size} label="Companies hiring" />
             <StatTile value={meta.companies_checked} label="Companies tracked" />
             <StatTile value={relativeTime(meta.generated_at)} label="Last crawl" />
           </div>
@@ -124,14 +157,17 @@ export default function App() {
             company={company}
             onCompanyChange={setCompany}
             companies={allCompanies}
+            role={role}
+            onRoleChange={setRole}
+            roles={roleOptions}
           />
 
           {filteredJobs.length === 0 ? (
-            <EmptyState hasFilters={Boolean(search || company)} />
+            <EmptyState hasFilters={Boolean(search || company || role)} />
           ) : (
             <div className="job-grid">
               {filteredJobs.map((job) => (
-                <JobCard job={job} key={job.id} />
+                <JobCard job={job} roleLabels={roleLabels} isNew={isNewJob(job)} seenAt={seenAtOf(job)} key={job.id} />
               ))}
             </div>
           )}
@@ -141,14 +177,15 @@ export default function App() {
               <div className="section-heading">
                 <h2>Also spotted on company career pages</h2>
                 <p>
-                  These London-mentioning roles were found on a company's own
-                  page, but that page didn't expose a machine-readable posted
-                  date, so we can't confirm they're within the last 24 hours.
+                  These roles were found on a company's own page, but that page
+                  didn't expose a posted date, so we can't confirm when they
+                  were posted. They're shown only while first seen within the
+                  last 7 days, and never highlighted as new.
                 </p>
               </div>
               <div className="job-grid">
                 {filteredUnconfirmed.map((job) => (
-                  <JobCard job={job} key={job.id} />
+                  <JobCard job={job} roleLabels={roleLabels} isNew={isNewJob(job)} seenAt={seenAtOf(job)} key={job.id} />
                 ))}
               </div>
             </>
@@ -158,9 +195,18 @@ export default function App() {
             <div>
               <span className="status-dot" />
               Last crawl: {formatDateTime(meta.generated_at)} · window: last{" "}
-              {meta.window_hours}h · {meta.companies_checked} companies checked
+              7 days · {meta.companies_checked} companies checked
               {meta.companies_failed.length > 0 && (
                 <> · {meta.companies_failed.length} unreachable this run</>
+              )}
+              {meta.filters && (
+                <>
+                  {" "}· filters: {meta.filters.permanent_only ? "permanent, " : ""}
+                  {meta.filters.locations.join(" / ")}
+                  {meta.filters.min_salary_gbp
+                    ? `, senior or £${Math.round(meta.filters.min_salary_gbp / 1000)}k+`
+                    : ""}
+                </>
               )}
               {meta.companies_dom_fallback.length > 0 && (
                 <> · {meta.companies_dom_fallback.length} used DOM fallback (no ATS call observed)</>

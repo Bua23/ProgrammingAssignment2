@@ -259,6 +259,11 @@ header.hero p {
   color: var(--text-primary);
 }
 
+.badge-role {
+  background: color-mix(in srgb, var(--series-1) 18%, transparent);
+  color: var(--text-primary);
+}
+
 .section-heading {
   margin: 32px 0 4px;
 }
@@ -323,4 +328,21 @@ header.hero p {
   border-radius: 50%;
   background: var(--status-good);
   margin-right: 6px;
+}
+
+.job-card-new {
+  border-color: var(--series-1);
+  box-shadow: 0 0 0 1px var(--series-1), var(--card-shadow);
+}
+
+.badge-new {
+  background: var(--series-1);
+  color: var(--surface-1);
+  font-weight: 600;
+}
+
+.badge-salary {
+  background: color-mix(in srgb, var(--status-good) 20%, transparent);
+  color: var(--text-primary);
+  font-weight: 600;
 }

@@ -1,12 +1,26 @@
 # London Software Jobs Dashboard
 
 A dashboard that surfaces software-engineering roles based in **London, UK**
-that were posted in the **last 24 hours**, at a curated list of ~144
+that were posted in the **last 7 days** (roles from the last 2 days are highlighted), at a curated list of ~144
 companies: large employers already established in the UK (Google, Meta,
 Amazon, ...), UK-native scaleups and unicorns (Monzo, Revolut, Darktrace,
 ...), and smaller US/international companies actively expanding into
 London (Cresta, Ramp, Harvey AI, ...) — consultancies excluded throughout.
 Crawls run automatically **twice on every weekday**.
+
+### How "last 7 days" and "new" work
+
+- Roles with a real posted date (Greenhouse/Lever/Ashby/Workable data) are
+  kept if posted within 7 days (`crawl.py --hours 168`); those posted within
+  2 days (`--highlight-hours 48`) get a **New** highlight.
+- Page-scraped roles have **no posted date**, so the crawler records
+  `first_seen_at` (carried over from the previous crawl's `jobs.json`) and
+  drops them once they've been on the site for more than 7 days. They are
+  never highlighted as new, because first-seen is not the same as posted.
+  Until that first-seen history builds up (the first week after this change),
+  they may include roles posted earlier.
+- The dashboard applies the same 7-day cut-off when it renders, so a
+  stalled crawler can't leave week-old roles on screen.
 
 > This repository started life as a Coursera R programming assignment. That
 > original content is preserved at
@@ -36,7 +50,7 @@ crawler/browser_crawl.py  renders careers_url in a headless browser (Playwright)
         │                     rendered page (no reliable posted-date this way)
         ▼
 crawler/crawl.py          keeps roles located in London, UK; splits results into
-        │                 "confirmed" (real posted-date within the last 24h)
+        │                 "confirmed" (real posted-date within the last 7 days)
         │                 and "unconfirmed" (DOM fallback, date unknown)
         ▼
 frontend/public/data/     jobs.json ({jobs, unconfirmed_jobs}) + meta.json
@@ -94,6 +108,30 @@ timestamp — a role that was edited stays looking "fresh" even if it was
 originally posted earlier. Lever and Ashby both expose true creation/publish
 timestamps, so this only affects Greenhouse-listed companies.
 
+## Role filter (what the dashboard shows)
+
+Only jobs whose **title** matches one of five AI role families (or adjacent
+roles) are kept — everything else is dropped before it reaches the
+dashboard. The families and their keywords live in
+[`crawler/roles.yaml`](crawler/roles.yaml) and are edited there, not in code:
+
+1. **AI Manager / Lead / Senior Manager** (also Head / Director / VP / Principal of AI)
+2. **AI Customer Success** (also AI value partner, adoption, enablement, technical account)
+3. **AI Governance** (also Responsible AI, AI ethics, risk, compliance, policy, assurance)
+4. **AI Strategy** (also AI transformation, roadmap, programme management, Chief AI Officer)
+5. **AI Consulting** (also AI consultant, advisory / advisor)
+
+Individual-contributor titles (engineer, scientist, researcher, intern, ...)
+are dropped unless a strong management word (manager, head, director, ...) is
+also present; sales/marketing/recruiting titles are always dropped. Each kept
+job carries a `matched_roles` list, shown as badges and a dropdown filter in
+the UI. `meta.json` records how many jobs the filter dropped. Run the crawler
+with `--no-role-filter` to see everything, or `--roles other.yaml` to use a
+different config. Tests: `cd crawler && python -m unittest discover -s tests`.
+
+Unconfirmed (page-scraped) cards that clearly belong to another city (their
+card text has a location line with no "London") are also dropped.
+
 ## Repository layout
 
 ```
@@ -106,6 +144,9 @@ crawler/
                            response if the page makes one (or one click-through
                            away), else DOM fallback
   crawl.py                 orchestrates crawl → filter → write JSON
+  roles.yaml / role_filter.py  title-based AI role-family filter (see above)
+  debug_probe.py           manual diagnostic for companies stuck in DOM fallback
+  tests/                   unit tests (role filter + crawl orchestration)
   requirements.txt
 frontend/
   src/                     React + TypeScript dashboard
